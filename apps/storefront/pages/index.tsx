@@ -10,9 +10,12 @@ const Home = () => {
         <title>Home Page</title>
       </Head>
       <main>
-        <Button type="button">
+        <Button type="primary">
           <I18n id="global.addToCart" />
         </Button>
+        <Button>Default</Button>
+        <Button type="dashed">Dashed</Button>
+        <Link href="/blog">Blog</Link>
         <div>
           <Link href="/login" title="Jump Login Page">
             Jump Login Page

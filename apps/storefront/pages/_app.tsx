@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import { Provider as ReduxProvider } from 'react-redux'
-import { SnackbarProvider } from 'notistack'
-import { EmotionCache } from '@emotion/react'
+import { StyleProvider } from '@ant-design/cssinjs'
 import { isEmpty } from 'lodash'
+import 'antd/dist/reset.css'
 
-import { createEmotionCache } from '@ecommerce/hooks'
+import { ConfigProvider } from '@ecommerce/ui'
 import { withRedux, LocaleContextProvider } from '@provider/index'
 import { fetchApp } from '@hooks/App'
 
@@ -16,20 +16,11 @@ interface InitialPage {
   ctx: any
 }
 
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientEmotionCache = createEmotionCache()
-
 interface HeadlessProps extends AppProps {
-  emotionCache?: EmotionCache
   reduxStore?: any
 }
 
-const App = ({
-  Component,
-  emotionCache = clientEmotionCache,
-  pageProps,
-  reduxStore
-}: HeadlessProps) => {
+const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
   return (
     <>
       <Head>
@@ -55,17 +46,15 @@ const App = ({
         <link rel="preconnect" href={process.env.API_URL} />
       </Head>
       <ReduxProvider store={reduxStore}>
-        <SnackbarProvider
-          maxSnack={3}
-          autoHideDuration={5000}
-          anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-        >
-          <LocaleContextProvider>
-            <AppShell cache={emotionCache}>
-              <Component {...pageProps} />
-            </AppShell>
-          </LocaleContextProvider>
-        </SnackbarProvider>
+        <LocaleContextProvider>
+          <StyleProvider ssrInline={false}>
+            <ConfigProvider prefixCls="apax">
+              <AppShell>
+                <Component {...pageProps} />
+              </AppShell>
+            </ConfigProvider>
+          </StyleProvider>
+        </LocaleContextProvider>
       </ReduxProvider>
     </>
   )

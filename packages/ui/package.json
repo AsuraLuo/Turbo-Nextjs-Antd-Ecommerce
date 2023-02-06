@@ -8,10 +8,8 @@
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "dependencies": {
-    "@mui/x-date-pickers": "^5.0.16",
-    "date-fns": "^2.29.3",
-    "react-images-uploading": "^3.1.7",
-    "react-mui-dropzone": "^4.0.6"
+    "antd": "^5.1.7",
+    "react-images-uploading": "^3.1.7"
   },
   "devDependencies": {
     "@ecommerce/tsconfig": "workspace:*",

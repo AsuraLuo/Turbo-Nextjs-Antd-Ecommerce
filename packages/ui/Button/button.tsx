@@ -1,9 +1,8 @@
 import { FC } from 'react'
+import { Button as AntdButton, ButtonProps } from 'antd'
 
-import Button, { ButtonProps } from '@mui/material/Button'
-
-const HeadlessButton: FC<ButtonProps> = ({ children, ...props }) => {
-  return <Button {...props}>{children}</Button>
+const Button: FC<ButtonProps> = ({ children, ...props }) => {
+  return <AntdButton {...props}>{children}</AntdButton>
 }
 
-export default HeadlessButton
+export default Button

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function Cart() {
+const CartPage = () => {
   return (
     <>
       <Head>
@@ -10,3 +10,5 @@ export default function Cart() {
     </>
   )
 }
+
+export default CartPage

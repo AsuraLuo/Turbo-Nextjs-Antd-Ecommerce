@@ -1,10 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { Children } from 'react'
-import { ServerStyleSheets } from '@mui/styles'
+import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs'
 import { Helmet } from 'react-helmet'
-import createEmotionServer from '@emotion/server/create-instance'
-
-import { createEmotionCache } from '@ecommerce/hooks'
 
 interface HeadlessProps {
   helmet: any
@@ -28,11 +25,7 @@ class HeadlessDocument extends Document<HeadlessProps> {
   render(): JSX.Element {
     return (
       <Html {...this.helmetHtmlAttrComponents}>
-        <Head>
-          {/* Inject MUI styles first to match with the prepend: true configuration. */}
-          {(this.props as any).emotionStyleTags}
-          {this.helmetHeadComponents}
-        </Head>
+        <Head>{this.helmetHeadComponents}</Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />
           <NextScript />
@@ -65,44 +58,31 @@ HeadlessDocument.getInitialProps = async (ctx) => {
   // 2. page.getInitialProps
   // 3. app.render
   // 4. page.render
-
   const originalRenderPage = ctx.renderPage
 
   // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
   // However, be aware that it can have global side effects.
-  const cache = createEmotionCache()
-  const { extractCriticalToChunks } = createEmotionServer(cache)
-  const jssSheets = new ServerStyleSheets()
+  const cache = createCache()
 
   ctx.renderPage = () =>
     originalRenderPage({
       enhanceApp: (App: any) =>
         function EnhanceApp(props) {
-          return jssSheets.collect(<App emotionCache={cache} {...props} />)
+          return (
+            <StyleProvider cache={cache}>
+              <App {...props} />
+            </StyleProvider>
+          )
         }
     })
 
   const initialProps = await Document.getInitialProps(ctx)
-
-  // Generate style tags for the styles coming from Emotion
-  // This is important. It prevents Emotion from rendering invalid HTML.
-  // See https://github.com/mui/material-ui/issues/26561#issuecomment-855286153
-  const emotionStyles = extractCriticalToChunks(initialProps.html)
-  const emotionStyleTags = emotionStyles.styles.map((style) => (
-    <style
-      data-emotion={`${style.key} ${style.ids.join(' ')}`}
-      key={style.key}
-      dangerouslySetInnerHTML={{ __html: style.css }}
-    />
-  ))
-
   // Generate the css string for the styles coming from jss
-  const css = jssSheets.toString()
+  const css = extractStyle(cache)
 
   return {
     ...initialProps,
     styles: [
-      ...emotionStyleTags,
       <style
         id="jss-server-side"
         key="jss-server-side"
