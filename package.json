@@ -25,9 +25,7 @@
     "clean:turbo-cache": "rm -rf ./node_modules/.cache"
   },
   "dependencies": {
-    "@emotion/cache": "^11.10.5",
     "@emotion/react": "^11.10.5",
-    "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
     "@reduxjs/toolkit": "^1.9.1",
     "clsx": "^1.2.1",
