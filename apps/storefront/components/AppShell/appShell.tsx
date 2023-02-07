@@ -11,10 +11,10 @@ interface AppShellProps {
 const AppShell: FC<AppShellProps> = ({ children }) => {
   useEffect(() => {
     // Remove the server-side injected CSS.
-    const jssStyles = document.getElementById('jss-server-side')
-    if (jssStyles) {
-      jssStyles?.parentElement?.removeChild(jssStyles)
-    }
+    // const jssStyles = document.getElementById('jss-server-side')
+    // if (jssStyles) {
+    //   jssStyles?.parentElement?.removeChild(jssStyles)
+    // }
   }, [])
 
   return (

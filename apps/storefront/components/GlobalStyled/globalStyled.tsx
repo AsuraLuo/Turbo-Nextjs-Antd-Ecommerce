@@ -62,15 +62,6 @@ const GlobalStyles = css`
   input::-webkit-inner-spin-button {
     appearance: none;
   }
-
-  body {
-    .SnackbarContainer-bottom {
-      .SnackbarItem-variantSuccess {
-        color: #000;
-        background-color: #f2e0d6;
-      }
-    }
-  }
 `
 
 const GlobalStyled: FC = () => {

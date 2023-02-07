@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Button } from 'antd'
-import { Input, I18n } from '@ecommerce/ui'
+import { Button, Input, I18n } from '@ecommerce/ui'
 
 const Home = () => {
   return (
