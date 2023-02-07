@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Button, I18n } from '@ecommerce/ui'
+import { Button } from 'antd'
+import { Input, I18n } from '@ecommerce/ui'
 
 const Home = () => {
   return (
@@ -13,9 +14,10 @@ const Home = () => {
         <Button type="primary">
           <I18n id="global.addToCart" />
         </Button>
-        <Button>Default</Button>
-        <Button type="dashed">Dashed</Button>
-        <Link href="/blog">Blog</Link>
+        <Input />
+        <div>
+          <Button type="dashed">Dashed</Button>
+        </div>
         <div>
           <Link href="/login" title="Jump Login Page">
             Jump Login Page

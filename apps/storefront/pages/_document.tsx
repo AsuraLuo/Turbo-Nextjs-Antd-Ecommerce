@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { Children } from 'react'
 import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs'
 import { Helmet } from 'react-helmet'
 
@@ -8,25 +7,32 @@ interface HeadlessProps {
 }
 
 class HeadlessDocument extends Document<HeadlessProps> {
-  get helmetHtmlAttrComponents() {
-    return this.props.helmet.htmlAttributes.toComponent()
-  }
+  // get helmetHtmlAttrComponents() {
+  //   return this.props.helmet.htmlAttributes.toComponent()
+  // }
 
-  get helmetBodyAttrComponents() {
-    return this.props.helmet.bodyAttributes.toComponent()
-  }
+  // get helmetBodyAttrComponents() {
+  //   return this.props.helmet.bodyAttributes.toComponent()
+  // }
 
-  get helmetHeadComponents() {
-    return Object.keys(this.props.helmet)
-      .filter((el) => el !== 'htmlAttributes' && el !== 'bodyAttributes')
-      .map((el) => this.props.helmet[el].toComponent())
-  }
+  // get helmetHeadComponents() {
+  //   return Object.keys(this.props.helmet)
+  //     .filter((el) => el !== 'htmlAttributes' && el !== 'bodyAttributes')
+  //     .map((el) => this.props.helmet[el].toComponent())
+  // }
 
   render(): JSX.Element {
     return (
-      <Html {...this.helmetHtmlAttrComponents}>
-        <Head>{this.helmetHeadComponents}</Head>
-        <body {...this.helmetBodyAttrComponents}>
+      // <Html {...this.helmetHtmlAttrComponents}>
+      //   <Head>{this.helmetHeadComponents}</Head>
+      //   <body {...this.helmetBodyAttrComponents}>
+      //     <Main />
+      //     <NextScript />
+      //   </body>
+      // </Html>
+      <Html lang="en">
+        <Head />
+        <body>
           <Main />
           <NextScript />
         </body>
@@ -58,22 +64,17 @@ HeadlessDocument.getInitialProps = async (ctx) => {
   // 2. page.getInitialProps
   // 3. app.render
   // 4. page.render
-  const originalRenderPage = ctx.renderPage
-
-  // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
-  // However, be aware that it can have global side effects.
   const cache = createCache()
+  const originalRenderPage = ctx.renderPage
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: any) =>
-        function EnhanceApp(props) {
-          return (
-            <StyleProvider cache={cache}>
-              <App {...props} />
-            </StyleProvider>
-          )
-        }
+      enhanceApp: (App) => (props) =>
+        (
+          <StyleProvider cache={cache}>
+            <App {...props} />
+          </StyleProvider>
+        )
     })
 
   const initialProps = await Document.getInitialProps(ctx)
@@ -82,14 +83,16 @@ HeadlessDocument.getInitialProps = async (ctx) => {
 
   return {
     ...initialProps,
-    styles: [
-      <style
-        id="jss-server-side"
-        key="jss-server-side"
-        dangerouslySetInnerHTML={{ __html: css }}
-      />,
-      ...Children.toArray(initialProps.styles)
-    ],
+    styles: (
+      <>
+        {initialProps.styles}
+        <style
+          id="jss-server-side"
+          key="jss-server-side"
+          dangerouslySetInnerHTML={{ __html: css }}
+        />
+      </>
+    ),
     helmet: Helmet.renderStatic()
   }
 }

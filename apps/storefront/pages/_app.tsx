@@ -47,7 +47,7 @@ const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
       </Head>
       <ReduxProvider store={reduxStore}>
         <LocaleContextProvider>
-          <StyleProvider ssrInline={false}>
+          <StyleProvider ssrInline>
             <ConfigProvider prefixCls="apax">
               <AppShell>
                 <Component {...pageProps} />

@@ -1,6 +1,6 @@
 import { useEffect, FC, ReactNode, memo } from 'react'
 
-import { CurrentLocale } from '@ecommerce/ui'
+// import { CurrentLocale } from '@ecommerce/ui'
 
 import GlobalStyled from '@components/GlobalStyled'
 
@@ -19,7 +19,7 @@ const AppShell: FC<AppShellProps> = ({ children }) => {
 
   return (
     <>
-      <CurrentLocale />
+      {/* <CurrentLocale /> */}
       <GlobalStyled />
       <main>{children}</main>
     </>
