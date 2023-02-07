@@ -7,32 +7,25 @@ interface HeadlessProps {
 }
 
 class HeadlessDocument extends Document<HeadlessProps> {
-  // get helmetHtmlAttrComponents() {
-  //   return this.props.helmet.htmlAttributes.toComponent()
-  // }
+  get helmetHtmlAttrComponents() {
+    return this.props.helmet.htmlAttributes.toComponent()
+  }
 
-  // get helmetBodyAttrComponents() {
-  //   return this.props.helmet.bodyAttributes.toComponent()
-  // }
+  get helmetBodyAttrComponents() {
+    return this.props.helmet.bodyAttributes.toComponent()
+  }
 
-  // get helmetHeadComponents() {
-  //   return Object.keys(this.props.helmet)
-  //     .filter((el) => el !== 'htmlAttributes' && el !== 'bodyAttributes')
-  //     .map((el) => this.props.helmet[el].toComponent())
-  // }
+  get helmetHeadComponents() {
+    return Object.keys(this.props.helmet)
+      .filter((el) => el !== 'htmlAttributes' && el !== 'bodyAttributes')
+      .map((el) => this.props.helmet[el].toComponent())
+  }
 
   render(): JSX.Element {
     return (
-      // <Html {...this.helmetHtmlAttrComponents}>
-      //   <Head>{this.helmetHeadComponents}</Head>
-      //   <body {...this.helmetBodyAttrComponents}>
-      //     <Main />
-      //     <NextScript />
-      //   </body>
-      // </Html>
-      <Html lang="en">
-        <Head />
-        <body>
+      <Html {...this.helmetHtmlAttrComponents}>
+        <Head>{this.helmetHeadComponents}</Head>
+        <body {...this.helmetBodyAttrComponents}>
           <Main />
           <NextScript />
         </body>
