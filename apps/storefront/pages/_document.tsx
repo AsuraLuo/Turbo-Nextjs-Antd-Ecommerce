@@ -34,7 +34,6 @@ class HeadlessDocument extends Document<HeadlessProps> {
   }
 }
 
-// It's compatible with static-site generation (SSG).
 HeadlessDocument.getInitialProps = async (ctx) => {
   // Resolution order
   //
@@ -71,7 +70,6 @@ HeadlessDocument.getInitialProps = async (ctx) => {
     })
 
   const initialProps = await Document.getInitialProps(ctx)
-  // Generate the css string for the styles coming from jss
   const css = extractStyle(cache)
 
   return {

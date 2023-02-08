@@ -9,17 +9,17 @@ const Home = () => {
       <Head>
         <title>Home Page</title>
       </Head>
-      <main>
+      <div>
         <Button type="primary">
           <I18n id="global.addToCart" />
         </Button>
         <div>
-          <Link href="/login" title="Jump Login Page">
-            Jump Login Page
+          <Link href="/cart" title="Jump Cart Page">
+            Jump Cart Page
           </Link>
         </div>
         <BaseImagesUpload />
-      </main>
+      </div>
     </>
   )
 }
