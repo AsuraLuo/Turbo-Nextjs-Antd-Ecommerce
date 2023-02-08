@@ -68,7 +68,7 @@ const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
               }}
               theme={{
                 token: {
-                  borderRadius: 0
+                  borderRadius: 3
                 }
               }}
             >
