@@ -14,6 +14,7 @@ interface BaseImagesUploadProps
 
 const BaseImagesUpload: FC<BaseImagesUploadProps> = ({
   label = '',
+  maxNumber = 4,
   ...props
 }) => {
   const [images, setImages] = useState<ImageListType>([])
@@ -30,7 +31,7 @@ const BaseImagesUpload: FC<BaseImagesUploadProps> = ({
         dataURLKey="data_url"
         {...props}
         value={images}
-        maxNumber={4}
+        maxNumber={maxNumber}
         onChange={handleImageChange}
       >
         {({
