@@ -5,6 +5,7 @@ export const I18nConf: any = {
     'global.login': 'Login',
     'global.required': 'This is a required filed.',
     'global.submit': 'Submit',
+    'validate.required': 'This is a required field.',
     'validate.email':
       'Please enter a valid email address (Ex: johndoe@domain.com).',
     'validate.password':

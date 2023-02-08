@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import { Provider as ReduxProvider } from 'react-redux'
-import { StyleProvider } from '@ant-design/cssinjs'
+import {
+  StyleProvider,
+  legacyLogicalPropertiesTransformer
+} from '@ant-design/cssinjs'
 import { isEmpty } from 'lodash'
 import 'antd/dist/reset.css'
 
@@ -21,6 +24,11 @@ interface HeadlessProps extends AppProps {
 }
 
 const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
+  // Fetch i18n required translate message
+  const state = reduxStore.getState()
+  const i18nLng = state.i18n.messages
+  const requireMsg = i18nLng?.['validate.required'] ?? ''
+
   return (
     <>
       <Head>
@@ -47,8 +55,23 @@ const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
       </Head>
       <ReduxProvider store={reduxStore}>
         <LocaleContextProvider>
-          <StyleProvider ssrInline>
-            <ConfigProvider prefixCls="apax">
+          <StyleProvider
+            ssrInline
+            transformers={[legacyLogicalPropertiesTransformer]}
+          >
+            <ConfigProvider
+              prefixCls="apax"
+              form={{
+                validateMessages: {
+                  required: requireMsg
+                }
+              }}
+              theme={{
+                token: {
+                  borderRadius: 0
+                }
+              }}
+            >
               <AppShell>
                 <Component {...pageProps} />
               </AppShell>
