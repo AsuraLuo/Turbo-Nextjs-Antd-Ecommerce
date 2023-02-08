@@ -22,7 +22,7 @@ module.exports = () => {
       reactRemoveProperties: isProd,
       removeConsole: isProd
     },
-    transpilePackages: ['antd', '@ecommerce/ui'],
+    transpilePackages: ['@ecommerce/ui'],
     webpack: (config) => {
       // Important: return the modified config
       return config

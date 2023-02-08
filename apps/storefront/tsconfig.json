@@ -8,7 +8,6 @@
       "@graphql/*": ["graphql/*"],
       "@hooks/*": ["hooks/*"],
       "@provider/*": ["provider/*"],
-      "@ecommerce/*": ["packages/*"],
       "@store/*": ["store/*"]
     }
   },
