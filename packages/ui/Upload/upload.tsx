@@ -1,14 +1,41 @@
 import { FC, Fragment, useState } from 'react'
-import { Upload as AntdUpload, UploadProps, UploadFile } from 'antd'
+import {
+  Upload as AntdUpload,
+  FormItemProps,
+  UploadProps,
+  UploadFile
+} from 'antd'
 import { RcFile } from 'antd/es/upload'
 
+import Form from '../Form'
 import Modal from '../Modal'
+import { formatMessage } from '../CurrentLocale'
 import { StyledUploadImage } from './styled'
 
-const Upload: FC<UploadProps> = ({ children, multiple = true, ...props }) => {
+interface BaseUploadProps extends UploadProps {
+  name?: string
+  label?: string
+  formItemProps?: FormItemProps
+}
+
+const Upload: FC<BaseUploadProps> = ({
+  children,
+  multiple = true,
+  name = '',
+  label = formatMessage({ id: 'global.upload' }),
+  formItemProps,
+  ...props
+}) => {
   const [previewOpen, setPreviewOpen] = useState<boolean>(false)
   const [previewImage, setPreviewImage] = useState<string>('')
   const [previewTitle, setPreviewTitle] = useState<string>('')
+
+  const handleValueEvent = (e: any) => {
+    if (Array.isArray(e)) {
+      return e
+    }
+    return e?.fileList
+  }
 
   const handleBase64 = (file: RcFile): Promise<string> =>
     new Promise((resolve, reject) => {
@@ -34,9 +61,17 @@ const Upload: FC<UploadProps> = ({ children, multiple = true, ...props }) => {
 
   return (
     <Fragment>
-      <AntdUpload {...props} multiple={multiple} onPreview={handlePreview}>
-        {children}
-      </AntdUpload>
+      <Form.Item
+        valuePropName="fileList"
+        name={name}
+        label={label}
+        {...formItemProps}
+        getValueFromEvent={handleValueEvent}
+      >
+        <AntdUpload {...props} multiple={multiple} onPreview={handlePreview}>
+          {children}
+        </AntdUpload>
+      </Form.Item>
       <Modal
         footer={null}
         open={previewOpen}

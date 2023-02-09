@@ -3,6 +3,7 @@
   "global.login": "登录",
   "global.home": "首页",
   "global.submit": "提交",
+  "global.upload": "上传",
   "validate.required": "该字段是必填字段.",
   "validate.email": "请输入有效的邮箱地址 (Ex: johndoe@domain.com).",
   "validate.password": "此字段的最小长度必须等于或大于8个符号。前导空格和尾随空格将被忽略.",
