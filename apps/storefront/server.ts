@@ -2,7 +2,7 @@ import fs from 'fs'
 import next from 'next'
 import express from 'express'
 import { parse } from 'url'
-import { createServer, ServerOptions } from 'spdy'
+import { createServer, ServerOptions } from 'spdy-fixes'
 
 const port = parseInt(process.env.PORT || '3000', 10)
 const dev = process.env.NODE_ENV !== 'production'
@@ -35,7 +35,7 @@ app.prepare().then(() => {
     }
 
     return console.warn(
-      `> Server listening at http://localhost:${port} as ${
+      `> Server listening at https://localhost:${port} as ${
         dev ? 'development' : process.env.NODE_ENV
       }`
     )
