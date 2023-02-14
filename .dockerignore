@@ -1,0 +1,10 @@
+node_modules
+.commitlintrc.js
+.cz-config.js
+.editorconfig
+.eslintignore
+.eslintrc.js
+.lintstagedrc
+.prettierrc.js
+.stylelintrc.js
+commitlint.config.js

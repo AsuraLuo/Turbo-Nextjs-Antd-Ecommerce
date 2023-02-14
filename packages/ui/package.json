@@ -8,7 +8,8 @@
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "dependencies": {
-    "antd": "^5.1.7",
+    "@tinymce/tinymce-react": "^4.3.0",
+    "antd": "^5.2.0",
     "react-images-uploading": "^3.1.7"
   },
   "devDependencies": {

@@ -1,5 +1,3 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')
-
 const isProd = process.env.NODE_ENV === 'production'
 const isAnalyzer = process.env.REACT_APP_BUNDLE_VISUALIZE === '1'
 
@@ -17,12 +15,23 @@ module.exports = () => {
     reactStrictMode: true,
     swcMinify: true,
     trailingSlash: false,
+    transpilePackages: ['@ecommerce/ui'],
     compiler: {
       emotion: true,
       reactRemoveProperties: isProd,
       removeConsole: isProd
     },
-    transpilePackages: ['@ecommerce/ui'],
+    eslint: {
+      ignoreDuringBuilds: isProd
+    },
+    modularizeImports: {
+      lodash: {
+        transform: 'lodash/{{member}}'
+      }
+    },
+    typescript: {
+      ignoreBuildErrors: isProd
+    },
     webpack: (config) => {
       // Important: return the modified config
       return config
@@ -33,7 +42,7 @@ module.exports = () => {
 
   if (isAnalyzer)
     plugins.push(
-      withBundleAnalyzer({
+      require('@next/bundle-analyzer')({
         enabled: true
       })
     )
