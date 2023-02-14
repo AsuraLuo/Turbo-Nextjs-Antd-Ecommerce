@@ -60,7 +60,7 @@ const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
             transformers={[legacyLogicalPropertiesTransformer]}
           >
             <ConfigProvider
-              prefixCls="apax"
+              prefixCls="ecommerce"
               form={{
                 validateMessages: {
                   required: requireMsg

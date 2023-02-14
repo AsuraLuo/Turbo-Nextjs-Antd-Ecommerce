@@ -10,8 +10,8 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 const options: ServerOptions = {
-  key: fs.readFileSync('keys/nextjs-key.pem'),
-  cert: fs.readFileSync('keys/nextjs-cert.pem'),
+  key: fs.readFileSync('keys/ecommerce-key.pem'),
+  cert: fs.readFileSync('keys/ecommerce-cert.pem'),
   spdy: {
     protocols: ['h2']
   }
@@ -25,7 +25,7 @@ app.prepare().then(() => {
     await handle(req, res, parsedUrl)
   })
 
-  // start the HTTP/2 server with koa
+  // start the HTTP/2 server with express
   const httpServer: any = createServer(options, server)
 
   httpServer.listen(port, (error: any) => {
