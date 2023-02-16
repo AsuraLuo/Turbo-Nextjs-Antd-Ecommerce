@@ -8,6 +8,7 @@ import {
 import { isEmpty } from 'lodash'
 import 'antd/dist/reset.css'
 
+import { ThemeConf } from '@config/theme'
 import { ConfigProvider } from '@ecommerce/ui'
 import { withRedux, LocaleContextProvider } from '@provider/index'
 import { fetchApp } from '@hooks/App'
@@ -60,7 +61,7 @@ const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
             transformers={[legacyLogicalPropertiesTransformer]}
           >
             <ConfigProvider
-              prefixCls="ecommerce"
+              prefixCls={ThemeConf.namespace}
               form={{
                 validateMessages: {
                   required: requireMsg
