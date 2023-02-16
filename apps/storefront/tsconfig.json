@@ -10,7 +10,8 @@
       "@provider/*": ["provider/*"],
       "@ecommerce/*": ["packages/*"],
       "@store/*": ["store/*"]
-    }
+    },
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

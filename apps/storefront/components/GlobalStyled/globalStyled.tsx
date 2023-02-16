@@ -58,9 +58,11 @@ const GlobalStyles = css`
     }
   }
 
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    appearance: none;
+  input {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
   }
 `
 
