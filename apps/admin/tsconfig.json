@@ -2,8 +2,6 @@
   "extends": "@ecommerce/tsconfig/vite.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "declaration": false,
-    "declarationMap": false,
     "paths": {
       "@/*": ["./*"],
       "~/*": ["./*"]

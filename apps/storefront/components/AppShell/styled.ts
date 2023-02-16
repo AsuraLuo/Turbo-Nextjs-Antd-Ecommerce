@@ -9,4 +9,8 @@ export const StyledMain = styled.main`
       font-size: 0.8rem;
     }
   }
+
+  @media (max-width: ${({ theme }) => theme.breakPoint.s}px) {
+    background-color: ${({ theme }) => theme.colors.black};
+  }
 `

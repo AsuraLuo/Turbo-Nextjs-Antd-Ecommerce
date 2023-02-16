@@ -1,5 +1,5 @@
 {
-  "extends": "@ecommerce/tsconfig/nextjs.json",
+  "extends": "@ecommerce/tsconfig/react-library.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }
