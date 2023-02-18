@@ -3,7 +3,7 @@ import axios from 'axios'
 const { CancelToken } = axios
 
 const baseConfig: any = {
-  baseURL: window.location.origin,
+  baseURL: '/',
   method: 'GET',
   headers: {
     Accept: 'application/json',

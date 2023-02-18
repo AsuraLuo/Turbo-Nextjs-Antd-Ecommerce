@@ -1,11 +1,18 @@
 {
   "extends": "@ecommerce/tsconfig/vite.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"],
-      "~/*": ["./*"]
+      "@components/*": ["components/*"],
+      "@config/*": ["config/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*": ["pages/*"],
+      "@plugin/*": ["plugin/*"],
+      "@provider/*": ["provider/*"],
+      "@ecommerce/*": ["packages/*"],
+      "@store/*": ["store/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

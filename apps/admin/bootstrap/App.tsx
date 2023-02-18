@@ -1,23 +1,30 @@
 import { Provider as ReduxProvider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from '@emotion/react'
-// import 'antd/dist/reset.css'
 
-import { ConfigProvider, Button } from '@ecommerce/ui'
-import { store } from '@/store'
+import { ConfigProvider, CssBaseline } from '@ecommerce/ui'
+import { ThemeConf } from '@config/theme'
+import { store } from '@store/index'
+
+import AppShell from '@components/AppShell'
+import LocaleProvider from '@components/LocaleProvider'
+import HttpProvider from '@components/HttpProvider'
 
 const App = () => {
   return (
     <ReduxProvider store={store}>
-      <BrowserRouter>
-        <ThemeProvider theme={{}}>
-          <ConfigProvider prefixCls="ecommerce">
-            <div>
-              <Button type="primary">Antd</Button>
-            </div>
-          </ConfigProvider>
-        </ThemeProvider>
-      </BrowserRouter>
+      <HttpProvider>
+        <BrowserRouter>
+          <LocaleProvider>
+            <ThemeProvider theme={ThemeConf}>
+              <ConfigProvider prefixCls="ecommerce">
+                <CssBaseline />
+                <AppShell />
+              </ConfigProvider>
+            </ThemeProvider>
+          </LocaleProvider>
+        </BrowserRouter>
+      </HttpProvider>
     </ReduxProvider>
   )
 }

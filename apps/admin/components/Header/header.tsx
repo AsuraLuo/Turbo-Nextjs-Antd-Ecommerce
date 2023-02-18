@@ -1,0 +1,47 @@
+import { Avatar, Dropdown, Divider, Input } from 'antd'
+import { Search } from 'react-feather'
+
+import { Icon, Header as AntdHeader } from '@ecommerce/ui'
+
+import Locale from './Locale'
+import Menus from './Menus'
+import Navigation from './Navigation'
+import { StyledHeader } from './styled'
+
+const Header = () => {
+  const items = [
+    { label: '菜单项一', key: 'item-1' },
+    { label: '菜单项二', key: 'item-2' }
+  ]
+
+  return (
+    <AntdHeader>
+      <StyledHeader>
+        <div className="header__menu">
+          <Menus />
+        </div>
+        <div className="header__actions">
+          <Input
+            placeholder="请输入搜索关键词"
+            prefix={<Icon src={Search} />}
+          />
+          <Locale />
+          <Divider type="vertical" />
+          <Dropdown
+            placement="bottomRight"
+            trigger={['click']}
+            menu={{ items }}
+          >
+            <p className="header__account">
+              <Avatar size={38} />
+              <span>Admin</span>
+            </p>
+          </Dropdown>
+        </div>
+      </StyledHeader>
+      <Navigation />
+    </AntdHeader>
+  )
+}
+
+export default Header

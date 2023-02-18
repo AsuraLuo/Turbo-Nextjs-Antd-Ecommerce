@@ -1,20 +1,50 @@
 import { defineConfig, loadEnv, ConfigEnv } from 'vite'
 import path from 'path'
 import react from '@vitejs/plugin-react-swc'
+import { visualizer } from 'rollup-plugin-visualizer'
+
+import { httpProxy } from './plugin'
 
 export default ({ mode }: ConfigEnv) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd(), 'REACT_') }
 
+  const isProd: boolean = mode === 'production'
+
   return defineConfig({
     envPrefix: 'REACT_',
-    // optimizeDeps: {
-    //   include: ['@ecommerce/ui']
-    // },
-    plugins: [react()],
+    optimizeDeps: {
+      exclude: ['@ecommerce/ui']
+    },
+    build: {
+      reportCompressedSize: !isProd,
+      sourcemap: !isProd
+    },
+    plugins: [
+      react(),
+      httpProxy({
+        '/api': {
+          target: process.env.REACT_APP_API_URL,
+          changeOrigin: true,
+          secure: false,
+          rewrite: (url: string) => url.replace(/^\/api/, '')
+        }
+      }),
+      process.env.REACT_APP_BUNDLE_VISUALIZE === '1' &&
+        visualizer({
+          open: true,
+          gzipSize: true,
+          brotliSize: true
+        })
+    ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './'),
-        '~': path.resolve(__dirname, './')
+        '@components': path.resolve(__dirname, './components/'),
+        '@config': path.resolve(__dirname, './config/'),
+        '@hooks': path.resolve(__dirname, './hooks/'),
+        '@pages': path.resolve(__dirname, './pages/'),
+        '@plugin': path.resolve(__dirname, './plugin/'),
+        '@provider': path.resolve(__dirname, './provider/'),
+        '@store': path.resolve(__dirname, './store/')
       }
     },
     server: {

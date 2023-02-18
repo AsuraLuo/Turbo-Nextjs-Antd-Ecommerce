@@ -1,6 +1,6 @@
 import { createSlice, Slice } from '@reduxjs/toolkit'
 
-import { i18n } from '@/config/i18n'
+import { i18n } from '@config/i18n'
 
 import { fetchI18nConfig } from './actions'
 
