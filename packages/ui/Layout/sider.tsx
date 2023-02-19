@@ -1,9 +1,5 @@
-import { FC, ReactElement, ReactNode } from 'react'
-import { Layout } from 'antd'
-
-interface SiderProps extends React.HTMLAttributes<HTMLDivElement> {
-  children?: ReactElement | ReactNode
-}
+import { FC } from 'react'
+import { Layout, SiderProps } from 'antd'
 
 const Sider: FC<SiderProps> = ({ children, ...props }) => {
   return <Layout.Sider {...props}>{children}</Layout.Sider>

@@ -1,6 +1,4 @@
-import { Form, Input, Spin } from 'antd'
-
-import { Button } from '@ecommerce/ui'
+import { Button, Form, Input, Spin } from '@ecommerce/ui'
 import { useLoginForm } from '@hooks/LoginPage'
 
 import VerificationCode from '../VerificationCode'

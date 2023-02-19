@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import { Table } from 'antd'
 
-export const StyledTable = styled(Table)`
+export const StyledTable = styled.div`
   background-color: #dedede;
 `

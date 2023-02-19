@@ -1,11 +1,9 @@
-import { Menu, Layout } from 'antd'
+import { Menu, Sider } from '@ecommerce/ui'
 
 import { useSideBar } from '@hooks/SideBar'
 
 import Logo from '@components/Logo'
 import { StyledSidebar } from './styled'
-
-const { Sider } = Layout
 
 const SideBar = () => {
   const {
@@ -23,7 +21,7 @@ const SideBar = () => {
       width={230}
       collapsible
       collapsed={collapsed}
-      onCollapse={(value) => setCollapsed(value)}
+      onCollapse={(value: boolean) => setCollapsed(value)}
     >
       <Logo />
       <StyledSidebar>

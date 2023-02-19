@@ -1,11 +1,11 @@
-import { Layout } from 'antd'
+import { Footer } from '@ecommerce/ui'
 
-const Footer = () => {
+const FooterFC = () => {
   return (
-    <Layout.Footer>
+    <Footer>
       <p>Copyright © 2022 olightstore.com all right reserved.</p>
-    </Layout.Footer>
+    </Footer>
   )
 }
 
-export default Footer
+export default FooterFC

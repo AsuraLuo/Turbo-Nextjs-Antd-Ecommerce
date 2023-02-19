@@ -1,7 +1,13 @@
-import { Avatar, Dropdown, Divider, Input } from 'antd'
 import { Search } from 'react-feather'
 
-import { Icon, Header as AntdHeader } from '@ecommerce/ui'
+import {
+  Avatar,
+  Dropdown,
+  Divider,
+  Icon,
+  Input,
+  Header as AntdHeader
+} from '@ecommerce/ui'
 
 import Locale from './Locale'
 import Menus from './Menus'

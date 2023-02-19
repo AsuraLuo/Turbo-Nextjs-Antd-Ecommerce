@@ -1,5 +1,4 @@
-import { Tabs } from 'antd'
-
+import { Tabs } from '@ecommerce/ui'
 import { useLoginPage } from '@hooks/LoginPage'
 
 import LoginForm from './LoginForm'

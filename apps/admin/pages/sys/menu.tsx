@@ -1,5 +1,4 @@
-import { Space, Tag } from 'antd'
-import type { ColumnsType } from 'antd/es/table'
+import { ColumnsType, Space, Table, Tag } from '@ecommerce/ui'
 
 import { StyledTable } from './styled'
 
@@ -86,9 +85,9 @@ const MenuPage = () => {
   ]
 
   return (
-    <div>
-      <StyledTable columns={columns} dataSource={data} />
-    </div>
+    <StyledTable>
+      <Table columns={columns} dataSource={data} />
+    </StyledTable>
   )
 }
 

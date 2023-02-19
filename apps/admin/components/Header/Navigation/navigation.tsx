@@ -1,9 +1,8 @@
 import { useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Divider } from 'antd'
 import { clsx } from 'clsx'
 
-import { Button, Carousel } from '@ecommerce/ui'
+import { Button, Carousel, Divider } from '@ecommerce/ui'
 import { actions as appActions } from '@store/app'
 
 import { StyledNav, StyledNavItem } from './styled'

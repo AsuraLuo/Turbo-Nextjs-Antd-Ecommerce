@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Dropdown } from 'antd'
 
-import { I18n } from '@ecommerce/ui'
+import { Dropdown, I18n } from '@ecommerce/ui'
 import { useCookie } from '@ecommerce/hooks'
 
 import { website } from '@config/website'
