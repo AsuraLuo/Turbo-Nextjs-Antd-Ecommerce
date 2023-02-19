@@ -10,7 +10,7 @@ const HttpProvider: FC<FetchProviderProps> = ({ children }) => {
   const accountDetail = useSelector((state: any) => state.user.accountDetail)
   const isDev: boolean = import.meta.env.DEV
   const baseURL: string = isDev
-    ? `${import.meta.env.REACT_APP_HOST_URL}api`
+    ? `${import.meta.env.REACT_APP_HOST_URL}/api`
     : import.meta.env.REACT_APP_API_URL
 
   const apiOptions: any = {

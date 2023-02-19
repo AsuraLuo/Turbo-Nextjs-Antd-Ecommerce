@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv, ConfigEnv } from 'vite'
 import path from 'path'
 import react from '@vitejs/plugin-react-swc'
-import { visualizer } from 'rollup-plugin-visualizer'
+import legacy from '@vitejs/plugin-legacy'
 
 import { httpProxy } from './plugin'
 
@@ -20,6 +20,9 @@ export default ({ mode }: ConfigEnv) => {
       sourcemap: !isProd
     },
     plugins: [
+      legacy({
+        targets: ['defaults', 'not IE 11']
+      }),
       react(),
       httpProxy({
         '/api': {
@@ -30,7 +33,7 @@ export default ({ mode }: ConfigEnv) => {
         }
       }),
       process.env.REACT_APP_BUNDLE_VISUALIZE === '1' &&
-        visualizer({
+        require('rollup-plugin-visualizer').visualizer({
           open: true,
           gzipSize: true,
           brotliSize: true
