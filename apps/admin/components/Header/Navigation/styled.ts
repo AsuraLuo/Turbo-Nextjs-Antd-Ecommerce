@@ -15,10 +15,20 @@ export const StyledNavItem = styled.div`
     }
 
     &__active {
-      .${({ theme }) => theme.prefix} {
+      .${({ theme }) => theme.namespace} {
         &-btn {
           background-color: rgba(0, 0, 0, 0.018);
         }
+      }
+    }
+  }
+
+  .${({ theme }) => theme.namespace} {
+    &-btn {
+      color: ${({ theme }) => theme.colors.white};
+
+      &:hover {
+        color: ${({ theme }) => theme.colors.white};
       }
     }
   }

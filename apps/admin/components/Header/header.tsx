@@ -12,7 +12,7 @@ import {
 import Locale from './Locale'
 import Menus from './Menus'
 import Navigation from './Navigation'
-import { StyledHeader } from './styled'
+import { StyledFlex } from './styled'
 
 const Header = () => {
   const items = [
@@ -22,10 +22,8 @@ const Header = () => {
 
   return (
     <AntdHeader>
-      <StyledHeader>
-        <div className="header__menu">
-          <Menus />
-        </div>
+      <StyledFlex>
+        <Menus />
         <div className="header__actions">
           <Input
             placeholder="请输入搜索关键词"
@@ -44,7 +42,7 @@ const Header = () => {
             </p>
           </Dropdown>
         </div>
-      </StyledHeader>
+      </StyledFlex>
       <Navigation />
     </AntdHeader>
   )

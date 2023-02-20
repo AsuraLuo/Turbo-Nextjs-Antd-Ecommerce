@@ -11,7 +11,7 @@ export const StyledLoginPage = styled.div`
   justify-content: center;
   align-items: center;
 
-  .${({ theme }) => theme.prefix} {
+  .${({ theme }) => theme.namespace} {
     &-tabs {
       width: 27.5rem;
     }

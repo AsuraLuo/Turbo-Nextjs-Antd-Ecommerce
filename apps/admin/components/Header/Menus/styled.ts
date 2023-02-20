@@ -5,7 +5,7 @@ export const StyledMenuGrid = styled.div`
   grid-auto-flow: column;
   grid-column-gap: 1.5rem;
 
-  .${({ theme }) => theme.prefix} {
+  .${({ theme }) => theme.namespace} {
     &-btn {
       text-transform: uppercase;
       background-color: #f6f8fd;
@@ -24,7 +24,7 @@ export const StyledMenuGrid = styled.div`
 
 export const StyledMenuItem = styled.div`
   &.active {
-    .${({ theme }) => theme.prefix} {
+    .${({ theme }) => theme.namespace} {
       &-btn {
         color: #6ba7b0;
       }

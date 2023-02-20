@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const StyledSidebar = styled.div`
-  .${({ theme }) => theme.prefix}-menu {
+  .${({ theme }) => theme.namespace}-menu {
     position: relative;
   }
 `

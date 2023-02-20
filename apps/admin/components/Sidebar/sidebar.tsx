@@ -21,6 +21,7 @@ const SideBar = () => {
       width={230}
       collapsible
       collapsed={collapsed}
+      trigger={null}
       onCollapse={(value: boolean) => setCollapsed(value)}
     >
       <Logo />

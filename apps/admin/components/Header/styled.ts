@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
 
-export const StyledHeader = styled.div`
+export const StyledFlex = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .${({ theme }) => theme.prefix} {
+  .${({ theme }) => theme.namespace} {
     &-dropdown-trigger {
       color: ${({ theme }) => theme.colors.black};
       cursor: pointer;
