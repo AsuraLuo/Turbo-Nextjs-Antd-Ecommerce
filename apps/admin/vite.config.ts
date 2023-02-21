@@ -2,8 +2,10 @@ import { defineConfig, loadEnv, ConfigEnv } from 'vite'
 import path from 'path'
 import react from '@vitejs/plugin-react-swc'
 import legacy from '@vitejs/plugin-legacy'
+import banner from 'vite-plugin-banner'
 
 import { httpProxy } from './plugin'
+import pkg from './package.json'
 
 export default ({ mode }: ConfigEnv) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd(), 'REACT_') }
@@ -12,14 +14,17 @@ export default ({ mode }: ConfigEnv) => {
 
   return defineConfig({
     envPrefix: 'REACT_',
-    optimizeDeps: {
-      exclude: ['@ecommerce/ui']
-    },
+    // optimizeDeps: {
+    //   exclude: ['@ecommerce/ui']
+    // },
     build: {
       reportCompressedSize: !isProd,
       sourcemap: !isProd
     },
     plugins: [
+      banner(
+        `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * author: ${pkg.author}\n * version: ${pkg.version}\n * copyright: ${pkg.copyright}\n */`
+      ),
       legacy({
         targets: ['defaults', 'not IE 11']
       }),

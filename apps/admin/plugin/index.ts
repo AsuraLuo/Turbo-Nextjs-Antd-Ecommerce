@@ -1,1 +1,1 @@
-export { httpProxy } from './http2'
+export { httpProxy } from './proxy'
