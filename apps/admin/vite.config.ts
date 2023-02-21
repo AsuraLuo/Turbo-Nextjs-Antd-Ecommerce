@@ -1,4 +1,5 @@
 import { defineConfig, loadEnv, ConfigEnv } from 'vite'
+import fs from 'fs'
 import path from 'path'
 import react from '@vitejs/plugin-react-swc'
 import legacy from '@vitejs/plugin-legacy'
@@ -56,11 +57,15 @@ export default ({ mode }: ConfigEnv) => {
       }
     },
     server: {
-      host: 'localhost',
-      port: 3000,
-      https: false,
       cors: true,
-      hmr: true
+      port: 3000,
+      host: 'localhost',
+      hmr: true,
+      https: {
+        // SSL certificate config
+        key: fs.readFileSync('keys/ecommerce-key.pem'),
+        cert: fs.readFileSync('keys/ecommerce-cert.pem')
+      }
     }
   })
 }

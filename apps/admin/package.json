@@ -10,6 +10,8 @@
     "dev": "vite",
     "build": "vite build",
     "build:prod": "tsc && vite build",
+    "mkcert:prepare": "mkcert -install",
+    "mkcert:genrate": "mkcert localhost 127.0.0.1 ::1",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "preview": "vite preview"
   },
