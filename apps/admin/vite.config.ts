@@ -14,9 +14,9 @@ export default ({ mode }: ConfigEnv) => {
 
   return defineConfig({
     envPrefix: 'REACT_',
-    // optimizeDeps: {
-    //   exclude: ['@ecommerce/ui']
-    // },
+    optimizeDeps: {
+      exclude: ['@ecommerce/ui']
+    },
     build: {
       reportCompressedSize: !isProd,
       sourcemap: !isProd
