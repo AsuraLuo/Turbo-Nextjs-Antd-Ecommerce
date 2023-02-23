@@ -17,7 +17,7 @@ const App = () => {
         <BrowserRouter>
           <LocaleProvider>
             <ThemeProvider theme={ThemeConf}>
-              <ConfigProvider theme={{}} prefixCls="ecommerce">
+              <ConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
                 <CssBaseline />
                 <AppShell />
               </ConfigProvider>
