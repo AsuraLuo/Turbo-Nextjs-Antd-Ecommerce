@@ -1,4 +1,6 @@
 import { StorybookViteConfig } from '@storybook/builder-vite'
+import { dirname } from 'path'
+import { InlineConfig } from 'vite'
 
 const config: StorybookViteConfig = {
   framework: '@storybook/react',
@@ -11,7 +13,8 @@ const config: StorybookViteConfig = {
   features: {
     storyStoreV7: true
   },
-  async viteFinal(config) {
+  async viteFinal(config: InlineConfig) {
+    config.root = dirname(require.resolve('@storybook/builder-vite'))
     return config
   }
 }
