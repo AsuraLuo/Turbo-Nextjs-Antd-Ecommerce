@@ -1,10 +1,10 @@
-import { Footer } from '@ecommerce/ui'
+import { Layout } from '@ecommerce/ui'
 
 const FooterFC = () => {
   return (
-    <Footer>
+    <Layout.Footer>
       <p>Copyright © 2022 olightstore.com all right reserved.</p>
-    </Footer>
+    </Layout.Footer>
   )
 }
 

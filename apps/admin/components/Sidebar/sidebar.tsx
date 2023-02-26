@@ -1,4 +1,4 @@
-import { Menu, Sider } from '@ecommerce/ui'
+import { Menu, Layout } from '@ecommerce/ui'
 
 import { useSideBar } from '@hooks/SideBar'
 
@@ -17,7 +17,7 @@ const SideBar = () => {
   } = useSideBar()
 
   return (
-    <Sider
+    <Layout.Sider
       width={230}
       collapsible
       collapsed={collapsed}
@@ -36,7 +36,7 @@ const SideBar = () => {
           onOpenChange={handleToggleItem}
         />
       </StyledSidebar>
-    </Sider>
+    </Layout.Sider>
   )
 }
 

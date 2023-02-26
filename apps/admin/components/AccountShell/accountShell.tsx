@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 
-import { Content, Layout } from '@ecommerce/ui'
+import { Layout } from '@ecommerce/ui'
 import { useAccountShell } from '@hooks/AccountShell'
 
 import AccountProvider from '@components/AccountProvider'
@@ -19,9 +19,9 @@ const AccountShell: FC<any> = ({ children }) => {
           <SideBar />
           <Layout>
             <Header />
-            <Content>
+            <Layout.Content>
               {menus.length > 0 && <StyledMain>{children}</StyledMain>}
-            </Content>
+            </Layout.Content>
             <Footer />
           </Layout>
         </Layout>
