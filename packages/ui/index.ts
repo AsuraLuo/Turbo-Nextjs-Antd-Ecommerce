@@ -9,8 +9,10 @@ import Breadcrumb from './Breadcrumb'
 import Button from './Button'
 import Carousel from './Carousel'
 import Checkbox from './Checkbox'
+import Collapse from './Collapse'
 import ConfigProvider from './ConfigProvider'
 import DatePicker from './DatePicker'
+import Descriptions from './Descriptions'
 import Divider from './Divider'
 import Drawer from './Drawer'
 import Dropdown from './Dropdown'
@@ -25,10 +27,13 @@ import Menu from './Menu'
 import Modal from './Modal'
 import Pagination from './Pagination'
 import Radio from './Radio'
+import Rate from './Rate'
 import Select from './Select'
+import Slider from './Slider'
 import Space from './Space'
 import Spin from './Spin'
 import Steps from './Steps'
+import Switch from './Switch'
 import Table from './Table'
 import Tabs from './Tabs'
 import Tag from './Tag'
@@ -48,8 +53,10 @@ export {
   Button,
   Carousel,
   Checkbox,
+  Collapse,
   ConfigProvider,
   DatePicker,
+  Descriptions,
   Divider,
   Drawer,
   Dropdown,
@@ -64,10 +71,13 @@ export {
   Modal,
   Pagination,
   Radio,
+  Rate,
   Select,
+  Slider,
   Space,
   Spin,
   Steps,
+  Switch,
   Table,
   Tabs,
   Tag,
