@@ -1,7 +1,21 @@
-import Content from './content'
-import Footer from './footer'
-import Header from './header'
-import Layout from './layout'
-import Sider from './sider'
+import { Layout as AntdLayout } from 'antd'
 
-export { Content, Footer, Header, Layout, Sider }
+import InternalLayout from './layout'
+
+const { Header, Footer, Content, Sider } = AntdLayout
+
+type InternalLayoutType = typeof InternalLayout
+type CompoundedComponent = InternalLayoutType & {
+  Header: typeof Header
+  Footer: typeof Footer
+  Content: typeof Content
+  Sider: typeof Sider
+}
+
+const Layout = InternalLayout as CompoundedComponent
+Layout.Header = Header
+Layout.Footer = Footer
+Layout.Content = Content
+Layout.Sider = Sider
+
+export default Layout
