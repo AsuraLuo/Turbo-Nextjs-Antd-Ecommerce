@@ -10,11 +10,13 @@ import Button from './Button'
 import Carousel from './Carousel'
 import Checkbox from './Checkbox'
 import ConfigProvider from './ConfigProvider'
+import DatePicker from './DatePicker'
 import Divider from './Divider'
 import Drawer from './Drawer'
 import Dropdown from './Dropdown'
 import FloatButton from './FloatButton'
 import Form from './Form'
+import { Col, Row, useBreakpoint } from './Grid'
 import I18n from './I18n'
 import Icon from './Icon'
 import Input from './Input'
@@ -26,6 +28,7 @@ import Radio from './Radio'
 import Select from './Select'
 import Space from './Space'
 import Spin from './Spin'
+import Steps from './Steps'
 import Table from './Table'
 import Tabs from './Tabs'
 import Tag from './Tag'
@@ -46,11 +49,14 @@ export {
   Carousel,
   Checkbox,
   ConfigProvider,
+  DatePicker,
   Divider,
   Drawer,
   Dropdown,
   FloatButton,
   Form,
+  Col,
+  Row,
   I18n,
   Icon,
   Input,
@@ -61,6 +67,7 @@ export {
   Select,
   Space,
   Spin,
+  Steps,
   Table,
   Tabs,
   Tag,
@@ -72,6 +79,7 @@ export {
   Layout,
   Sider,
   ColumnsType,
+  useBreakpoint,
   BaseImagesUpload,
   CssBaseline,
   CurrentLocale,
