@@ -1,10 +1,14 @@
 import { notification } from 'antd'
+import { ArgsProps } from 'antd/es/notification/interface'
 
-notification.config({
-  bottom: 50,
-  duration: 3,
-  prefixCls: 'ecommerce',
-  placement: 'bottomRight'
-})
+const internalNotification = (options: ArgsProps) => {
+  return notification.config({
+    bottom: 50,
+    duration: 3,
+    prefixCls: 'ecommerce',
+    placement: 'bottomRight',
+    ...options
+  })
+}
 
-export default notification
+export default internalNotification
