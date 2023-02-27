@@ -61,7 +61,7 @@ importers:
 
   apps/admin:
     specifiers:
-      '@ant-design/cssinjs': ^1.5.6
+      '@ant-design/cssinjs': ^1.6.0
       '@ecommerce/hooks': workspace:*
       '@ecommerce/tsconfig': workspace:*
       '@ecommerce/ui': workspace:*
@@ -87,7 +87,7 @@ importers:
       vite: ^4.1.2
       vite-plugin-banner: ^0.7.0
     dependencies:
-      '@ant-design/cssinjs': 1.5.6_biqbaboplfbrettd7655fr4n2y
+      '@ant-design/cssinjs': 1.6.0_biqbaboplfbrettd7655fr4n2y
       '@ecommerce/hooks': link:../../packages/hooks
       '@ecommerce/tsconfig': link:../../packages/tsconfig
       '@ecommerce/ui': link:../../packages/ui
@@ -116,7 +116,7 @@ importers:
 
   apps/storefront:
     specifiers:
-      '@ant-design/cssinjs': ^1.5.6
+      '@ant-design/cssinjs': ^1.6.0
       '@ecommerce/hooks': workspace:*
       '@ecommerce/tsconfig': workspace:*
       '@ecommerce/ui': workspace:*
@@ -142,7 +142,7 @@ importers:
       ts-node: ^10.9.1
       typescript: ^4.5.3
     dependencies:
-      '@ant-design/cssinjs': 1.5.6_biqbaboplfbrettd7655fr4n2y
+      '@ant-design/cssinjs': 1.6.0_biqbaboplfbrettd7655fr4n2y
       '@ecommerce/hooks': link:../../packages/hooks
       '@ecommerce/tsconfig': link:../../packages/tsconfig
       '@ecommerce/ui': link:../../packages/ui
@@ -298,23 +298,6 @@ packages:
       '@ctrl/tinycolor': 3.5.1
     dev: false
 
-  /@ant-design/cssinjs/1.5.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-1S7LUPC9BMyQ/CUYgzfePJJwEfsbVHJe3Tpd9zhujTxRM/6LYpN9N4FTaPHVqpnPazm0S2vG0WBkh2T5Erwuug==}
-    peerDependencies:
-      react: '>=16.0.0'
-      react-dom: '>=16.0.0'
-    dependencies:
-      '@babel/runtime': 7.20.13
-      '@emotion/hash': 0.8.0
-      '@emotion/unitless': 0.7.5
-      classnames: 2.3.2
-      csstype: 3.1.1
-      rc-util: 5.27.2_biqbaboplfbrettd7655fr4n2y
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      stylis: 4.1.3
-    dev: false
-
   /@ant-design/cssinjs/1.5.6_react@18.2.0:
     resolution: {integrity: sha512-1S7LUPC9BMyQ/CUYgzfePJJwEfsbVHJe3Tpd9zhujTxRM/6LYpN9N4FTaPHVqpnPazm0S2vG0WBkh2T5Erwuug==}
     peerDependencies:
@@ -328,6 +311,23 @@ packages:
       csstype: 3.1.1
       rc-util: 5.27.2_react@18.2.0
       react: 18.2.0
+      stylis: 4.1.3
+    dev: false
+
+  /@ant-design/cssinjs/1.6.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-QSGz+Tk7P+oqywv+K5yNI6cX32iYBNrn5+OTKs7drrNj5fiXzo+7BOALnWSPHeq4ykcec9gb1JGLGMPeFnWk7w==}
+    peerDependencies:
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      '@babel/runtime': 7.20.13
+      '@emotion/hash': 0.8.0
+      '@emotion/unitless': 0.7.5
+      classnames: 2.3.2
+      csstype: 3.1.1
+      rc-util: 5.27.2_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
       stylis: 4.1.3
     dev: false
 
@@ -6716,7 +6716,7 @@ packages:
   /axios/0.21.4_debug@4.3.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.2_debug@4.3.4
     transitivePeerDependencies:
       - debug
     dev: false
@@ -9726,6 +9726,18 @@ packages:
         optional: true
     dev: false
 
+  /follow-redirects/1.15.2_debug@4.3.4:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.4
+    dev: false
+
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
@@ -10616,7 +10628,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.2_debug@4.3.4
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug

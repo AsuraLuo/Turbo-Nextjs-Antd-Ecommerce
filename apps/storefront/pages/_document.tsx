@@ -1,5 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs'
+import {
+  createCache,
+  extractStyle,
+  StyleProvider,
+  legacyLogicalPropertiesTransformer,
+  px2remTransformer
+} from '@ant-design/cssinjs'
 import { Helmet } from 'react-helmet'
 
 interface HeadlessProps {
@@ -63,7 +69,11 @@ HeadlessDocument.getInitialProps = async (ctx) => {
     originalRenderPage({
       enhanceApp: (App) => (props) =>
         (
-          <StyleProvider cache={cache}>
+          <StyleProvider
+            cache={cache}
+            ssrInline
+            transformers={[legacyLogicalPropertiesTransformer, px2remTransformer()]}
+          >
             <App {...props} />
           </StyleProvider>
         )

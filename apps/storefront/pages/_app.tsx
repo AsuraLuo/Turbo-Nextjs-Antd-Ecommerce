@@ -3,7 +3,8 @@ import { AppProps } from 'next/app'
 import { Provider as ReduxProvider } from 'react-redux'
 import {
   StyleProvider,
-  legacyLogicalPropertiesTransformer
+  legacyLogicalPropertiesTransformer,
+  px2remTransformer
 } from '@ant-design/cssinjs'
 import { isEmpty } from 'lodash'
 import 'antd/dist/reset.css'
@@ -58,7 +59,7 @@ const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
         <LocaleContextProvider>
           <StyleProvider
             ssrInline
-            transformers={[legacyLogicalPropertiesTransformer]}
+            transformers={[legacyLogicalPropertiesTransformer, px2remTransformer()]}
           >
             <ConfigProvider
               prefixCls={ThemeConf.namespace}
@@ -90,9 +91,7 @@ App.getInitialProps = async ({ Component, ctx }: InitialPage) => {
 
   if (isEmpty(state.i18n.languages)) await fetchApp(ctx)
 
-  const pageProps = Component.getInitialProps
-    ? await Component.getInitialProps({ ...ctx })
-    : {}
+  const pageProps = Component.getInitialProps ? await Component.getInitialProps({ ...ctx }) : {}
 
   return { pageProps }
 }
