@@ -2,10 +2,6 @@ import { FC } from 'react'
 import { css, Global } from '@emotion/react'
 
 const GlobalStyles = css`
-  html {
-    font-size: 20px;
-  }
-
   ul,
   ol {
     padding: 0;
