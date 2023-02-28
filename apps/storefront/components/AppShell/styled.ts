@@ -6,7 +6,7 @@ export const StyledMain = styled.main`
 
   .${({ theme }) => theme.namespace} {
     &-btn {
-      font-size: 0.8rem;
+      font-size: 16px;
     }
   }
 
