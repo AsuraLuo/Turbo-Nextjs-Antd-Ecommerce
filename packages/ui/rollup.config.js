@@ -1,4 +1,5 @@
 import { defineConfig } from 'rollup'
+import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 
 /**
@@ -6,10 +7,16 @@ import typescript from '@rollup/plugin-typescript'
  */
 export default defineConfig({
   input: 'index.ts',
-  output: {
-    file: 'dist/index.js',
-    format: 'cjs'
-  },
-  plugins: [typescript()],
+  output: [
+    {
+      file: 'dist/index.js',
+      format: 'cjs'
+    },
+    {
+      file: 'dist/index.mjs',
+      format: 'esm'
+    }
+  ],
+  plugins: [resolve(), typescript()],
   external: ['react', 'react-intl', 'react-redux']
 })
