@@ -3,9 +3,10 @@
   "display": "React Library",
   "extends": "./base.json",
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
-    "lib": ["ES2015"],
-    "module": "ESNext",
+    "jsxImportSource": "@emotion/react",
+    "module": "esnext",
     "target": "es6"
   }
 }

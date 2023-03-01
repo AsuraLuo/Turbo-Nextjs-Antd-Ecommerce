@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "license": "MIT",
   "scripts": {
-    "build": "rollup --config --bundleConfigAsCjs",
+    "build": "rollup --config",
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "dependencies": {
@@ -16,11 +17,13 @@
     "react-images-uploading": "^3.1.7"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
     "eslint": "^7.32.0",
     "eslint-config-ecommerce": "workspace:*",
     "rollup": "^3.17.3",
+    "tslib": "^2.5.0",
     "typescript": "^4.5.2"
   }
 }

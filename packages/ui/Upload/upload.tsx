@@ -1,10 +1,5 @@
 import { FC, Fragment, useState } from 'react'
-import {
-  Upload as AntdUpload,
-  FormItemProps,
-  UploadProps,
-  UploadFile
-} from 'antd'
+import { Upload as AntdUpload, FormItemProps, UploadProps, UploadFile } from 'antd'
 import { RcFile } from 'antd/es/upload'
 
 import Form from '../Form'
@@ -54,9 +49,7 @@ const Upload: FC<BaseUploadProps> = ({
 
     setPreviewImage(file.url || (file.preview as string))
     setPreviewOpen(true)
-    setPreviewTitle(
-      file.name || file.url!.substring(file.url!.lastIndexOf('/') + 1)
-    )
+    setPreviewTitle(file.name || file.url!.substring(file.url!.lastIndexOf('/') + 1))
   }
 
   return (
@@ -72,12 +65,7 @@ const Upload: FC<BaseUploadProps> = ({
           {children}
         </AntdUpload>
       </Form.Item>
-      <Modal
-        footer={null}
-        open={previewOpen}
-        title={previewTitle}
-        onCancel={handleCancel}
-      >
+      <Modal footer={null} open={previewOpen} title={previewTitle} onCancel={handleCancel}>
         <StyledUploadImage>
           <picture>
             <img src={previewImage} alt={previewTitle} />
