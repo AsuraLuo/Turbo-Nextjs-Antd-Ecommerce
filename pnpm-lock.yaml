@@ -15,7 +15,7 @@ importers:
       clsx: ^1.2.1
       cz-customizable: ^7.0.0
       eslint: ^8.31.0
-      eslint-config-ecommerce: workspace:*
+      eslint-config-ecloud: workspace:*
       husky: ^8.0.2
       lint-staged: ^13.1.0
       lodash: ^4.17.21
@@ -50,7 +50,7 @@ importers:
       '@types/redux-logger': 3.0.9
       cz-customizable: 7.0.0
       eslint: 8.35.0
-      eslint-config-ecommerce: link:packages/eslint-config-ecommerce
+      eslint-config-ecloud: link:packages/eslint-config-ecloud
       husky: 8.0.3
       lint-staged: 13.1.2
       prettier: 2.8.4
@@ -62,9 +62,9 @@ importers:
   apps/admin:
     specifiers:
       '@ant-design/cssinjs': ^1.6.0
-      '@ecommerce/hooks': workspace:*
-      '@ecommerce/tsconfig': workspace:*
-      '@ecommerce/ui': workspace:*
+      '@ecloud/hooks': workspace:*
+      '@ecloud/tsconfig': workspace:*
+      '@ecloud/ui': workspace:*
       '@types/crypto-js': ^4.1.1
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
@@ -74,7 +74,7 @@ importers:
       '@vitejs/plugin-react-swc': ^3.2.0
       crypto-js: ^4.1.1
       eslint: ^7.32.0
-      eslint-config-ecommerce: workspace:*
+      eslint-config-ecloud: workspace:*
       http2-proxy: ^5.0.53
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -87,10 +87,10 @@ importers:
       vite: ^4.1.2
       vite-plugin-banner: ^0.7.0
     dependencies:
-      '@ant-design/cssinjs': 1.6.0_biqbaboplfbrettd7655fr4n2y
-      '@ecommerce/hooks': link:../../packages/hooks
-      '@ecommerce/tsconfig': link:../../packages/tsconfig
-      '@ecommerce/ui': link:../../packages/ui
+      '@ant-design/cssinjs': 1.6.1_biqbaboplfbrettd7655fr4n2y
+      '@ecloud/hooks': link:../../packages/hooks
+      '@ecloud/tsconfig': link:../../packages/tsconfig
+      '@ecloud/ui': link:../../packages/ui
       '@vitejs/plugin-legacy': 4.0.1_terser@5.16.5+vite@4.1.4
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
       crypto-js: 4.1.1
@@ -110,16 +110,16 @@ importers:
       '@types/react-router-dom': 5.3.3
       '@types/uuid': 9.0.1
       eslint: 7.32.0
-      eslint-config-ecommerce: link:../../packages/eslint-config-ecommerce
+      eslint-config-ecloud: link:../../packages/eslint-config-ecloud
       rollup-plugin-visualizer: 5.9.0
       typescript: 4.9.5
 
   apps/storefront:
     specifiers:
       '@ant-design/cssinjs': ^1.6.0
-      '@ecommerce/hooks': workspace:*
-      '@ecommerce/tsconfig': workspace:*
-      '@ecommerce/ui': workspace:*
+      '@ecloud/hooks': workspace:*
+      '@ecloud/tsconfig': workspace:*
+      '@ecloud/ui': workspace:*
       '@next/bundle-analyzer': ^13.1.1
       '@types/express': ^4.17.17
       '@types/node': ^18.11.18
@@ -128,7 +128,7 @@ importers:
       '@types/react-dom': ^18.0.7
       cross-env: ^7.0.3
       eslint: ^7.32.0
-      eslint-config-ecommerce: workspace:*
+      eslint-config-ecloud: workspace:*
       express: ^4.18.2
       http-proxy-middleware: ^2.0.6
       next: ^13.2.1
@@ -141,10 +141,10 @@ importers:
       ts-node: ^10.9.1
       typescript: ^4.5.3
     dependencies:
-      '@ant-design/cssinjs': 1.6.0_biqbaboplfbrettd7655fr4n2y
-      '@ecommerce/hooks': link:../../packages/hooks
-      '@ecommerce/tsconfig': link:../../packages/tsconfig
-      '@ecommerce/ui': link:../../packages/ui
+      '@ant-design/cssinjs': 1.6.1_biqbaboplfbrettd7655fr4n2y
+      '@ecloud/hooks': link:../../packages/hooks
+      '@ecloud/tsconfig': link:../../packages/tsconfig
+      '@ecloud/ui': link:../../packages/ui
       cross-env: 7.0.3
       express: 4.18.2
       http-proxy-middleware: 2.0.6_@types+express@4.17.17
@@ -163,15 +163,15 @@ importers:
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       eslint: 7.32.0
-      eslint-config-ecommerce: link:../../packages/eslint-config-ecommerce
+      eslint-config-ecloud: link:../../packages/eslint-config-ecloud
       nodemon: 2.0.20
       typescript: 4.9.5
 
   docs/storybook:
     specifiers:
-      '@ecommerce/hooks': workspace:*
-      '@ecommerce/tsconfig': workspace:*
-      '@ecommerce/ui': workspace:*
+      '@ecloud/hooks': workspace:*
+      '@ecloud/tsconfig': workspace:*
+      '@ecloud/ui': workspace:*
       '@storybook/addon-a11y': ^6.5.9
       '@storybook/addon-docs': ^6.5.9
       '@storybook/addon-essentials': ^6.5.9
@@ -181,16 +181,16 @@ importers:
       '@types/react-dom': ^18.0.10
       '@vitejs/plugin-react-swc': ^3.2.0
       eslint: ^7.32.0
-      eslint-config-ecommerce: workspace:*
+      eslint-config-ecloud: workspace:*
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^4.5.3
       vite: ^4.1.2
       vite-plugin-banner: ^0.7.0
     dependencies:
-      '@ecommerce/hooks': link:../../packages/hooks
-      '@ecommerce/tsconfig': link:../../packages/tsconfig
-      '@ecommerce/ui': link:../../packages/ui
+      '@ecloud/hooks': link:../../packages/hooks
+      '@ecloud/tsconfig': link:../../packages/tsconfig
+      '@ecloud/ui': link:../../packages/ui
       '@storybook/addon-a11y': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-docs': 6.5.16_fmrxgqijb2xh4fyeijyqyd2a4e
       '@storybook/addon-essentials': 6.5.16_fmrxgqijb2xh4fyeijyqyd2a4e
@@ -205,10 +205,10 @@ importers:
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       eslint: 7.32.0
-      eslint-config-ecommerce: link:../../packages/eslint-config-ecommerce
+      eslint-config-ecloud: link:../../packages/eslint-config-ecloud
       typescript: 4.9.5
 
-  packages/eslint-config-ecommerce:
+  packages/eslint-config-ecloud:
     specifiers:
       '@typescript-eslint/eslint-plugin': ^5.30.4
       '@typescript-eslint/parser': ^5.30.4
@@ -258,21 +258,21 @@ importers:
 
   packages/ui:
     specifiers:
-      '@ecommerce/tsconfig': workspace:*
+      '@ecloud/tsconfig': workspace:*
       '@rollup/plugin-node-resolve': ^15.0.1
       '@rollup/plugin-typescript': ^11.0.0
       '@tinymce/tinymce-react': ^4.3.0
       '@types/react': ^18.0.22
       antd: ^5.2.3
       eslint: ^7.32.0
-      eslint-config-ecommerce: workspace:*
+      eslint-config-ecloud: workspace:*
       react: ^18.2.0
       react-images-uploading: ^3.1.7
       rollup: ^3.17.3
       tslib: ^2.5.0
       typescript: ^4.5.2
     dependencies:
-      '@ecommerce/tsconfig': link:../tsconfig
+      '@ecloud/tsconfig': link:../tsconfig
       '@tinymce/tinymce-react': 4.3.0_biqbaboplfbrettd7655fr4n2y
       antd: 5.2.3_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
@@ -282,7 +282,7 @@ importers:
       '@rollup/plugin-typescript': 11.0.0_per5yc2zdun6mbf4vuvuomnsj4
       '@types/react': 18.0.28
       eslint: 7.32.0
-      eslint-config-ecommerce: link:../eslint-config-ecommerce
+      eslint-config-ecloud: link:../eslint-config-ecloud
       rollup: 3.17.3
       tslib: 2.5.0
       typescript: 4.9.5
@@ -302,8 +302,8 @@ packages:
       '@ctrl/tinycolor': 3.6.0
     dev: false
 
-  /@ant-design/cssinjs/1.6.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-QSGz+Tk7P+oqywv+K5yNI6cX32iYBNrn5+OTKs7drrNj5fiXzo+7BOALnWSPHeq4ykcec9gb1JGLGMPeFnWk7w==}
+  /@ant-design/cssinjs/1.6.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-35+1e5h1HzPt7d7NjXTG5yg/OQY85YcOIpb3peB3/eKri7+0mW9c+WZB3In7yMscBzvxQREOR5pxNDbqMcI42w==}
     peerDependencies:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
@@ -5518,7 +5518,7 @@ packages:
       react-dom: '>=16.9.0'
     dependencies:
       '@ant-design/colors': 7.0.0
-      '@ant-design/cssinjs': 1.6.0_biqbaboplfbrettd7655fr4n2y
+      '@ant-design/cssinjs': 1.6.1_biqbaboplfbrettd7655fr4n2y
       '@ant-design/icons': 5.0.1_biqbaboplfbrettd7655fr4n2y
       '@ant-design/react-slick': 1.0.0_react@18.2.0
       '@babel/runtime': 7.21.0

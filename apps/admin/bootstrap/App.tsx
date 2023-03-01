@@ -8,7 +8,7 @@ import {
   px2remTransformer
 } from '@ant-design/cssinjs'
 
-import { ConfigProvider, CssBaseline } from '@ecommerce/ui'
+import { ConfigProvider, CssBaseline } from '@ecloud/ui'
 import { ThemeConf } from '@config/theme'
 import { store } from '@store/index'
 

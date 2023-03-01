@@ -3,7 +3,7 @@ import { IntlProvider, ReactIntlError } from 'react-intl'
 import { useDispatch } from 'react-redux'
 import { isEmpty } from 'lodash'
 
-import { useCookie } from '@ecommerce/hooks'
+import { useCookie } from '@ecloud/hooks'
 import { actions as i18nActions } from '@store/i18n'
 
 import { website } from '@config/website'
@@ -35,18 +35,15 @@ const LocaleProvider: FC<any> = ({ children, ...props }) => {
         const json = key.replace(/-/, '_')
 
         // Fetch i18n locale
-        const result = await fetch(
-          `${window.location.origin}/i18n/${json}.json`,
-          {
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json'
-            },
-            credentials: 'same-origin',
-            method: 'GET',
-            mode: 'cors'
-          }
-        )
+        const result = await fetch(`${window.location.origin}/i18n/${json}.json`, {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
+          credentials: 'same-origin',
+          method: 'GET',
+          mode: 'cors'
+        })
 
         const data = await result.json()
         setLocale(key)

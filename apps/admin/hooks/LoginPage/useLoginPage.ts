@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { useCookie } from '@ecommerce/hooks'
+import { useCookie } from '@ecloud/hooks'
 
 export const useLoginPage = () => {
   const navigate = useNavigate()

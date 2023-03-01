@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Navigate } from 'react-router-dom'
 
-import { useCookie } from '@ecommerce/hooks'
+import { useCookie } from '@ecloud/hooks'
 
 const AuthRoute: FC<any> = ({ children }) => {
   const { cookie } = useCookie()

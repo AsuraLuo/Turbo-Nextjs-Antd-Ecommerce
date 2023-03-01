@@ -1,5 +1,5 @@
 {
-  "extends": "@ecommerce/tsconfig/vite.json",
+  "extends": "@ecloud/tsconfig/vite.json",
   "compilerOptions": {
     "baseUrl": ".",
     "target": "esnext",

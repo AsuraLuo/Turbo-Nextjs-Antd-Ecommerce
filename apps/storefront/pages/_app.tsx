@@ -10,7 +10,7 @@ import { isEmpty } from 'lodash'
 import 'antd/dist/reset.css'
 
 import { ThemeConf } from '@config/theme'
-import { ConfigProvider } from '@ecommerce/ui'
+import { ConfigProvider } from '@ecloud/ui'
 import { withRedux, LocaleContextProvider } from '@provider/index'
 import { fetchApp } from '@hooks/App'
 

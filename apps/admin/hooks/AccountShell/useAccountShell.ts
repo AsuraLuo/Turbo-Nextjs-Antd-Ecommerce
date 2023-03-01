@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useFetch } from 'use-http'
 
-import { useCookie } from '@ecommerce/hooks'
+import { useCookie } from '@ecloud/hooks'
 import { asyncActions as userAsyncActions } from '@store/user'
 
 export const useAccountShell = () => {

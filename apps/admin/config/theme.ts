@@ -18,5 +18,5 @@ export const ThemeConf: Theme = {
     black: '#000000',
     primary: '#556cd6'
   },
-  namespace: 'ecommerce'
+  namespace: 'ecloud'
 }

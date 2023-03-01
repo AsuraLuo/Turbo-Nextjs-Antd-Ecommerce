@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 
-import { Input } from '@ecommerce/ui'
+import { Input } from '@ecloud/ui'
 
 import { useVerificationCode } from '@hooks/LoginPage'
 

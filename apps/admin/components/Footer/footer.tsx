@@ -1,4 +1,4 @@
-import { Layout } from '@ecommerce/ui'
+import { Layout } from '@ecloud/ui'
 
 const FooterFC = () => {
   return (

@@ -16,7 +16,7 @@ export default ({ mode }: ConfigEnv) => {
   return defineConfig({
     envPrefix: 'REACT_',
     optimizeDeps: {
-      exclude: ['@ecommerce/ui']
+      exclude: ['@ecloud/ui']
     },
     build: {
       reportCompressedSize: !isProd,
@@ -63,8 +63,8 @@ export default ({ mode }: ConfigEnv) => {
       hmr: true,
       https: {
         // SSL certificate config
-        key: fs.readFileSync('keys/ecommerce-key.pem'),
-        cert: fs.readFileSync('keys/ecommerce-cert.pem')
+        key: fs.readFileSync('keys/ecloud-key.pem'),
+        cert: fs.readFileSync('keys/ecloud-cert.pem')
       }
     }
   })

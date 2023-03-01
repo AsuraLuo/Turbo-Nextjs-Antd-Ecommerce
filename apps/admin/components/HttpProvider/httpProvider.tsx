@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { useSelector } from 'react-redux'
 import { Provider, FetchProviderProps } from 'use-http'
 
-import { useCookie } from '@ecommerce/hooks'
+import { useCookie } from '@ecloud/hooks'
 import { website } from '@config/website'
 
 const HttpProvider: FC<FetchProviderProps> = ({ children }) => {
@@ -35,9 +35,7 @@ const HttpProvider: FC<FetchProviderProps> = ({ children }) => {
           ...options,
           headers: {
             Accept: 'application/json',
-            Authorization: token
-              ? `Bearer ${token}`
-              : 'Basic b2xpZ2h0X2FkbWluOm9saWdodF9hZG1pbg==',
+            Authorization: token ? `Bearer ${token}` : 'Basic b2xpZ2h0X2FkbWluOm9saWdodF9hZG1pbg==',
             'Accept-Language': locale,
             'Content-Type': 'application/json',
             'X-Requested-With': 'XMLHttpRequest',

@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { useCookie } from '@ecommerce/hooks'
-import { CurrentLocale } from '@ecommerce/ui'
+import { useCookie } from '@ecloud/hooks'
+import { CurrentLocale } from '@ecloud/ui'
 import { actions as userActions } from '@store/user'
 
 import AccountShell from '@components/AccountShell'

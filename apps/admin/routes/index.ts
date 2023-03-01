@@ -1,14 +1,8 @@
-import {
-  lazy,
-  LazyExoticComponent,
-  useCallback,
-  useEffect,
-  useState
-} from 'react'
+import { lazy, LazyExoticComponent, useCallback, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { isEmpty } from 'lodash'
 
-import { useCookie } from '@ecommerce/hooks'
+import { useCookie } from '@ecloud/hooks'
 
 interface Router {
   path: string

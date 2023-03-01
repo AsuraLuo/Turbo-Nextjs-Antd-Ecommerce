@@ -1,4 +1,4 @@
-import { Menu, Layout } from '@ecommerce/ui'
+import { Menu, Layout } from '@ecloud/ui'
 
 import { useSideBar } from '@hooks/SideBar'
 

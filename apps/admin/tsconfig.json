@@ -1,5 +1,5 @@
 {
-  "extends": "@ecommerce/tsconfig/vite.json",
+  "extends": "@ecloud/tsconfig/vite.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
@@ -9,7 +9,7 @@
       "@pages/*": ["pages/*"],
       "@plugin/*": ["plugin/*"],
       "@provider/*": ["provider/*"],
-      "@ecommerce/*": ["packages/*"],
+      "@ecloud/*": ["packages/*"],
       "@store/*": ["store/*"]
     }
   },

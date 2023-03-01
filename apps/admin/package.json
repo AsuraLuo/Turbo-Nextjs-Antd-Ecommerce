@@ -1,5 +1,5 @@
 {
-  "name": "@ecommerce/admin",
+  "name": "@ecloud/admin",
   "author": "caesar",
   "license": "",
   "copyright": "Copyright © 2023 all right reserved.",
@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.6.0",
-    "@ecommerce/hooks": "workspace:*",
-    "@ecommerce/tsconfig": "workspace:*",
-    "@ecommerce/ui": "workspace:*",
+    "@ecloud/hooks": "workspace:*",
+    "@ecloud/tsconfig": "workspace:*",
+    "@ecloud/ui": "workspace:*",
     "@vitejs/plugin-legacy": "^4.0.1",
     "@vitejs/plugin-react-swc": "^3.2.0",
     "crypto-js": "^4.1.1",
@@ -40,7 +40,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/uuid": "^9.0.0",
     "eslint": "^7.32.0",
-    "eslint-config-ecommerce": "workspace:*",
+    "eslint-config-ecloud": "workspace:*",
     "rollup-plugin-visualizer": "^5.9.0",
     "typescript": "^4.5.3"
   }

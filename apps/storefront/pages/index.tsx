@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Button, Form, I18n, Input, Upload } from '@ecommerce/ui'
+import { Button, Form, I18n, Input, Upload } from '@ecloud/ui'
 
 const Home = () => {
   const handleFormSubmit = (values: any) => {

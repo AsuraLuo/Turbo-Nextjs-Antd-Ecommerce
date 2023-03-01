@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 
-import { ConfigProvider } from '@ecommerce/ui'
+import { ConfigProvider } from '@ecloud/ui'
 
 import { ThemeConf } from '../config/theme'
 

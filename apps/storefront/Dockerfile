@@ -34,7 +34,7 @@ COPY turbo.json turbo.json
 # ARG TURBO_TOKEN
 # ENV TURBO_TOKEN=$TURBO_TOKEN
 
-RUN yarn turbo run build --filter=@ecommerce/storefront
+RUN yarn turbo run build --filter=@ecloud/storefront
 
 FROM node:alpine AS runner
 WORKDIR /app
@@ -52,4 +52,4 @@ COPY --from=installer /app/apps/storefront/package.json .
 COPY --from=installer --chown=nextjs:nodejs /app/apps/storefront/.next/standalone ./
 COPY --from=installer --chown=nextjs:nodejs /app/apps/storefront/.next/static ./apps/storefront/.next/static
 
-ENTRYPOINT pnpm deploy:ecommerce && sleep infinity
+ENTRYPOINT pnpm deploy:ecloud && sleep infinity

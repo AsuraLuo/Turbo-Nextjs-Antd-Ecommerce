@@ -1,5 +1,5 @@
 {
-  "name": "@ecommerce/storybook",
+  "name": "@ecloud/storybook",
   "author": "caesar",
   "license": "",
   "copyright": "Copyright © 2023 all right reserved.",
@@ -10,9 +10,9 @@
     "build": "NODE_PATH=$(pwd)/node_modules build-storybook"
   },
   "dependencies": {
-    "@ecommerce/hooks": "workspace:*",
-    "@ecommerce/tsconfig": "workspace:*",
-    "@ecommerce/ui": "workspace:*",
+    "@ecloud/hooks": "workspace:*",
+    "@ecloud/tsconfig": "workspace:*",
+    "@ecloud/ui": "workspace:*",
     "@storybook/addon-a11y": "^6.5.9",
     "@storybook/addon-docs": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
@@ -28,7 +28,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "eslint": "^7.32.0",
-    "eslint-config-ecommerce": "workspace:*",
+    "eslint-config-ecloud": "workspace:*",
     "typescript": "^4.5.3"
   }
 }

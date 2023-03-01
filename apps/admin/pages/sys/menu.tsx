@@ -1,4 +1,4 @@
-import { ColumnsType, Space, Table, Tag } from '@ecommerce/ui'
+import { ColumnsType, Space, Table, Tag } from '@ecloud/ui'
 
 import { StyledTable } from './styled'
 

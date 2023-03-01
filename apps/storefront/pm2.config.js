@@ -12,8 +12,8 @@ module.exports = {
       exp_backoff_restart_delay: 100,
       ignore_watch: ['node_modules'],
       log_date_format: 'YYYY-MM-DD HH:mm Z',
-      // pid_file: './pm2/pid/ecommerce_storefront_pm.pid',
-      error_file: './pm2/logs/ecommerce_storefront_err.log'
+      // pid_file: './pm2/pid/ecloud_storefront_pm.pid',
+      error_file: './pm2/logs/ecloud_storefront_err.log'
     }
   ]
 }

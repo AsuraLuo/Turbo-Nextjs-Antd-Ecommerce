@@ -1,4 +1,4 @@
-import { Tabs } from '@ecommerce/ui'
+import { Tabs } from '@ecloud/ui'
 import { useLoginPage } from '@hooks/LoginPage'
 
 import LoginForm from './LoginForm'
@@ -12,11 +12,7 @@ const LoginPage = () => {
     { label: '企业微信登录', key: 'login-weichat', children: '内容 1' }
   ]
 
-  return (
-    <StyledLoginPage>
-      {isRender ? <Tabs items={items} /> : null}
-    </StyledLoginPage>
-  )
+  return <StyledLoginPage>{isRender ? <Tabs items={items} /> : null}</StyledLoginPage>
 }
 
 export default LoginPage
