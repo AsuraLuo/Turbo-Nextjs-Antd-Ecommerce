@@ -15,6 +15,7 @@ export const fetchApp = async (ctx: AppContext) => {
   const { dispatch } = reduxStore
   const cookies = parseCookies({ req })
   const locale: string = cookies?.locale_code ?? WebsiteConf.i18n.locale
+  // const locale: string = ctx?.req?.headers?.['x-ecloud-locale'] ?? WebsiteConf.i18n.locale
 
   try {
     const i18nJson = await import(`../../public/i18n/${locale}.json`)
