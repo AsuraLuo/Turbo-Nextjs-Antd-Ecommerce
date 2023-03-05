@@ -40,7 +40,7 @@ import Space from './Space'
 import Spin from './Spin'
 import Statistic from './Statistic'
 import Steps from './Steps'
-import Switch from './Switch'
+// import Switch from './Switch'
 import Table from './Table'
 import Tabs from './Tabs'
 import Tag from './Tag'
@@ -101,7 +101,7 @@ export {
   Spin,
   Statistic,
   Steps,
-  Switch,
+  // Switch,
   Table,
   Tabs,
   Tag,

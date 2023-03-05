@@ -10,9 +10,10 @@ coverage
 
 # next.js
 .next/
-dist
+dist/
 out/
-build
+build/
+storybook-static/
 
 # misc
 .DS_Store

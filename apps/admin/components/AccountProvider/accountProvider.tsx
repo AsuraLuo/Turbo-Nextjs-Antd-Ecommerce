@@ -1,16 +1,8 @@
-import {
-  FC,
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo
-} from 'react'
+import { FC, createContext, useCallback, useContext, useEffect, useMemo } from 'react'
 import { useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { useFetch } from 'use-http'
 import { isEmpty } from 'lodash'
-
 import { actions as appActions } from '@store/app'
 
 const AccountContext = createContext({})
@@ -75,11 +67,7 @@ const AccountProvider: FC<any> = ({ children }) => {
     fetchAuthMenu()
   }, [])
 
-  return (
-    <AccountContext.Provider value={contextValue}>
-      {children}
-    </AccountContext.Provider>
-  )
+  return <AccountContext.Provider value={contextValue}>{children}</AccountContext.Provider>
 }
 
 export default AccountProvider

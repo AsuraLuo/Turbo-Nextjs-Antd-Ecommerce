@@ -1,20 +1,21 @@
-import { StorybookViteConfig } from '@storybook/builder-vite'
-import { dirname } from 'path'
-import { InlineConfig } from 'vite'
+import type { StorybookConfig } from '@storybook/react-vite'
 
-const config: StorybookViteConfig = {
-  framework: '@storybook/react',
-  stories: ['../stories/**/*.stories.@(ts|tsx)'],
-  addons: ['@storybook/addon-a11y', '@storybook/addon-essentials'],
+const config: StorybookConfig = {
+  stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(ts|tsx)'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions'
+  ],
   core: {
     builder: '@storybook/builder-vite',
     disableTelemetry: true
   },
-  features: {
-    storyStoreV7: true
+  framework: {
+    name: '@storybook/react-vite',
+    options: {}
   },
-  async viteFinal(config: InlineConfig) {
-    config.root = dirname(require.resolve('@storybook/builder-vite'))
+  async viteFinal(config) {
     return config
   }
 }

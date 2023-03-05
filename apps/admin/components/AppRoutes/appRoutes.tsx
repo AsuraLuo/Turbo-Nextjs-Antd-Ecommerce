@@ -11,10 +11,7 @@ const rotuerViews = (routerItems: any[]) => {
         return children && children.length ? (
           <Route path={path} key={path} element={<Component />}>
             {rotuerViews(children)}
-            <Route
-              path={path}
-              element={<Navigate to={redirect || children[0].path} />}
-            />
+            <Route path={path} element={<Navigate to={redirect || children[0].path} />} />
           </Route>
         ) : (
           <Route key={path} path={path} element={<Component />} />
