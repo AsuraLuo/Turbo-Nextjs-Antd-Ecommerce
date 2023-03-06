@@ -5,13 +5,15 @@ export const slice: Slice = createSlice({
   initialState: {
     currency: null,
     loading: false,
-    storeConfig: null
+    storeConfig: null,
+    viewport: '',
+    bolt: false
   },
   reducers: {
     setAppConfig: (state: any, { payload }) => {
-      const { currency, storeConfig } = payload
-      state.currency = currency
-      state.storeConfig = storeConfig
+      const { bolt, viewport } = payload
+      state.bolt = bolt
+      state.viewport = viewport
     },
     setLoading: (state: any, { payload }) => {
       state.loading = payload

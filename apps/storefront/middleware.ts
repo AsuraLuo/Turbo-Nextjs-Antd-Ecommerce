@@ -1,11 +1,14 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, userAgent } from 'next/server'
 import type { NextRequest, NextMiddleware } from 'next/server'
 
 export const middleware: NextMiddleware = (request: NextRequest) => {
-  const locale: any = request.cookies.get('locale')
-  // Clone the request headers and set a new header `x-hello-from-middleware1`
+  const { isBot, device } = userAgent(request)
   const requestHeaders: Headers = new Headers(request.headers)
-  requestHeaders.set('x-ecloud-locale', locale?.value ?? '')
+  const viewport = device.type === 'mobile' ? 'mobile' : 'desktop'
+  const locale: any = request.cookies.get('locale')
+
+  requestHeaders.set('x-ecloud-viewport', viewport)
+  requestHeaders.set('x-ecloud-bolt', `${isBot}`)
 
   // You can also set request headers in NextResponse.rewrite
   const response: NextResponse = NextResponse.next({
@@ -17,6 +20,7 @@ export const middleware: NextMiddleware = (request: NextRequest) => {
 
   // Set a new response header
   response.headers.set('x-ecloud-currency', 'USD')
+  response.headers.set('x-ecloud-locale', locale?.value ?? '')
 
   return response
 }
