@@ -4,7 +4,8 @@ import { Button } from '@ecloud/ui'
 
 const meta: ComponentMeta<typeof Button> = {
   title: 'Atomic Components/Button',
-  component: (args) => <Button {...args}>Primary Button</Button>
+  component: (args) => <Button {...args}>Primary Button</Button>,
+  argTypes: { onClick: { action: 'clicked' } }
 }
 
 export default meta

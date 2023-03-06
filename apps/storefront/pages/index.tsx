@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 import { Button, Form, I18n, Input, Upload } from '@ecloud/ui'
 
@@ -18,6 +19,9 @@ const Home = () => {
         style={{ maxWidth: 600, margin: '5rem auto' }}
         onFinish={handleFormSubmit}
       >
+        <Link href="/cart">
+          <span>Cart</span>
+        </Link>
         <Form.Item name="name" label="Name" rules={[{ required: true }]}>
           <Input />
         </Form.Item>

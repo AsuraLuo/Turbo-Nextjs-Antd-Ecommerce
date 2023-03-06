@@ -5,7 +5,7 @@ export const middleware: NextMiddleware = (request: NextRequest) => {
   const locale: any = request.cookies.get('locale')
   // Clone the request headers and set a new header `x-hello-from-middleware1`
   const requestHeaders: Headers = new Headers(request.headers)
-  requestHeaders.set('x-ecloud-locale', locale)
+  requestHeaders.set('x-ecloud-locale', locale?.value ?? '')
 
   // You can also set request headers in NextResponse.rewrite
   const response: NextResponse = NextResponse.next({

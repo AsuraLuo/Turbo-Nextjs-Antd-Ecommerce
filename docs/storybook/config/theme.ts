@@ -1,6 +1,6 @@
-import { Theme } from '@emotion/react'
+// import { Theme } from '@emotion/react'
 
-export const ThemeConf: Theme = {
+export const ThemeConf: any = {
   breakPoint: {
     xxs: 320,
     xs: 480,
