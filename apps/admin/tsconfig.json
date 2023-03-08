@@ -10,7 +10,8 @@
       "@plugin/*": ["plugin/*"],
       "@provider/*": ["provider/*"],
       "@ecloud/*": ["packages/*"],
-      "@store/*": ["store/*"]
+      "@store/*": ["store/*"],
+      "@svgs/*": ["svgs/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

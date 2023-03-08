@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 import ssl from '@vitejs/plugin-basic-ssl'
 import legacy from '@vitejs/plugin-legacy'
 import banner from 'vite-plugin-banner'
+import svgr from 'vite-plugin-svgr'
 
 import { httpProxy } from './plugin'
 import pkg from './package.json'
@@ -39,6 +40,17 @@ export default ({ mode }: ConfigEnv) => {
           rewrite: (url: string) => url.replace(/^\/api/, '')
         }
       }),
+      svgr({
+        exportAsDefault: true,
+        // svgr options: https://react-svgr.com/docs/options/
+        svgrOptions: {},
+        // esbuild options, to transform jsx to js
+        esbuildOptions: {},
+        //  A minimatch pattern, or array of patterns, which specifies the files in the build the plugin should include. By default all svg files will be included.
+        include: 'svgs/*.svg',
+        //  A minimatch pattern, or array of patterns, which specifies the files in the build the plugin should ignore. By default no files are ignored.
+        exclude: ''
+      }),
       process.env.REACT_APP_BUNDLE_VISUALIZE === '1' &&
         require('rollup-plugin-visualizer').visualizer({
           open: true,
@@ -54,7 +66,8 @@ export default ({ mode }: ConfigEnv) => {
         '@pages': path.resolve(__dirname, './pages/'),
         '@plugin': path.resolve(__dirname, './plugin/'),
         '@provider': path.resolve(__dirname, './provider/'),
-        '@store': path.resolve(__dirname, './store/')
+        '@store': path.resolve(__dirname, './store/'),
+        '@svgs': path.resolve(__dirname, './svgs/')
       }
     },
     server: {
