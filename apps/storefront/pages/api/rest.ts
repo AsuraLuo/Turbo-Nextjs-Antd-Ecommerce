@@ -16,9 +16,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
       throw result
     }
 
-    throw new Error(
-      `Request '${req.url}' is not proxied! We should never reach here!`
-    )
+    throw new Error(`Request '${req.url}' is not proxied! We should never reach here!`)
   })
 }
 

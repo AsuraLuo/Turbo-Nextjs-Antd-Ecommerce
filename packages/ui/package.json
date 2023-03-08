@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "pnpm clean && rollup --config",
+    "release": "pnpm clean && rollup --config",
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "dependencies": {
