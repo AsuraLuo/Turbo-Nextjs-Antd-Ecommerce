@@ -22,6 +22,7 @@
     "@ecloud/hooks": "workspace:*",
     "@ecloud/tsconfig": "workspace:*",
     "@ecloud/ui": "workspace:*",
+    "@svgr/webpack": "^6.5.1",
     "cross-env": "^7.0.3",
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6",

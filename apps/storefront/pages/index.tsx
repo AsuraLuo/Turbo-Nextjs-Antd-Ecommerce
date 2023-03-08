@@ -3,6 +3,8 @@ import Link from 'next/link'
 
 import { Button, Form, I18n, Input, Upload } from '@ecloud/ui'
 
+import Loader from '@svgs/loader.svg'
+
 const Home = () => {
   const handleFormSubmit = (values: any) => {
     console.info('Received values of form: ', values)
@@ -22,6 +24,7 @@ const Home = () => {
         <Link href="/cart">
           <span>Cart</span>
         </Link>
+        <Loader />
         <Form.Item name="name" label="Name" rules={[{ required: true }]}>
           <Input />
         </Form.Item>

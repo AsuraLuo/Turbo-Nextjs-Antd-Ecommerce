@@ -33,7 +33,13 @@ module.exports = () => {
       ignoreBuildErrors: isProd
     },
     webpack: (config) => {
-      // Important: return the modified config
+      // Important: svg resource as component
+      config.module.rules.push({
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack']
+      })
+
       return config
     }
   }

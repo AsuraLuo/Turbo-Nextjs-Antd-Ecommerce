@@ -9,7 +9,8 @@
       "@hooks/*": ["hooks/*"],
       "@provider/*": ["provider/*"],
       "@ecloud/*": ["packages/*"],
-      "@store/*": ["store/*"]
+      "@store/*": ["store/*"],
+      "@svgs/*": ["svgs/*"]
     },
     "jsxImportSource": "@emotion/react"
   },

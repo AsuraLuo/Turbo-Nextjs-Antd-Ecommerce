@@ -1,6 +1,6 @@
 import { Search } from 'react-feather'
 
-import { Avatar, Dropdown, Divider, Icon, Input, Layout } from '@ecloud/ui'
+import { Avatar, Button, Dropdown, Divider, Icon, Input, Layout } from '@ecloud/ui'
 
 import Locale from './Locale'
 import Menus from './Menus'
@@ -17,6 +17,7 @@ const Header = () => {
     <Layout.Header>
       <StyledFlex>
         <Menus />
+        <Button type="primary">查询</Button>
         <div className="header__actions">
           <Input placeholder="请输入搜索关键词" prefix={<Icon src={Search} />} />
           <Locale />
