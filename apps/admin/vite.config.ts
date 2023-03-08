@@ -6,7 +6,7 @@ import legacy from '@vitejs/plugin-legacy'
 import banner from 'vite-plugin-banner'
 import svgr from 'vite-plugin-svgr'
 
-import { httpProxy } from './plugin'
+import { httpProxy, svgBuilder } from './plugin'
 import pkg from './package.json'
 
 export default ({ mode }: ConfigEnv) => {
@@ -40,6 +40,7 @@ export default ({ mode }: ConfigEnv) => {
           rewrite: (url: string) => url.replace(/^\/api/, '')
         }
       }),
+      svgBuilder('svgs/'),
       svgr({
         exportAsDefault: true,
         // svgr options: https://react-svgr.com/docs/options/

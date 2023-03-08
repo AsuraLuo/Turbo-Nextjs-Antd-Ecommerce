@@ -1,6 +1,5 @@
 import { Tabs } from '@ecloud/ui'
 import { useLoginPage } from '@hooks/LoginPage'
-import Loader from '@svgs/loader.svg'
 
 import LoginForm from './LoginForm'
 import { StyledLoginPage } from './styled'
@@ -14,10 +13,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <StyledLoginPage>
-        {isRender ? <Tabs items={items} /> : null}
-        <Loader />
-      </StyledLoginPage>
+      <StyledLoginPage>{isRender ? <Tabs items={items} /> : null}</StyledLoginPage>
     </>
   )
 }
