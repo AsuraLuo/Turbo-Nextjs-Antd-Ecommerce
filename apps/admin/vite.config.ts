@@ -1,7 +1,7 @@
 import { defineConfig, loadEnv, ConfigEnv } from 'vite'
-import fs from 'fs'
 import path from 'path'
 import react from '@vitejs/plugin-react-swc'
+import ssl from '@vitejs/plugin-basic-ssl'
 import legacy from '@vitejs/plugin-legacy'
 import banner from 'vite-plugin-banner'
 
@@ -30,6 +30,7 @@ export default ({ mode }: ConfigEnv) => {
         targets: ['defaults', 'not IE 11']
       }),
       react(),
+      ssl(),
       httpProxy({
         '/api': {
           target: process.env.REACT_APP_API_URL,
@@ -61,11 +62,7 @@ export default ({ mode }: ConfigEnv) => {
       port: 3000,
       host: 'localhost',
       hmr: true,
-      https: {
-        // SSL certificate config
-        key: fs.readFileSync('keys/ecloud-key.pem'),
-        cert: fs.readFileSync('keys/ecloud-cert.pem')
-      }
+      https: true
     }
   })
 }

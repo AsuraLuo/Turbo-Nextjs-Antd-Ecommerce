@@ -15,6 +15,7 @@ module.exports = {
     semi: ['error', 'never'],
     quotes: ['error', 'single'],
     'arrow-body-style': 0,
+    'consistent-return': 0,
     'global-require': 0,
     'import/extensions': 0,
     'import/no-unresolved': [
@@ -31,6 +32,12 @@ module.exports = {
     'no-useless-escape': 0,
     'no-unused-vars': 0,
     'no-restricted-exports': 0,
+    'no-restricted-syntax': [
+      'error',
+      'FunctionExpression',
+      'WithStatement',
+      "BinaryExpression[operator='in']"
+    ],
     'prettier/prettier': [
       'error',
       {

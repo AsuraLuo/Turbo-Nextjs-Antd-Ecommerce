@@ -20,6 +20,7 @@
     "@ecloud/hooks": "workspace:*",
     "@ecloud/tsconfig": "workspace:*",
     "@ecloud/ui": "workspace:*",
+    "@vitejs/plugin-basic-ssl": "^1.0.1",
     "@vitejs/plugin-legacy": "^4.0.1",
     "@vitejs/plugin-react-swc": "^3.2.0",
     "crypto-js": "^4.1.1",

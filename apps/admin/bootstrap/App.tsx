@@ -9,6 +9,7 @@ import {
 } from '@ant-design/cssinjs'
 
 import { ConfigProvider, CssBaseline } from '@ecloud/ui'
+// import { useDebug } from '@ecloud/hooks'
 import { ThemeConf } from '@config/theme'
 import { store } from '@store/index'
 
@@ -18,6 +19,7 @@ import HttpProvider from '@components/HttpProvider'
 
 const App = () => {
   const cache = createCache()
+  // useDebug()
 
   return (
     <ReduxProvider store={store}>

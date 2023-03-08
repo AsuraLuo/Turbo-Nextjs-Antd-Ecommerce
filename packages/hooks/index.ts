@@ -1,4 +1,3 @@
-import { useAxios } from './axios'
-import { useCookie } from './cookie'
-
-export { useAxios, useCookie }
+export { useAxios } from './axios'
+export { useCookie } from './cookie'
+export { useDebug } from './debug'

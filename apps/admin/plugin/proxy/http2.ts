@@ -16,11 +16,7 @@ export const httpProxy = (configOptions: {
 }): Plugin => {
   const configure = ({ middlewares }: { middlewares: Connect.Server }) => {
     const result: any = Object.entries(configOptions)
-    // eslint-disable-next-line no-restricted-syntax
-    for (const [
-      regexp,
-      { target, rewrite, headers, secure = true }
-    ] of result) {
+    for (const [regexp, { target, rewrite, headers, secure = true }] of result) {
       const re = new RegExp(regexp)
       const tu = new URL(target)
 
