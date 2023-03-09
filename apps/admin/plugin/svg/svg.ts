@@ -1,37 +1,33 @@
 import { readFileSync, readdirSync } from 'fs'
 
-// 识别svg标签的属性
-const svgTitle = /<svg([^>+].*?)>/
+const findSvgFile: Function = (dir: string) => {
+  // 识别svg标签的属性
+  const svgTitle: RegExp = /<svg([^>+].*?)>/
+  // 有一些svg文件的属性会定义height和width，要把它清除掉
+  const clearHeightWidth: RegExp = /(width|height)="([^>+].*?)"/g
+  // 没有viewBox的话就利用height和width来新建一个viewBox
+  const hasViewBox: RegExp = /(viewBox="[^>+].*?")/g
+  // 清除换行符
+  const clearReturn: RegExp = /(\r)|(\n)/g
+  const svgRes: any[] = []
 
-// 有一些svg文件的属性会定义height和width，要把它清除掉
-const clearHeightWidth = /(width|height)="([^>+].*?)"/g
-
-// 没有viewBox的话就利用height和width来新建一个viewBox
-const hasViewBox = /(viewBox="[^>+].*?")/g
-
-// 清除换行符
-const clearReturn = /(\r)|(\n)/g
-
-/**
- * @param dir 路径
- */
-const findSvgFile = (dir: string) => {
-  const svgRes = []
   const dirents = readdirSync(dir, {
     withFileTypes: true
   })
+
   for (const dirent of dirents) {
-    const path = dir + dirent.name
+    const path: string = dir + dirent.name
+
     if (dirent.isDirectory()) {
       svgRes.push(...findSvgFile(`${path}/`))
     } else {
-      const svg = readFileSync(path)
+      const svg: any = readFileSync(path)
         .toString()
         .replace(clearReturn, '')
-        .replace(svgTitle, ($1, $2) => {
+        .replace(svgTitle, ($1: any, $2: any) => {
           let width = 0
           let height = 0
-          let content = $2.replace(clearHeightWidth, (s1, s2, s3) => {
+          let content = $2.replace(clearHeightWidth, (s1: any, s2: any, s3: any) => {
             s3 = s3.replace('px', '')
             if (s2 === 'width') {
               width = s3
@@ -46,14 +42,19 @@ const findSvgFile = (dir: string) => {
           return `<symbol id="${dirent.name.replace('.svg', '')}" ${content}>`
         })
         .replace('</svg>', '</symbol>')
+
       svgRes.push(svg)
     }
   }
+
   return svgRes
 }
+
 export const svgBuilder = (path: string) => {
   if (path === '') return
-  const res = findSvgFile(path) // 引用上面的
+
+  const result: any[] = findSvgFile(path)
+
   return {
     name: 'svg-transform',
     transformIndexHtml: (html: string) => {
@@ -62,7 +63,7 @@ export const svgBuilder = (path: string) => {
         `
           <body>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0">
-              ${res.join('')}
+              ${result.join('')}
             </svg>
         `
       )

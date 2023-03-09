@@ -1,14 +1,14 @@
 import Head from 'next/head'
 
-const CartPage = () => {
+const Cart = () => {
   return (
     <>
       <Head>
-        <title>Cart Page</title>
+        <title>Cart</title>
       </Head>
-      <p>Cart Page</p>
+      <p>Cart</p>
     </>
   )
 }
 
-export default CartPage
+export default Cart
