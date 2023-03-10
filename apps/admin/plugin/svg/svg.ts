@@ -25,10 +25,11 @@ const findSvgFile: Function = (dir: string) => {
         .toString()
         .replace(clearReturn, '')
         .replace(svgTitle, ($1: any, $2: any) => {
-          let width = 0
-          let height = 0
-          let content = $2.replace(clearHeightWidth, (s1: any, s2: any, s3: any) => {
+          let width: number = 0
+          let height: number = 0
+          let content: string = $2.replace(clearHeightWidth, (s1: any, s2: any, s3: any) => {
             s3 = s3.replace('px', '')
+
             if (s2 === 'width') {
               width = s3
             } else if (s2 === 'height') {
@@ -36,9 +37,11 @@ const findSvgFile: Function = (dir: string) => {
             }
             return ''
           })
+
           if (!hasViewBox.test($2)) {
             content += `viewBox="0 0 ${width} ${height}"`
           }
+
           return `<symbol id="${dirent.name.replace('.svg', '')}" ${content}>`
         })
         .replace('</svg>', '</symbol>')
