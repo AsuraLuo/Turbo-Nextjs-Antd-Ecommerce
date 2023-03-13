@@ -10,8 +10,8 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 const options: ServerOptions = {
-  key: fs.readFileSync('keys/ecloud-key.pem'),
-  cert: fs.readFileSync('keys/ecloud-cert.pem'),
+  key: fs.readFileSync('keys/ocloud-key.pem'),
+  cert: fs.readFileSync('keys/ocloud-cert.pem'),
   spdy: {
     protocols: ['h2']
   }

@@ -1,5 +1,5 @@
 {
-  "extends": "@ecloud/tsconfig/nextjs.json",
+  "extends": "@ocloud/tsconfig/nextjs.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
@@ -8,7 +8,7 @@
       "@graphql/*": ["graphql/*"],
       "@hooks/*": ["hooks/*"],
       "@provider/*": ["provider/*"],
-      "@ecloud/*": ["packages/*"],
+      "@ocloud/*": ["packages/*"],
       "@store/*": ["store/*"],
       "@svgs/*": ["svgs/*"]
     },

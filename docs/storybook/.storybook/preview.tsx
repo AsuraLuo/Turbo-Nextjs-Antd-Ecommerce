@@ -2,7 +2,7 @@ import React from 'react'
 import { ThemeProvider } from '@emotion/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
-import { ConfigProvider } from '@ecloud/ui'
+import { ConfigProvider } from '@ocloud/ui'
 import { ThemeConf } from '../config/theme'
 
 const withThemeProvider = (Story: any, context: any) => {

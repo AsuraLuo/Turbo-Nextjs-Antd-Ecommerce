@@ -18,5 +18,5 @@ export const ThemeConf: any = {
     black: '#000000',
     primary: '#556cd6'
   },
-  namespace: 'ecloud'
+  namespace: 'ocloud'
 }

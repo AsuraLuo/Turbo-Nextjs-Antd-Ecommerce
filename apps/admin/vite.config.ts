@@ -16,9 +16,9 @@ export default ({ mode }: ConfigEnv) => {
 
   return defineConfig({
     envPrefix: 'REACT_',
-    optimizeDeps: {
-      exclude: ['@ecloud/ui']
-    },
+    // optimizeDeps: {
+    //   exclude: ['@ocloud/ui']
+    // },
     build: {
       reportCompressedSize: !isProd,
       sourcemap: !isProd
@@ -77,8 +77,8 @@ export default ({ mode }: ConfigEnv) => {
       hmr: true,
       https: {
         // SSL certificate config
-        key: fs.readFileSync('keys/ecloud-key.pem'),
-        cert: fs.readFileSync('keys/ecloud-cert.pem')
+        key: fs.readFileSync('keys/ocloud-key.pem'),
+        cert: fs.readFileSync('keys/ocloud-cert.pem')
       }
     }
   })

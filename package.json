@@ -1,5 +1,5 @@
 {
-  "name": "turbo-nextjs-antd-ecloud",
+  "name": "turbo-nextjs-antd-ocloud",
   "version": "0.1.0",
   "private": true,
   "workspaces": [
@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
-    "build:ecloud": "turbo run build --filter=@ecloud/storefront",
+    "build:ocloud": "turbo run build --filter=@ocloud/storefront",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "husky:prepare": "husky install",
@@ -45,7 +45,7 @@
     "@types/redux-logger": "^3.0.9",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.31.0",
-    "eslint-config-ecloud": "workspace:*",
+    "eslint-config-ocloud": "workspace:*",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.7.1",

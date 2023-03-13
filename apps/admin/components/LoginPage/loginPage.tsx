@@ -1,4 +1,4 @@
-import { Tabs } from '@ecloud/ui'
+import { Tabs } from '@ocloud/ui'
 import { useLoginPage } from '@hooks/LoginPage'
 
 import LoginForm from './LoginForm'

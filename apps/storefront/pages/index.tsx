@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Button, Form, I18n, Input, Upload } from '@ecloud/ui'
+import { Button, Form, I18n, Input, Upload } from '@ocloud/ui'
 
 import Loader from '@svgs/loader.svg'
 

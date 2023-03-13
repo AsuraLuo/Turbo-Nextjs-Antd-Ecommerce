@@ -8,8 +8,8 @@ import {
   px2remTransformer
 } from '@ant-design/cssinjs'
 
-import { ConfigProvider, CssBaseline } from '@ecloud/ui'
-// import { useDebug } from '@ecloud/hooks'
+import { ConfigProvider, CssBaseline } from '@ocloud/ui'
+// import { useDebug } from '@ocloud/hooks'
 import { ThemeConf } from '@config/theme'
 import { store } from '@store/index'
 

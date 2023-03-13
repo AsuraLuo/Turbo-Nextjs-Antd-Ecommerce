@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-import { formatMessage } from '@ecloud/ui'
+import { formatMessage } from '@ocloud/ui'
 
 export const useLoginPage = () => {
   const {

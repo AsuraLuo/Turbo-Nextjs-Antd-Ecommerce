@@ -1,5 +1,5 @@
 {
-  "name": "@ecloud/ui",
+  "name": "@ocloud/ui",
   "version": "0.0.1",
   "main": "index.ts",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "dependencies": {
-    "@ecloud/tsconfig": "workspace:*",
+    "@ocloud/tsconfig": "workspace:*",
     "@tinymce/tinymce-react": "^4.3.0",
     "antd": "^5.3.0",
     "react": "^18.2.0",
@@ -21,7 +21,7 @@
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.22",
     "eslint": "^7.32.0",
-    "eslint-config-ecloud": "workspace:*",
+    "eslint-config-ocloud": "workspace:*",
     "rollup": "^3.17.3",
     "tslib": "^2.5.0",
     "typescript": "^4.5.2"

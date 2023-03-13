@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react'
 
-import { Button } from '@ecloud/ui'
+import { Button } from '@ocloud/ui'
 
 const meta: ComponentMeta<typeof Button> = {
   title: 'Atomic Components/Button',

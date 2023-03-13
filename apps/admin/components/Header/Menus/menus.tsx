@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { clsx } from 'clsx'
 
-import { Button, I18n } from '@ecloud/ui'
+import { Button, I18n } from '@ocloud/ui'
 import { actions as appActions } from '@store/app'
 
 import { StyledMenuGrid, StyledMenuItem } from './styled'

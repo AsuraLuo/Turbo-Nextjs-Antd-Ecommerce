@@ -2,7 +2,7 @@ import { lazy, LazyExoticComponent, useCallback, useEffect, useState } from 'rea
 import { useSelector } from 'react-redux'
 import { isEmpty } from 'lodash'
 
-import { useCookie } from '@ecloud/hooks'
+import { useCookie } from '@ocloud/hooks'
 
 interface Router {
   path: string

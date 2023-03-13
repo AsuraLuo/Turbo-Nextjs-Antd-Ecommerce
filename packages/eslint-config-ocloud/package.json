@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-ecloud",
+  "name": "eslint-config-ocloud",
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",

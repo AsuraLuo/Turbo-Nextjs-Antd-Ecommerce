@@ -7,8 +7,8 @@ export const middleware: NextMiddleware = (request: NextRequest) => {
   const viewport = device.type === 'mobile' ? 'mobile' : 'desktop'
   const locale: any = request.cookies.get('locale')
 
-  requestHeaders.set('x-ecloud-viewport', viewport)
-  requestHeaders.set('x-ecloud-bolt', `${isBot}`)
+  requestHeaders.set('x-ocloud-viewport', viewport)
+  requestHeaders.set('x-ocloud-bolt', `${isBot}`)
 
   // You can also set request headers in NextResponse.rewrite
   const response: NextResponse = NextResponse.next({
@@ -19,8 +19,8 @@ export const middleware: NextMiddleware = (request: NextRequest) => {
   })
 
   // Set a new response header
-  response.headers.set('x-ecloud-currency', 'USD')
-  response.headers.set('x-ecloud-locale', locale?.value ?? '')
+  response.headers.set('x-ocloud-currency', 'USD')
+  response.headers.set('x-ocloud-locale', locale?.value ?? '')
 
   return response
 }

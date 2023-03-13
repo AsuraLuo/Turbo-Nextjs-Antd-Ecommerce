@@ -16,8 +16,8 @@ export const fetchApp = async (ctx: AppContext) => {
   const { dispatch } = reduxStore
   const cookies = parseCookies({ req })
   const locale: string = cookies?.locale_code ?? WebsiteConf.i18n.locale
-  const viewport: string = ctx?.req?.headers?.['x-ecloud-viewport'] ?? 'desktop'
-  const bolt: string = ctx?.req?.headers?.['x-ecloud-bolt'] ?? 'false'
+  const viewport: string = ctx?.req?.headers?.['x-ocloud-viewport'] ?? 'desktop'
+  const bolt: string = ctx?.req?.headers?.['x-ocloud-bolt'] ?? 'false'
 
   try {
     const i18nJson = await import(`../../public/i18n/${locale}.json`)

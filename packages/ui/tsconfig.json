@@ -1,5 +1,5 @@
 {
-  "extends": "@ecloud/tsconfig/react-library.json",
+  "extends": "@ocloud/tsconfig/react-library.json",
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsxImportSource": "@emotion/react",

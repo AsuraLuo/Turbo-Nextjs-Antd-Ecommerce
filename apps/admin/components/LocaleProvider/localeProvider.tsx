@@ -3,7 +3,7 @@ import { IntlProvider, ReactIntlError } from 'react-intl'
 import { useDispatch } from 'react-redux'
 import { isEmpty } from 'lodash'
 
-import { useCookie } from '@ecloud/hooks'
+import { useCookie } from '@ocloud/hooks'
 import { actions as i18nActions } from '@store/i18n'
 
 import { website } from '@config/website'

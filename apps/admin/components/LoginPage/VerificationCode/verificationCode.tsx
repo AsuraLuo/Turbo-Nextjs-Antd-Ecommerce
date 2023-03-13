@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 
-import { Input } from '@ecloud/ui'
+import { Input } from '@ocloud/ui'
 
 import { useVerificationCode } from '@hooks/LoginPage'
 

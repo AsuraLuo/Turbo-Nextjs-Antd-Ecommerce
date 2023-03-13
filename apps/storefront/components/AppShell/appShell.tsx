@@ -2,7 +2,7 @@ import { useEffect, FC, ReactNode, memo } from 'react'
 import { ThemeProvider } from '@emotion/react'
 
 import { ThemeConf } from '@config/theme'
-import { CurrentLocale } from '@ecloud/ui'
+import { CurrentLocale } from '@ocloud/ui'
 
 import GlobalStyled from '@components/GlobalStyled'
 import { StyledMain } from './styled'

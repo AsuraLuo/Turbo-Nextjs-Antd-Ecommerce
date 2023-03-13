@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { clsx } from 'clsx'
 
-import { Button, Carousel, Divider } from '@ecloud/ui'
+import { Button, Carousel, Divider } from '@ocloud/ui'
 import { actions as appActions } from '@store/app'
 
 import { StyledNav, StyledNavItem } from './styled'

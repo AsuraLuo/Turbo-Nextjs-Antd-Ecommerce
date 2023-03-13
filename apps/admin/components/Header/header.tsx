@@ -1,6 +1,6 @@
 import { Search } from 'react-feather'
 
-import { Avatar, Button, Dropdown, Divider, Icon, Input, Layout } from '@ecloud/ui'
+import { Avatar, Button, Dropdown, Divider, Icon, Input, Layout } from '@ocloud/ui'
 
 import Locale from './Locale'
 import Menus from './Menus'

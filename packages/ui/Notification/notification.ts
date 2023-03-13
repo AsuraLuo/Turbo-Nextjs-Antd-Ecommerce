@@ -5,7 +5,7 @@ const internalNotification = (options: ArgsProps) => {
   return notification.config({
     bottom: 50,
     duration: 3,
-    prefixCls: 'ecloud',
+    prefixCls: 'ocloud',
     placement: 'bottomRight',
     ...options
   })

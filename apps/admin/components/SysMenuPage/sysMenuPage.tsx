@@ -1,4 +1,4 @@
-import { ColumnsType, Space, Tag } from '@ecloud/ui'
+import { ColumnsType, Space, Tag } from '@ocloud/ui'
 
 import { StyledTable } from './styled'
 

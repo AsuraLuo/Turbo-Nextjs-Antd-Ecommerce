@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 
-import { Layout } from '@ecloud/ui'
+import { Layout } from '@ocloud/ui'
 import { useAccountShell } from '@hooks/AccountShell'
 
 import AccountProvider from '@components/AccountProvider'

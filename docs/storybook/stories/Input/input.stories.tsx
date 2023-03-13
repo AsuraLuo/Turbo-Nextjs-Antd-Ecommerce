@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react'
 
-import { Input } from '@ecloud/ui'
+import { Input } from '@ocloud/ui'
 
 const meta: ComponentMeta<typeof Input> = {
   title: 'Atomic Components/Input',

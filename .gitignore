@@ -15,6 +15,9 @@ out/
 build/
 storybook-static/
 
+# ssl
+keys/
+
 # misc
 .DS_Store
 

@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { useSelector } from 'react-redux'
 import { Provider, FetchProviderProps } from 'use-http'
 
-import { useCookie } from '@ecloud/hooks'
+import { useCookie } from '@ocloud/hooks'
 import { website } from '@config/website'
 
 const HttpProvider: FC<FetchProviderProps> = ({ children }) => {

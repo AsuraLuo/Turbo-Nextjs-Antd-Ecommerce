@@ -1,4 +1,4 @@
-import { Button, Form, Input, Spin } from '@ecloud/ui'
+import { Button, Form, Input, Spin } from '@ocloud/ui'
 import { useLoginForm } from '@hooks/LoginPage'
 
 import VerificationCode from '../VerificationCode'

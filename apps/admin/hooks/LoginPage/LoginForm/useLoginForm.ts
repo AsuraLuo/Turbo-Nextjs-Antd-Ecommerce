@@ -5,7 +5,7 @@ import { useFetch } from 'use-http'
 import { enc, mode, pad, AES } from 'crypto-js'
 import { v4 as uuidv4 } from 'uuid'
 
-import { useCookie } from '@ecloud/hooks'
+import { useCookie } from '@ocloud/hooks'
 import { actions as userActions } from '@store/user'
 
 export const useLoginForm = () => {

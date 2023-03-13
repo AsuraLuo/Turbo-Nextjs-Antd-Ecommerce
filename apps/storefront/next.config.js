@@ -15,7 +15,7 @@ module.exports = () => {
     reactStrictMode: true,
     swcMinify: true,
     trailingSlash: false,
-    transpilePackages: ['@ecloud/ui'],
+    transpilePackages: ['@ocloud/ui'],
     compiler: {
       emotion: true,
       reactRemoveProperties: isProd,
