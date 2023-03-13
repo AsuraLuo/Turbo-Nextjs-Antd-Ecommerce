@@ -32,12 +32,7 @@ module.exports = {
     'no-useless-escape': 0,
     'no-unused-vars': 0,
     'no-restricted-exports': 0,
-    'no-restricted-syntax': [
-      'error',
-      'FunctionExpression',
-      'WithStatement',
-      "BinaryExpression[operator='in']"
-    ],
+    'no-restricted-syntax': ['error', 'WithStatement', "BinaryExpression[operator='in']"],
     'prettier/prettier': [
       'error',
       {

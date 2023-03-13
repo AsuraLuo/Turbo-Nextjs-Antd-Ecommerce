@@ -16,9 +16,9 @@ export default ({ mode }: ConfigEnv) => {
 
   return defineConfig({
     envPrefix: 'REACT_',
-    // optimizeDeps: {
-    //   exclude: ['@ocloud/ui']
-    // },
+    optimizeDeps: {
+      include: ['@ocloud/ui']
+    },
     build: {
       reportCompressedSize: !isProd,
       sourcemap: !isProd

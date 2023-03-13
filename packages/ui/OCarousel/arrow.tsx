@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import Icon from '../Icon'
+import Icon from '../OIcon'
 import { StyledArrow } from './styled'
 
 interface ArrowProps {

@@ -2,9 +2,9 @@ import { FC, Fragment, useState } from 'react'
 import { Upload as AntdUpload, FormItemProps, UploadProps, UploadFile } from 'antd'
 import { RcFile } from 'antd/es/upload'
 
-import Form from '../Form'
-import Modal from '../Modal'
-import { formatMessage } from '../CurrentLocale'
+import Form from '../OForm'
+import Modal from '../OModal'
+import { formatMessage } from '../OCurrentLocale'
 import { StyledUploadImage } from './styled'
 
 interface BaseUploadProps extends UploadProps {
@@ -49,6 +49,7 @@ const Upload: FC<BaseUploadProps> = ({
 
     setPreviewImage(file.url || (file.preview as string))
     setPreviewOpen(true)
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     setPreviewTitle(file.name || file.url!.substring(file.url!.lastIndexOf('/') + 1))
   }
 

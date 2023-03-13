@@ -279,7 +279,6 @@ importers:
       eslint: ^7.32.0
       eslint-config-ocloud: workspace:*
       react: ^18.2.0
-      react-images-uploading: ^3.1.7
       rollup: ^3.17.3
       tslib: ^2.5.0
       typescript: ^4.5.2
@@ -288,7 +287,6 @@ importers:
       '@tinymce/tinymce-react': 4.3.0_biqbaboplfbrettd7655fr4n2y
       antd: 5.3.1_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
-      react-images-uploading: 3.1.7_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.19.1
       '@rollup/plugin-typescript': 11.0.0_6xpx4ownnv75244cfyuvoru6ci
@@ -15184,17 +15182,6 @@ packages:
       react: 18.2.0
       react-fast-compare: 3.2.0
       react-side-effect: 2.1.2_react@18.2.0
-    dev: false
-
-  /react-images-uploading/3.1.7_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-woET50eCezm645iIeP4gCoN7HjdR3T64UXC5l53yd+2vHFp+pwABH8Z/aAO5IXDeC1aP6doQ+K738L701zswAw==}
-    engines: {node: '>=8', npm: '>=5'}
-    peerDependencies:
-      react: '>=16.8.0'
-      react-dom: '>=16.8.0'
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-inspector/6.0.1_react@18.2.0:

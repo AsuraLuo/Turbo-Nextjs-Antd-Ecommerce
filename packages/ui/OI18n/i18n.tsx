@@ -9,9 +9,7 @@ interface I18nProps {
 const I18n: FC<I18nProps> = ({ id, ...props }) => {
   const defaultMessage = useSelector((state: any) => state.i18n.defaultMessage)
 
-  return (
-    <FormattedMessage id={id} defaultMessage={defaultMessage[id]} {...props} />
-  )
+  return <FormattedMessage id={id} defaultMessage={defaultMessage[id]} {...props} />
 }
 
 export default I18n
