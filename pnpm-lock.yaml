@@ -70,13 +70,13 @@ importers:
       '@types/react-dom': ^18.0.7
       '@types/react-router-dom': ^5.3.3
       '@types/uuid': ^9.0.0
-      '@vitejs/plugin-basic-ssl': ^1.0.1
       '@vitejs/plugin-legacy': ^4.0.1
       '@vitejs/plugin-react-swc': ^3.2.0
       crypto-js: ^4.1.1
       eslint: ^7.32.0
       eslint-config-ecloud: workspace:*
       http2-proxy: ^5.0.53
+      mkcert: ^1.5.1
       react: ^18.2.0
       react-dom: ^18.2.0
       react-router-dom: ^6.8.1
@@ -93,7 +93,6 @@ importers:
       '@ecloud/hooks': link:../../packages/hooks
       '@ecloud/tsconfig': link:../../packages/tsconfig
       '@ecloud/ui': link:../../packages/ui
-      '@vitejs/plugin-basic-ssl': 1.0.1_vite@4.1.4
       '@vitejs/plugin-legacy': 4.0.1_terser@5.16.5+vite@4.1.4
       '@vitejs/plugin-react-swc': 3.2.0_vite@4.1.4
       crypto-js: 4.1.1
@@ -115,6 +114,7 @@ importers:
       '@types/uuid': 9.0.1
       eslint: 7.32.0
       eslint-config-ecloud: link:../../packages/eslint-config-ecloud
+      mkcert: 1.5.1
       rollup-plugin-visualizer: 5.9.0
       typescript: 4.9.5
 
@@ -5852,15 +5852,6 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitejs/plugin-basic-ssl/1.0.1_vite@4.1.4:
-    resolution: {integrity: sha512-pcub+YbFtFhaGRTo1832FQHQSHvMrlb43974e2eS8EKleR3p1cDdkJFPci1UhwkEf1J9Bz+wKBSzqpKp7nNj2A==}
-    engines: {node: '>=14.6.0'}
-    peerDependencies:
-      vite: ^3.0.0 || ^4.0.0
-    dependencies:
-      vite: 4.1.4_terser@5.16.5
-    dev: false
-
   /@vitejs/plugin-legacy/4.0.1_terser@5.16.5+vite@4.1.4:
     resolution: {integrity: sha512-/ZV63NagI1c9TB5E4ijGmycY//fNm/2L02nsnXXxACwYaF9W+/OyVlgIW24jYUIS+g0yQRtn+N5hzBc8RLNhGA==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -11171,6 +11162,11 @@ packages:
       tslib: 2.5.0
     dev: false
 
+  /ip-regex/4.3.0:
+    resolution: {integrity: sha512-B9ZWJxHHOHUhUjCPrMpLD4xEq35bUTClHM1S6CBU5ixQnkZmwipwgc96vAd7AAGM9TGHvJR+Uss+/Ak6UphK+Q==}
+    engines: {node: '>=8'}
+    dev: true
+
   /ip/1.1.8:
     resolution: {integrity: sha512-PuExPYUiu6qMBQb4l06ecm6T6ujzhmh+MeJcW9wa89PoAz5pvd4zPgN5WJV104mb6S2T1AwNIAaB70JNrLQWhg==}
     dev: false
@@ -13547,6 +13543,16 @@ packages:
       is-extendable: 1.0.1
     dev: false
 
+  /mkcert/1.5.1:
+    resolution: {integrity: sha512-MHOmridCutIIPMKvaQwueIAo+lsHPyO0WotbGIOq5V4mPywrjtOPlzdS/kgk/2vjRELWv4OrDSKo4KA8H7VARw==}
+    engines: {node: '>=12'}
+    hasBin: true
+    dependencies:
+      commander: 9.5.0
+      ip-regex: 4.3.0
+      node-forge: 1.3.1
+    dev: true
+
   /mkdirp-classic/0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
     dev: false
@@ -13780,6 +13786,11 @@ packages:
     dependencies:
       whatwg-url: 5.0.0
     dev: false
+
+  /node-forge/1.3.1:
+    resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
+    engines: {node: '>= 6.13.0'}
+    dev: true
 
   /node-int64/0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}

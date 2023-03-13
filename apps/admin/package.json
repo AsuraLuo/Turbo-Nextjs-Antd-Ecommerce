@@ -11,14 +11,15 @@
     "build": "vite build",
     "build:prod": "tsc && vite build",
     "lint": "eslint \"**/*.{ts,tsx}\"",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "mkcert:prepare": "mkcert -install",
+    "mkcert:genrate": "mkcert localhost 127.0.0.1 ::1"
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.6.0",
     "@ecloud/hooks": "workspace:*",
     "@ecloud/tsconfig": "workspace:*",
     "@ecloud/ui": "workspace:*",
-    "@vitejs/plugin-basic-ssl": "^1.0.1",
     "@vitejs/plugin-legacy": "^4.0.1",
     "@vitejs/plugin-react-swc": "^3.2.0",
     "crypto-js": "^4.1.1",
@@ -41,6 +42,7 @@
     "@types/uuid": "^9.0.0",
     "eslint": "^7.32.0",
     "eslint-config-ecloud": "workspace:*",
+    "mkcert": "^1.5.1",
     "rollup-plugin-visualizer": "^5.9.0",
     "typescript": "^4.5.3"
   }
