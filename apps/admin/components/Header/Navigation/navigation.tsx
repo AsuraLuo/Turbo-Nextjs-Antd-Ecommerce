@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { clsx } from 'clsx'
 
-import { Button, Carousel, Divider } from '@ocloud/ui'
+import { OButton, OCarousel, ODivider } from '@ocloud/ui'
 import { actions as appActions } from '@store/app'
 
 import { StyledNav, StyledNavItem } from './styled'
@@ -51,7 +51,7 @@ const Navigation = () => {
   return (
     <StyledNav>
       {navMenus.length > 0 && (
-        <Carousel {...carousel}>
+        <OCarousel {...carousel}>
           {navMenus.map((menu: any, index: number) => {
             const { id, name } = menu
             const count: number = navMenus.length
@@ -63,20 +63,20 @@ const Navigation = () => {
                     navigation__active: activeNav?.id === id
                   })}
                 >
-                  <Button
+                  <OButton
                     type="text"
                     onClick={() => {
                       handleMenuClick(menu)
                     }}
                   >
                     <span dangerouslySetInnerHTML={{ __html: name }} />
-                  </Button>
-                  {index + 1 < count && <Divider type="vertical" />}
+                  </OButton>
+                  {index + 1 < count && <ODivider type="vertical" />}
                 </div>
               </StyledNavItem>
             )
           })}
-        </Carousel>
+        </OCarousel>
       )}
     </StyledNav>
   )

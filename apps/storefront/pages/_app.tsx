@@ -10,7 +10,7 @@ import { isEmpty } from 'lodash'
 import 'antd/dist/reset.css'
 
 import { ThemeConf } from '@config/theme'
-import { ConfigProvider } from '@ocloud/ui'
+import { OConfigProvider } from '@ocloud/ui'
 import { withRedux, LocaleContextProvider } from '@provider/index'
 import { fetchApp } from '@hooks/App'
 
@@ -61,7 +61,7 @@ const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
             ssrInline
             transformers={[legacyLogicalPropertiesTransformer, px2remTransformer()]}
           >
-            <ConfigProvider
+            <OConfigProvider
               prefixCls={ThemeConf.namespace}
               form={{
                 validateMessages: {
@@ -77,7 +77,7 @@ const App = ({ Component, pageProps, reduxStore }: HeadlessProps) => {
               <AppShell>
                 <Component {...pageProps} />
               </AppShell>
-            </ConfigProvider>
+            </OConfigProvider>
           </StyleProvider>
         </LocaleContextProvider>
       </ReduxProvider>

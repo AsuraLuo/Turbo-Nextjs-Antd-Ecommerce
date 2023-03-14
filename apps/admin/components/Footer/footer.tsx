@@ -1,10 +1,10 @@
-import { Layout } from '@ocloud/ui'
+import { OLayout } from '@ocloud/ui'
 
 const FooterFC = () => {
   return (
-    <Layout.Footer>
+    <OLayout.Footer>
       <p>Copyright © 2022 olightstore.com all right reserved.</p>
-    </Layout.Footer>
+    </OLayout.Footer>
   )
 }
 

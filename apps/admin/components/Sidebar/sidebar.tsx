@@ -1,4 +1,4 @@
-import { Menu, Layout } from '@ocloud/ui'
+import { OMenu, OLayout } from '@ocloud/ui'
 
 import { useSideBar } from '@hooks/SideBar'
 
@@ -17,7 +17,7 @@ const SideBar = () => {
   } = useSideBar()
 
   return (
-    <Layout.Sider
+    <OLayout.Sider
       width={230}
       collapsible
       collapsed={collapsed}
@@ -26,7 +26,7 @@ const SideBar = () => {
     >
       <Logo />
       <StyledSidebar>
-        <Menu
+        <OMenu
           theme="dark"
           mode="inline"
           items={sideList}
@@ -36,7 +36,7 @@ const SideBar = () => {
           onOpenChange={handleToggleItem}
         />
       </StyledSidebar>
-    </Layout.Sider>
+    </OLayout.Sider>
   )
 }
 

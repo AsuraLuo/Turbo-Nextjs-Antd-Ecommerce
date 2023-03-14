@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 
-import { Table } from '@ocloud/ui'
+import { OTable } from '@ocloud/ui'
 
-export const StyledTable: any = styled(Table)({
+export const StyledTable: any = styled(OTable)({
   '&': {
     backgroundColor: '#dedede'
   }

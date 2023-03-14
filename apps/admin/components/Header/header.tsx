@@ -1,6 +1,6 @@
 import { Search } from 'react-feather'
 
-import { Avatar, Button, Dropdown, Divider, Icon, Input, Layout } from '@ocloud/ui'
+import { OAvatar, OButton, ODropdown, ODivider, OIcon, OInput, OLayout } from '@ocloud/ui'
 
 import Locale from './Locale'
 import Menus from './Menus'
@@ -14,24 +14,24 @@ const Header = () => {
   ]
 
   return (
-    <Layout.Header>
+    <OLayout.Header>
       <StyledFlex>
         <Menus />
-        <Button type="primary">查询</Button>
+        <OButton type="primary">查询</OButton>
         <div className="header__actions">
-          <Input placeholder="请输入搜索关键词" prefix={<Icon src={Search} />} />
+          <OInput placeholder="请输入搜索关键词" prefix={<OIcon src={Search} />} />
           <Locale />
-          <Divider type="vertical" />
-          <Dropdown placement="bottomRight" trigger={['click']} menu={{ items }}>
+          <ODivider type="vertical" />
+          <ODropdown placement="bottomRight" trigger={['click']} menu={{ items }}>
             <p className="header__account">
-              <Avatar size={38} />
+              <OAvatar size={38} />
               <span>Admin</span>
             </p>
-          </Dropdown>
+          </ODropdown>
         </div>
       </StyledFlex>
       <Navigation />
-    </Layout.Header>
+    </OLayout.Header>
   )
 }
 

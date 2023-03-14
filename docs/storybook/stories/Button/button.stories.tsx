@@ -1,16 +1,16 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react'
 
-import { Button } from '@ocloud/ui'
+import { OButton } from '@ocloud/ui'
 
-const meta: ComponentMeta<typeof Button> = {
+const meta: ComponentMeta<typeof OButton> = {
   title: 'Atomic Components/Button',
-  component: (args) => <Button {...args}>Primary Button</Button>,
+  component: (args) => <OButton {...args}>Primary Button</OButton>,
   argTypes: { onClick: { action: 'clicked' } }
 }
 
 export default meta
 
-export const Primary: ComponentStoryObj<typeof Button> = {
+export const Primary: ComponentStoryObj<typeof OButton> = {
   args: {
     type: 'primary'
   }

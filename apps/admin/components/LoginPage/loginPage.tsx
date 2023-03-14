@@ -1,4 +1,4 @@
-import { Tabs } from '@ocloud/ui'
+import { OTabs } from '@ocloud/ui'
 import { useLoginPage } from '@hooks/LoginPage'
 
 import LoginForm from './LoginForm'
@@ -13,7 +13,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <StyledLoginPage>{isRender ? <Tabs items={items} /> : null}</StyledLoginPage>
+      <StyledLoginPage>{isRender ? <OTabs items={items} /> : null}</StyledLoginPage>
     </>
   )
 }

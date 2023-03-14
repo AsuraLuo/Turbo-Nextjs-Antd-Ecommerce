@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { Button, Form, I18n, Input, Upload } from '@ocloud/ui'
+import { OButton, OForm, OI18n, OInput, OUpload } from '@ocloud/ui'
 
 import Loader from '@svgs/loader.svg'
 
@@ -15,7 +15,7 @@ const Home = () => {
       <Head>
         <title>Home Page</title>
       </Head>
-      <Form
+      <OForm
         layout="vertical"
         autoComplete="off"
         style={{ maxWidth: 600, margin: '5rem auto' }}
@@ -25,10 +25,10 @@ const Home = () => {
           <span>Cart</span>
         </Link>
         <Loader />
-        <Form.Item name="name" label="Name" rules={[{ required: true }]}>
-          <Input />
-        </Form.Item>
-        <Upload
+        <OForm.Item name="name" label="Name" rules={[{ required: true }]}>
+          <OInput />
+        </OForm.Item>
+        <OUpload
           name="upload"
           label="Upload"
           listType="picture-card"
@@ -39,13 +39,13 @@ const Home = () => {
           <div>
             <div style={{ marginTop: 8 }}>Upload</div>
           </div>
-        </Upload>
-        <Form.Item>
-          <Button type="primary" htmlType="submit">
-            <I18n id="global.submit" />
-          </Button>
-        </Form.Item>
-      </Form>
+        </OUpload>
+        <OForm.Item>
+          <OButton type="primary" htmlType="submit">
+            <OI18n id="global.submit" />
+          </OButton>
+        </OForm.Item>
+      </OForm>
     </>
   )
 }

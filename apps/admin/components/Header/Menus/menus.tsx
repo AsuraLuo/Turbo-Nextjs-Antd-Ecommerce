@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { clsx } from 'clsx'
 
-import { Button, I18n } from '@ocloud/ui'
+import { OButton, OI18n } from '@ocloud/ui'
 import { actions as appActions } from '@store/app'
 
 import { StyledMenuGrid, StyledMenuItem } from './styled'
@@ -32,9 +32,9 @@ const Menus = () => {
 
   return (
     <StyledMenuGrid>
-      <Button type="link" onClick={handleRediectHome}>
-        <I18n id="global.home" />
-      </Button>
+      <OButton type="link" onClick={handleRediectHome}>
+        <OI18n id="global.home" />
+      </OButton>
       {menus.map((menu: any) => {
         const { id, name } = menu
         return (
@@ -44,14 +44,14 @@ const Menus = () => {
               active: activeMenu?.id === id
             })}
           >
-            <Button
+            <OButton
               type="link"
               onClick={() => {
                 handleMenuClick(menu)
               }}
             >
               <span dangerouslySetInnerHTML={{ __html: name }} />
-            </Button>
+            </OButton>
           </StyledMenuItem>
         )
       })}

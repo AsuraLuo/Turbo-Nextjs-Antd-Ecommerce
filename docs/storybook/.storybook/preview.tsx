@@ -2,15 +2,15 @@ import React from 'react'
 import { ThemeProvider } from '@emotion/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
-import { ConfigProvider } from '@ocloud/ui'
+import { OConfigProvider } from '@ocloud/ui'
 import { ThemeConf } from '../config/theme'
 
 const withThemeProvider = (Story: any, context: any) => {
   return (
     <ThemeProvider theme={ThemeConf}>
-      <ConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
+      <OConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
         <Story {...context} />
-      </ConfigProvider>
+      </OConfigProvider>
     </ThemeProvider>
   )
 }

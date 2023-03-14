@@ -2,7 +2,7 @@ import { useEffect, FC, ReactNode, memo } from 'react'
 import { ThemeProvider } from '@emotion/react'
 
 import { ThemeConf } from '@config/theme'
-import { CurrentLocale } from '@ocloud/ui'
+import { OLocale } from '@ocloud/ui'
 
 import GlobalStyled from '@components/GlobalStyled'
 import { StyledMain } from './styled'
@@ -22,7 +22,7 @@ const AppShell: FC<AppShellProps> = ({ children }) => {
 
   return (
     <ThemeProvider theme={ThemeConf}>
-      <CurrentLocale />
+      <OLocale />
       <GlobalStyled />
       <StyledMain>{children}</StyledMain>
     </ThemeProvider>

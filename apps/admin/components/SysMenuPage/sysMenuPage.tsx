@@ -1,4 +1,4 @@
-import { ColumnsType, Space, Tag } from '@ocloud/ui'
+import { ColumnsType, OSpace, OTag } from '@ocloud/ui'
 
 import { StyledTable } from './styled'
 
@@ -40,9 +40,9 @@ const SysMenuPage = () => {
               color = 'volcano'
             }
             return (
-              <Tag color={color} key={tag}>
+              <OTag color={color} key={tag}>
                 {tag.toUpperCase()}
-              </Tag>
+              </OTag>
             )
           })}
         </>
@@ -52,10 +52,10 @@ const SysMenuPage = () => {
       title: 'Action',
       key: 'action',
       render: (_, record) => (
-        <Space size="middle">
+        <OSpace size="middle">
           <p>Invite {record.name}</p>
           <p>Delete</p>
-        </Space>
+        </OSpace>
       )
     }
   ]

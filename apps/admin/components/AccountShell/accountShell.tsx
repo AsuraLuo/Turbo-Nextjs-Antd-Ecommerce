@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 
-import { Layout } from '@ocloud/ui'
+import { OLayout } from '@ocloud/ui'
 import { useAccountShell } from '@hooks/AccountShell'
 
 import AccountProvider from '@components/AccountProvider'
@@ -15,16 +15,16 @@ const AccountShell: FC<any> = ({ children }) => {
   return isLogin ? (
     <AccountProvider>
       <StyledLayout>
-        <Layout hasSider style={{ minHeight: '100vh' }}>
+        <OLayout hasSider style={{ minHeight: '100vh' }}>
           <SideBar />
-          <Layout>
+          <OLayout>
             <Header />
-            <Layout.Content>
+            <OLayout.Content>
               {menus.length > 0 && <StyledMain>{children}</StyledMain>}
-            </Layout.Content>
+            </OLayout.Content>
             <Footer />
-          </Layout>
-        </Layout>
+          </OLayout>
+        </OLayout>
       </StyledLayout>
     </AccountProvider>
   ) : (

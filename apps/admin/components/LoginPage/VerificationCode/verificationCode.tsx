@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 
-import { Input } from '@ocloud/ui'
+import { OInput } from '@ocloud/ui'
 
 import { useVerificationCode } from '@hooks/LoginPage'
 
@@ -13,7 +13,7 @@ const VerificationCode: FC<VerificationCodeProps> = ({ uuid, ...props }) => {
 
   return (
     <div>
-      <Input placeholder="请输入验证码" {...props} />
+      <OInput placeholder="请输入验证码" {...props} />
       {verifyCode && <img src={verifyCode} alt="" />}
     </div>
   )

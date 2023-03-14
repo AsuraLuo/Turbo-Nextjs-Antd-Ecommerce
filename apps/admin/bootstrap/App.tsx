@@ -8,8 +8,7 @@ import {
   px2remTransformer
 } from '@ant-design/cssinjs'
 
-import { ConfigProvider, CssBaseline } from '@ocloud/ui'
-// import { useDebug } from '@ocloud/hooks'
+import { OConfigProvider, OCssBaseline } from '@ocloud/ui'
 import { ThemeConf } from '@config/theme'
 import { store } from '@store/index'
 
@@ -19,7 +18,6 @@ import HttpProvider from '@components/HttpProvider'
 
 const App = () => {
   const cache = createCache()
-  // useDebug()
 
   return (
     <ReduxProvider store={store}>
@@ -31,10 +29,10 @@ const App = () => {
               transformers={[legacyLogicalPropertiesTransformer, px2remTransformer()]}
             >
               <ThemeProvider theme={ThemeConf}>
-                <ConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
-                  <CssBaseline />
+                <OConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
+                  <OCssBaseline />
                   <AppShell />
-                </ConfigProvider>
+                </OConfigProvider>
               </ThemeProvider>
             </StyleProvider>
           </LocaleProvider>

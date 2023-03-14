@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { Dropdown, I18n } from '@ocloud/ui'
+import { ODropdown, OI18n } from '@ocloud/ui'
 import { useCookie } from '@ocloud/hooks'
 
 import { website } from '@config/website'
@@ -32,7 +32,7 @@ const Locale = () => {
                 handleToggle(next.key)
               }}
             >
-              <I18n id={next.id} />
+              <OI18n id={next.id} />
             </span>
           ),
           key: next.key
@@ -49,9 +49,9 @@ const Locale = () => {
   }, [cookie, locales])
 
   return (
-    <Dropdown trigger={['click']} menu={{ items: langs }}>
-      <span>{locale && <I18n id={locale} />}</span>
-    </Dropdown>
+    <ODropdown trigger={['click']} menu={{ items: langs }}>
+      <span>{locale && <OI18n id={locale} />}</span>
+    </ODropdown>
   )
 }
 
