@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Descriptions as AntdDescriptions, DescriptionsProps } from 'antd'
+import { Descriptions, DescriptionsProps } from 'antd'
 
-const Descriptions: FC<DescriptionsProps> = ({ children, ...props }) => {
-  return <AntdDescriptions {...props}>{children}</AntdDescriptions>
+const ODescriptions: FC<DescriptionsProps> = ({ children, ...props }) => {
+  return <Descriptions {...props}>{children}</Descriptions>
 }
 
-export default Descriptions
+export default ODescriptions

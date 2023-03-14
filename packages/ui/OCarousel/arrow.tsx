@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import Icon from '../OIcon'
+import OIcon from '../OIcon'
 import { StyledArrow } from './styled'
 
 interface ArrowProps {
@@ -25,7 +25,7 @@ const Arrow: FC<ArrowProps> = ({
   return (
     <StyledArrow className={className} style={mergeStyle}>
       <div className="arrow" aria-hidden="true" role="button" onClick={onClick}>
-        <Icon src={icon} />
+        <OIcon src={icon} />
       </div>
     </StyledArrow>
   )

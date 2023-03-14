@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import { ConfigProvider as AntdConfigProvider } from 'antd'
+import { ConfigProvider } from 'antd'
 import { ConfigProviderProps } from 'antd/es/config-provider'
 
-const ConfigProvider: FC<ConfigProviderProps> = ({ children, ...props }) => {
-  return <AntdConfigProvider {...props}>{children}</AntdConfigProvider>
+const OConfigProvider: FC<ConfigProviderProps> = ({ children, ...props }) => {
+  return <ConfigProvider {...props}>{children}</ConfigProvider>
 }
 
-export default ConfigProvider
+export default OConfigProvider

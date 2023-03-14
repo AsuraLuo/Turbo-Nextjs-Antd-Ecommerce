@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Switch as AntdSwitch, SwitchProps } from 'antd'
+import { Switch, SwitchProps } from 'antd'
 
-const Switch: FC<SwitchProps> = ({ ...props }) => {
-  return <AntdSwitch {...props} />
+const OSwitch: FC<SwitchProps> = ({ ...props }) => {
+  return <Switch {...props} />
 }
 
-export default Switch
+export default OSwitch

@@ -1,8 +1,8 @@
-import { Form as AntdForm } from 'antd'
+import { Form } from 'antd'
 
 import InternalForm from './form'
 
-const { Item, List, ErrorList, Provider, useForm, useFormInstance } = AntdForm
+const { Item, List, ErrorList, Provider, useForm, useFormInstance } = Form
 
 type InternalFormType = typeof InternalForm
 type CompoundedComponent = InternalFormType & {
@@ -14,12 +14,12 @@ type CompoundedComponent = InternalFormType & {
   Provider: typeof Provider
 }
 
-const Form = InternalForm as CompoundedComponent
-Form.Item = Item
-Form.List = List
-Form.ErrorList = ErrorList
-Form.Provider = Provider
-Form.useForm = useForm
-Form.useFormInstance = useFormInstance
+const OForm = InternalForm as CompoundedComponent
+OForm.Item = Item
+OForm.List = List
+OForm.ErrorList = ErrorList
+OForm.Provider = Provider
+OForm.useForm = useForm
+OForm.useFormInstance = useFormInstance
 
-export default Form
+export default OForm

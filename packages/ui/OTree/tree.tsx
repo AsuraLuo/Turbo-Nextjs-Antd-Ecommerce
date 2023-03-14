@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Tree as AntdTree, TreeProps } from 'antd'
+import { Tree, TreeProps } from 'antd'
 
-const Tree: FC<TreeProps<any>> = ({ children, ...props }) => {
-  return <AntdTree {...props}>{children}</AntdTree>
+const OTree: FC<TreeProps<any>> = ({ children, ...props }) => {
+  return <Tree {...props}>{children}</Tree>
 }
 
-export default Tree
+export default OTree

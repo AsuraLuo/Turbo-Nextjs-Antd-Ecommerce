@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Pagination as AntdPagination, PaginationProps } from 'antd'
+import { Pagination, PaginationProps } from 'antd'
 
-const Pagination: FC<PaginationProps> = ({ ...props }) => {
-  return <AntdPagination {...props} />
+const OPagination: FC<PaginationProps> = ({ ...props }) => {
+  return <Pagination {...props} />
 }
 
-export default Pagination
+export default OPagination

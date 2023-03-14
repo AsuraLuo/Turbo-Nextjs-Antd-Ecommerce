@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Badge as AntdBadge, BadgeProps } from 'antd'
+import { Badge, BadgeProps } from 'antd'
 
-const Badge: FC<BadgeProps> = ({ children, ...props }) => {
-  return <AntdBadge {...props}>{children}</AntdBadge>
+const OBadge: FC<BadgeProps> = ({ children, ...props }) => {
+  return <Badge {...props}>{children}</Badge>
 }
 
-export default Badge
+export default OBadge

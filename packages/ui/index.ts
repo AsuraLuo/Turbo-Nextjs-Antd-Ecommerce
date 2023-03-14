@@ -19,7 +19,7 @@ import Dropdown from './ODropdown'
 import Empty from './OEmpty'
 import FloatButton from './OFloatButton'
 import Form from './OForm'
-import { Col, Row, useBreakpoint } from './OGrid'
+import { OCol, ORow, useBreakpoint } from './OGrid'
 import I18n from './OI18n'
 import Icon from './OIcon'
 import Image from './OImage'
@@ -55,7 +55,7 @@ import message from './OMessage'
 import notification from './ONotification'
 
 import CssBaseline from './OCssBaseline'
-import CurrentLocale, { formatMessage } from './OCurrentLocale'
+import CurrentLocale, { formatMessage } from './OLocale'
 
 // Antd Atomic Components
 export {
@@ -78,8 +78,8 @@ export {
   Empty,
   FloatButton,
   Form,
-  Col,
-  Row,
+  OCol,
+  ORow,
   I18n,
   Icon,
   Image,

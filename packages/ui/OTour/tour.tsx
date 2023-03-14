@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Tour as AntdTour, TourProps } from 'antd'
+import { Tour, TourProps } from 'antd'
 
-const Tour: FC<TourProps> = ({ ...props }) => {
-  return <AntdTour {...props} />
+const OTour: FC<TourProps> = ({ ...props }) => {
+  return <Tour {...props} />
 }
 
-export default Tour
+export default OTour

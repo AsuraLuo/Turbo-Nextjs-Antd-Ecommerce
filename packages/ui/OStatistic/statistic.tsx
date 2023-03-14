@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Statistic as AntdStatistic, StatisticProps } from 'antd'
+import { Statistic, StatisticProps } from 'antd'
 
-const Statistic: FC<StatisticProps> = ({ ...props }) => {
-  return <AntdStatistic {...props} />
+const OStatistic: FC<StatisticProps> = ({ ...props }) => {
+  return <Statistic {...props} />
 }
 
-export default Statistic
+export default OStatistic

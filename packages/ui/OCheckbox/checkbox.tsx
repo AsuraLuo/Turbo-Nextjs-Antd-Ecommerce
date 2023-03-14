@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Checkbox as AntdCheckbox, CheckboxProps } from 'antd'
+import { Checkbox, CheckboxProps } from 'antd'
 
-const Checkbox: FC<CheckboxProps> = ({ children, ...props }) => {
-  return <AntdCheckbox {...props}>{children}</AntdCheckbox>
+const OCheckbox: FC<CheckboxProps> = ({ children, ...props }) => {
+  return <Checkbox {...props}>{children}</Checkbox>
 }
 
-export default Checkbox
+export default OCheckbox

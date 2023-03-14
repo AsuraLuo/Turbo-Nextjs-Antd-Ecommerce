@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Tooltip as AntdTooltip, TooltipProps } from 'antd'
+import { Tooltip, TooltipProps } from 'antd'
 
-const Tooltip: FC<TooltipProps> = ({ children, ...props }) => {
-  return <AntdTooltip {...props}>{children}</AntdTooltip>
+const OTooltip: FC<TooltipProps> = ({ children, ...props }) => {
+  return <Tooltip {...props}>{children}</Tooltip>
 }
 
-export default Tooltip
+export default OTooltip

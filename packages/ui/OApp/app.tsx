@@ -1,9 +1,8 @@
 import { FC } from 'react'
-import { App as AntdApp } from 'antd'
-import { AppProps } from 'antd/es/app'
+import { App, AppProps } from 'antd'
 
-const App: FC<AppProps> = ({ children, ...props }) => {
-  return <AntdApp {...props}>{children}</AntdApp>
+const OApp: FC<AppProps> = ({ children, ...props }) => {
+  return <App {...props}>{children}</App>
 }
 
-export default App
+export default OApp

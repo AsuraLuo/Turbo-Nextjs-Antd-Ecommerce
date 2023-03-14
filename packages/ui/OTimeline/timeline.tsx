@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Timeline as AntdTimeline, TimelineProps } from 'antd'
+import { Timeline, TimelineProps } from 'antd'
 
-const Timeline: FC<TimelineProps> = ({ children, ...props }) => {
-  return <AntdTimeline {...props}>{children}</AntdTimeline>
+const OTimeline: FC<TimelineProps> = ({ children, ...props }) => {
+  return <Timeline {...props}>{children}</Timeline>
 }
 
-export default Timeline
+export default OTimeline

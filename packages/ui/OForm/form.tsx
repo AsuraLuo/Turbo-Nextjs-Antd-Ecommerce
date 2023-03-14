@@ -1,11 +1,11 @@
 import { FC } from 'react'
-import { Form as AntdForm, FormProps } from 'antd'
+import { Form, FormProps } from 'antd'
 
 const InternalForm: FC<FormProps> = ({ children, ...props }) => {
   return (
-    <AntdForm {...props}>
+    <Form {...props}>
       <>{children}</>
-    </AntdForm>
+    </Form>
   )
 }
 

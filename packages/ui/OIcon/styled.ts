@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const StyledIcon = styled.span`
+export const StyledOIcon = styled.span`
   display: inline-flex;
   justify-content: center;
   align-items: center;

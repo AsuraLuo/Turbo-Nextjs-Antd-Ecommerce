@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Breadcrumb as AntdBreadcrumb, BreadcrumbProps } from 'antd'
+import { Breadcrumb, BreadcrumbProps } from 'antd'
 
-const Breadcrumb: FC<BreadcrumbProps> = ({ children, ...props }) => {
-  return <AntdBreadcrumb {...props}>{children}</AntdBreadcrumb>
+const OBreadcrumb: FC<BreadcrumbProps> = ({ children, ...props }) => {
+  return <Breadcrumb {...props}>{children}</Breadcrumb>
 }
 
-export default Breadcrumb
+export default OBreadcrumb

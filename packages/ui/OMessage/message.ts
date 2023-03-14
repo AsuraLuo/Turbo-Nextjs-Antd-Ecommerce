@@ -1,15 +1,15 @@
 import { message } from 'antd'
 import { ArgsProps } from 'antd/es/message'
 
-const internalMessage = (options: ArgsProps) => {
+const OMessage = (options: ArgsProps) => {
   return message.config({
     top: 100,
     duration: 2,
     maxCount: 3,
     rtl: true,
-    prefixCls: 'my-message',
+    prefixCls: 'ocloud',
     ...options
   })
 }
 
-export default internalMessage
+export default OMessage

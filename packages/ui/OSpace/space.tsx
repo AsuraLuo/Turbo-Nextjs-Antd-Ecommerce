@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Space as AntdSpace, SpaceProps } from 'antd'
+import { Space, SpaceProps } from 'antd'
 
-const Space: FC<SpaceProps> = ({ children, ...props }) => {
-  return <AntdSpace {...props}>{children}</AntdSpace>
+const OSpace: FC<SpaceProps> = ({ children, ...props }) => {
+  return <Space {...props}>{children}</Space>
 }
 
-export default Space
+export default OSpace

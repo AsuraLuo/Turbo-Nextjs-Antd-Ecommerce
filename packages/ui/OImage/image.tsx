@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Image as AntdImage, ImageProps } from 'antd'
+import { Image, ImageProps } from 'antd'
 
-const Image: FC<ImageProps> = ({ children, ...props }) => {
-  return <AntdImage {...props}>{children}</AntdImage>
+const OImage: FC<ImageProps> = ({ children, ...props }) => {
+  return <Image {...props}>{children}</Image>
 }
 
-export default Image
+export default OImage

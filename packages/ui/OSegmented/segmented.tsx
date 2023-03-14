@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import { Segmented as AntdSegmented, SegmentedProps } from 'antd'
+import { Segmented, SegmentedProps } from 'antd'
 
-const Segmented: FC<SegmentedProps> = ({ children, ...props }) => {
-  const Component: any = AntdSegmented
+const OSegmented: FC<SegmentedProps> = ({ children, ...props }) => {
+  const Component: any = Segmented
   return <Component {...props}>{children}</Component>
 }
 
-export default Segmented
+export default OSegmented

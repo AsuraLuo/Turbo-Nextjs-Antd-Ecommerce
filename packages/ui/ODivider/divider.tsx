@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Divider as AntdDivider, DividerProps } from 'antd'
+import { Divider, DividerProps } from 'antd'
 
-const Divider: FC<DividerProps> = ({ children, ...props }) => {
-  return <AntdDivider {...props}>{children}</AntdDivider>
+const ODivider: FC<DividerProps> = ({ children, ...props }) => {
+  return <Divider {...props}>{children}</Divider>
 }
 
-export default Divider
+export default ODivider

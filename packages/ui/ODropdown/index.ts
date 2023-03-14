@@ -1,15 +1,15 @@
-import { Dropdown as AntdDropdown } from 'antd'
+import { Dropdown } from 'antd'
 
 import InternalDropDown from './dropdown'
 
-const { Button } = AntdDropdown
+const { Button } = Dropdown
 
 type InternalType = typeof InternalDropDown
 type CompoundedComponent = InternalType & {
   Button: typeof Button
 }
 
-const Dropdown = InternalDropDown as CompoundedComponent
-Dropdown.Button = Button
+const ODropdown = InternalDropDown as CompoundedComponent
+ODropdown.Button = Button
 
-export default Dropdown
+export default ODropdown

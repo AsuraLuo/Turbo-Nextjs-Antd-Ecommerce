@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Menu as AntdMenu, MenuProps } from 'antd'
+import { Menu, MenuProps } from 'antd'
 
-const Menu: FC<MenuProps> = ({ children, ...props }) => {
-  return <AntdMenu {...props}>{children}</AntdMenu>
+const OMenu: FC<MenuProps> = ({ children, ...props }) => {
+  return <Menu {...props}>{children}</Menu>
 }
 
-export default Menu
+export default OMenu

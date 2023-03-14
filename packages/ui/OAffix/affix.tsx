@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Affix as AntdAffix, AffixProps } from 'antd'
+import { Affix, AffixProps } from 'antd'
 
-const Affix: FC<AffixProps> = ({ children, ...props }) => {
-  return <AntdAffix {...props}>{children}</AntdAffix>
+const OAffix: FC<AffixProps> = ({ children, ...props }) => {
+  return <Affix {...props}>{children}</Affix>
 }
 
-export default Affix
+export default OAffix

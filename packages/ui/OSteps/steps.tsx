@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Steps as AntdSteps, StepsProps } from 'antd'
+import { Steps, StepsProps } from 'antd'
 
-const Steps: FC<StepsProps> = ({ children, ...props }) => {
-  return <AntdSteps {...props}>{children}</AntdSteps>
+const OSteps: FC<StepsProps> = ({ children, ...props }) => {
+  return <Steps {...props}>{children}</Steps>
 }
 
-export default Steps
+export default OSteps

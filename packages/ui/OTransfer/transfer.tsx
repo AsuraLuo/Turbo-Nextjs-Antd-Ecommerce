@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Transfer as AntdTransfer, TransferProps } from 'antd'
+import { Transfer, TransferProps } from 'antd'
 
-const Transfer: FC<TransferProps<any>> = ({ children, ...props }) => {
-  return <AntdTransfer {...props}>{children}</AntdTransfer>
+const OTransfer: FC<TransferProps<any>> = ({ children, ...props }) => {
+  return <Transfer {...props}>{children}</Transfer>
 }
 
-export default Transfer
+export default OTransfer

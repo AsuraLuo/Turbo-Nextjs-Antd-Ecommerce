@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Collapse as AntdCollapse, CollapseProps } from 'antd'
+import { Collapse, CollapseProps } from 'antd'
 
 const InternalCollapse: FC<CollapseProps> = ({ children, ...props }) => {
-  return <AntdCollapse {...props}>{children}</AntdCollapse>
+  return <Collapse {...props}>{children}</Collapse>
 }
 
 export default InternalCollapse

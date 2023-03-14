@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Tag as AntdTag, TagProps } from 'antd'
+import { Tag, TagProps } from 'antd'
 
-const Tag: FC<TagProps> = ({ children, ...props }) => {
-  return <AntdTag {...props}>{children}</AntdTag>
+const OTag: FC<TagProps> = ({ children, ...props }) => {
+  return <Tag {...props}>{children}</Tag>
 }
 
-export default Tag
+export default OTag

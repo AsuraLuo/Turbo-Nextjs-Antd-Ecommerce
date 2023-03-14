@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Rate as AntdRate, RateProps } from 'antd'
+import { Rate, RateProps } from 'antd'
 
-const Rate: FC<RateProps> = ({ ...props }) => {
-  return <AntdRate {...props} />
+const ORate: FC<RateProps> = ({ ...props }) => {
+  return <Rate {...props} />
 }
 
-export default Rate
+export default ORate

@@ -1,5 +1,5 @@
-import { Col } from './col'
-import { Row } from './row'
+import { OCol } from './col'
+import { ORow } from './row'
 import { useBreakpoint } from './grid'
 
-export { Col, Row, useBreakpoint }
+export { OCol, ORow, useBreakpoint }

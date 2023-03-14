@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Popover as AntdPopover, PopoverProps } from 'antd'
+import { Popover, PopoverProps } from 'antd'
 
-const Popover: FC<PopoverProps> = ({ children, ...props }) => {
-  return <AntdPopover {...props}>{children}</AntdPopover>
+const OPopover: FC<PopoverProps> = ({ children, ...props }) => {
+  return <Popover {...props}>{children}</Popover>
 }
 
-export default Popover
+export default OPopover

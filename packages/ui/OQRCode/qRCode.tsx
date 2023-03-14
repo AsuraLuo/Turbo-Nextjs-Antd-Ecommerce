@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { QRCode as AntdQRCode, QRCodeProps } from 'antd'
+import { QRCode, QRCodeProps } from 'antd'
 
-const QRCode: FC<QRCodeProps> = ({ ...props }) => {
-  return <AntdQRCode {...props} />
+const OQRCode: FC<QRCodeProps> = ({ ...props }) => {
+  return <QRCode {...props} />
 }
 
-export default QRCode
+export default OQRCode

@@ -1,7 +1,7 @@
 import { notification } from 'antd'
 import { ArgsProps } from 'antd/es/notification/interface'
 
-const internalNotification = (options: ArgsProps) => {
+const ONotification = (options: ArgsProps) => {
   return notification.config({
     bottom: 50,
     duration: 3,
@@ -11,4 +11,4 @@ const internalNotification = (options: ArgsProps) => {
   })
 }
 
-export default internalNotification
+export default ONotification

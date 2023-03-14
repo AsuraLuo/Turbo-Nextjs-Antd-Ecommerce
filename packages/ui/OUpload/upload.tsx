@@ -1,10 +1,10 @@
 import { FC, Fragment, useState } from 'react'
-import { Upload as AntdUpload, FormItemProps, UploadProps, UploadFile } from 'antd'
+import { Upload, FormItemProps, UploadProps, UploadFile } from 'antd'
 import { RcFile } from 'antd/es/upload'
 
 import Form from '../OForm'
 import Modal from '../OModal'
-import { formatMessage } from '../OCurrentLocale'
+import { formatMessage } from '../OLocale'
 import { StyledUploadImage } from './styled'
 
 interface BaseUploadProps extends UploadProps {
@@ -13,7 +13,7 @@ interface BaseUploadProps extends UploadProps {
   formItemProps?: FormItemProps
 }
 
-const Upload: FC<BaseUploadProps> = ({
+const OUpload: FC<BaseUploadProps> = ({
   children,
   multiple = true,
   name = '',
@@ -46,7 +46,6 @@ const Upload: FC<BaseUploadProps> = ({
     if (!file.url && !file.preview) {
       file.preview = await handleBase64(file.originFileObj as RcFile)
     }
-
     setPreviewImage(file.url || (file.preview as string))
     setPreviewOpen(true)
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -62,9 +61,9 @@ const Upload: FC<BaseUploadProps> = ({
         {...formItemProps}
         getValueFromEvent={handleValueEvent}
       >
-        <AntdUpload {...props} multiple={multiple} onPreview={handlePreview}>
+        <Upload {...props} multiple={multiple} onPreview={handlePreview}>
           {children}
-        </AntdUpload>
+        </Upload>
       </Form.Item>
       <Modal footer={null} open={previewOpen} title={previewTitle} onCancel={handleCancel}>
         <StyledUploadImage>
@@ -77,4 +76,4 @@ const Upload: FC<BaseUploadProps> = ({
   )
 }
 
-export default Upload
+export default OUpload

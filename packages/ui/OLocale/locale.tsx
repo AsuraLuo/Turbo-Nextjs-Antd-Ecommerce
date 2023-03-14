@@ -13,12 +13,12 @@ class Locale extends Component {
     return false
   }
 }
-const CurrentLocale: any = Locale
+const OLocale: any = Locale
 
-export default injectIntl(CurrentLocale)
+export default injectIntl(OLocale)
 
 export const intl = () => {
-  return CurrentLocale.instance?.props.intl
+  return OLocale.instance?.props.intl
 }
 
 export const formatMessage = (...args: any[]) => {

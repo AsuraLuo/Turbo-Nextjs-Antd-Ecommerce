@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Spin as AntdSpin, SpinProps } from 'antd'
+import { Spin, SpinProps } from 'antd'
 
-const Spin: FC<SpinProps> = ({ children, ...props }) => {
-  return <AntdSpin {...props}>{children}</AntdSpin>
+const OSpin: FC<SpinProps> = ({ children, ...props }) => {
+  return <Spin {...props}>{children}</Spin>
 }
 
-export default Spin
+export default OSpin

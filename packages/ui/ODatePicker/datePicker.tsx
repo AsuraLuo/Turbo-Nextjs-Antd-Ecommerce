@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { DatePicker as AntdDatePicker, DatePickerProps } from 'antd'
+import { DatePicker, DatePickerProps } from 'antd'
 
-const DatePicker: FC<DatePickerProps> = ({ ...props }) => {
-  return <AntdDatePicker {...props} />
+const ODatePicker: FC<DatePickerProps> = ({ ...props }) => {
+  return <DatePicker {...props} />
 }
 
-export default DatePicker
+export default ODatePicker

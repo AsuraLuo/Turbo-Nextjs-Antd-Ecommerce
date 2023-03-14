@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Layout as AntdLayout, LayoutProps } from 'antd'
+import { Layout, LayoutProps } from 'antd'
 
-const Layout: FC<LayoutProps> = ({ children, ...props }) => {
-  return <AntdLayout {...props}>{children}</AntdLayout>
+const OLayout: FC<LayoutProps> = ({ children, ...props }) => {
+  return <Layout {...props}>{children}</Layout>
 }
 
-export default Layout
+export default OLayout

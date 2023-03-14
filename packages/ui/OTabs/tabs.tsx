@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Tabs as AntdTabs, TabsProps } from 'antd'
+import { Tabs, TabsProps } from 'antd'
 
-const Tabs: FC<TabsProps> = ({ children, ...props }) => {
-  return <AntdTabs {...props}>{children}</AntdTabs>
+const OTabs: FC<TabsProps> = ({ children, ...props }) => {
+  return <Tabs {...props}>{children}</Tabs>
 }
 
-export default Tabs
+export default OTabs

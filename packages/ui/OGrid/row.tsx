@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { Row as AntdRow, RowProps } from 'antd'
+import { Row, RowProps } from 'antd'
 
-export const Row: FC<RowProps> = ({ children, ...props }) => {
-  return <AntdRow {...props}>{children}</AntdRow>
+export const ORow: FC<RowProps> = ({ children, ...props }) => {
+  return <Row {...props}>{children}</Row>
 }

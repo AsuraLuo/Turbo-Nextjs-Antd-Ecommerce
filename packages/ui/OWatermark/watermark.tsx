@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Watermark as AntdWatermark, WatermarkProps } from 'antd'
+import { Watermark, WatermarkProps } from 'antd'
 
-const Watermark: FC<WatermarkProps> = ({ children, ...props }) => {
-  return <AntdWatermark {...props}>{children}</AntdWatermark>
+const OWatermark: FC<WatermarkProps> = ({ children, ...props }) => {
+  return <Watermark {...props}>{children}</Watermark>
 }
 
-export default Watermark
+export default OWatermark

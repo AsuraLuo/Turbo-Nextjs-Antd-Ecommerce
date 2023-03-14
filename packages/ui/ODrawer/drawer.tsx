@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Drawer as AntdDrawer, DrawerProps } from 'antd'
+import { Drawer, DrawerProps } from 'antd'
 
-const Drawer: FC<DrawerProps> = ({ children, ...props }) => {
-  return <AntdDrawer {...props}>{children}</AntdDrawer>
+const ODrawer: FC<DrawerProps> = ({ children, ...props }) => {
+  return <Drawer {...props}>{children}</Drawer>
 }
 
-export default Drawer
+export default ODrawer

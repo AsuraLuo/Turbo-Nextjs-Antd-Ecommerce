@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Table as AntdTable, TableProps } from 'antd'
+import { Table, TableProps } from 'antd'
 
-const Table: FC<TableProps<any>> = ({ children, ...props }) => {
-  return <AntdTable {...props}>{children}</AntdTable>
+const OTable: FC<TableProps<any>> = ({ children, ...props }) => {
+  return <Table {...props}>{children}</Table>
 }
 
-export default Table
+export default OTable

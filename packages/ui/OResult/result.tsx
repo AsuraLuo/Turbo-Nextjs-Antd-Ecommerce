@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Result as AntdResult, ResultProps } from 'antd'
+import { Result, ResultProps } from 'antd'
 
-const Result: FC<ResultProps> = ({ children, ...props }) => {
-  return <AntdResult {...props}>{children}</AntdResult>
+const OResult: FC<ResultProps> = ({ children, ...props }) => {
+  return <Result {...props}>{children}</Result>
 }
 
-export default Result
+export default OResult

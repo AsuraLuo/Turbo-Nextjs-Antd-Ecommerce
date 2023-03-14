@@ -1,19 +1,19 @@
 import { FC } from 'react'
 
-import { StyledIcon } from './styled'
+import { StyledOIcon } from './styled'
 
-interface IconProps {
+interface OIconProps {
   src: FC<any>
   size?: number
 }
 
-const Icon: FC<IconProps> = ({ size = 20, src, ...props }) => {
+const OIcon: FC<OIconProps> = ({ size = 20, src, ...props }) => {
   const Component: any = src
   return (
-    <StyledIcon {...props}>
+    <StyledOIcon {...props}>
       <Component size={size} />
-    </StyledIcon>
+    </StyledOIcon>
   )
 }
 
-export default Icon
+export default OIcon

@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { Col as AntdCol, ColProps } from 'antd'
+import { Col, ColProps } from 'antd'
 
-export const Col: FC<ColProps> = ({ children, ...props }) => {
-  return <AntdCol {...props}>{children}</AntdCol>
+export const OCol: FC<ColProps> = ({ children, ...props }) => {
+  return <Col {...props}>{children}</Col>
 }

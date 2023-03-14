@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Select as AntdSelect, SelectProps } from 'antd'
+import { Select, SelectProps } from 'antd'
 
-const Select: FC<SelectProps> = ({ children, ...props }) => {
-  return <AntdSelect {...props}>{children}</AntdSelect>
+const OSelect: FC<SelectProps> = ({ children, ...props }) => {
+  return <Select {...props}>{children}</Select>
 }
 
-export default Select
+export default OSelect

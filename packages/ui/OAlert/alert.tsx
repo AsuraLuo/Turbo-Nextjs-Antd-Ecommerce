@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Alert as AntdAlert, AlertProps } from 'antd'
+import { Alert, AlertProps } from 'antd'
 
-const Alert: FC<AlertProps> = ({ ...props }) => {
-  return <AntdAlert {...props} />
+const OAlert: FC<AlertProps> = ({ ...props }) => {
+  return <Alert {...props} />
 }
 
-export default Alert
+export default OAlert

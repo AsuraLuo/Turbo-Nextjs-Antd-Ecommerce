@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Input as AntdInput, InputProps } from 'antd'
+import { Input, InputProps } from 'antd'
 
-const Input: FC<InputProps> = ({ children, ...props }) => {
-  return <AntdInput {...props}>{children}</AntdInput>
+const OInput: FC<InputProps> = ({ children, ...props }) => {
+  return <Input {...props}>{children}</Input>
 }
 
-export default Input
+export default OInput

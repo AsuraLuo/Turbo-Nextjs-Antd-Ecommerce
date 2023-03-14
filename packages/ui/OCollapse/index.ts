@@ -1,15 +1,15 @@
-import { Collapse as AntdCollapse } from 'antd'
+import { Collapse } from 'antd'
 
 import InternalCollapse from './collapse'
 
-const { Panel } = AntdCollapse
+const { Panel } = Collapse
 
 type InternalType = typeof InternalCollapse
 type CompoundedComponent = InternalType & {
   Panel: typeof Panel
 }
 
-const Collapse = InternalCollapse as CompoundedComponent
-Collapse.Panel = Panel
+const OCollapse = InternalCollapse as CompoundedComponent
+OCollapse.Panel = Panel
 
-export default Collapse
+export default OCollapse

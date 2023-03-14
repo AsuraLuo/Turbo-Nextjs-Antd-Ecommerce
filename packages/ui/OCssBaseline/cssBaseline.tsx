@@ -1,7 +1,7 @@
 import 'antd/dist/reset.css'
 
-const CssBaseline = () => {
+const OCssBaseline = () => {
   return null
 }
 
-export default CssBaseline
+export default OCssBaseline
