@@ -1,16 +1,20 @@
 import { FC, memo } from 'react'
+import { useFetch } from 'use-http'
 
 import { OLayout } from '@ocloud/ui'
+
 import { useAccountShell } from '@hooks/AccountShell'
 
 import AccountProvider from '@components/AccountProvider'
-import Header from '@components/Header'
 import Footer from '@components/Footer'
+import Header from '@components/Header'
 import SideBar from '@components/Sidebar'
+
 import { StyledLayout, StyledMain } from './styled'
 
 const AccountShell: FC<any> = ({ children }) => {
   const { isLogin, menus } = useAccountShell()
+  useFetch()
 
   return isLogin ? (
     <AccountProvider>

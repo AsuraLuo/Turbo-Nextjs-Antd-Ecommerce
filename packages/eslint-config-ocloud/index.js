@@ -24,6 +24,36 @@ module.exports = {
         ignore: ['antd']
       }
     ],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', ['internal', 'parent', 'sibling', 'index'], 'unknown'],
+        pathGroups: [
+          {
+            pattern: '@ocloud/**',
+            group: 'external',
+            position: 'after'
+          },
+          {
+            pattern: '@hooks/**',
+            group: 'external',
+            position: 'after'
+          },
+          {
+            pattern: '@components/**',
+            group: 'external',
+            position: 'after'
+          }
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          orderImportKind: 'asc',
+          caseInsensitive: true
+        }
+      }
+    ],
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
     'no-console': ['error', { allow: ['error', 'info', 'warn'] }],
@@ -32,6 +62,7 @@ module.exports = {
     'no-useless-escape': 0,
     'no-unused-vars': 0,
     'no-restricted-exports': 0,
+    // eslint-disable-next-line quotes
     'no-restricted-syntax': ['error', 'WithStatement', "BinaryExpression[operator='in']"],
     'prettier/prettier': [
       'error',
