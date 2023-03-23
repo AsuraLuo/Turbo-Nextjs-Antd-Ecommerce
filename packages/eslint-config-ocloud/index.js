@@ -62,8 +62,7 @@ module.exports = {
     'no-useless-escape': 0,
     'no-unused-vars': 0,
     'no-restricted-exports': 0,
-    // eslint-disable-next-line quotes
-    'no-restricted-syntax': ['error', 'WithStatement', "BinaryExpression[operator='in']"],
+    'no-restricted-syntax': ['error', 'WithStatement'],
     'prettier/prettier': [
       'error',
       {
