@@ -16,9 +16,9 @@ export default ({ mode }: ConfigEnv) => {
 
   return defineConfig({
     envPrefix: 'REACT_',
-    optimizeDeps: {
-      include: ['@ocloud/ui']
-    },
+    // optimizeDeps: {
+    //   include: ['@ocloud/ui']
+    // },
     build: {
       reportCompressedSize: !isProd,
       sourcemap: !isProd
@@ -70,16 +70,18 @@ export default ({ mode }: ConfigEnv) => {
         '@svgs': path.resolve(__dirname, './svgs/')
       }
     },
-    server: {
-      cors: true,
-      port: 3000,
-      host: 'localhost',
-      hmr: true,
-      https: {
-        // SSL certificate config
-        key: fs.readFileSync('keys/ocloud-key.pem'),
-        cert: fs.readFileSync('keys/ocloud-cert.pem')
-      }
-    }
+    server: isProd
+      ? {}
+      : {
+          cors: true,
+          port: 3000,
+          host: 'localhost',
+          hmr: true,
+          https: {
+            // SSL certificate config
+            key: fs.readFileSync('keys/ocloud-key.pem'),
+            cert: fs.readFileSync('keys/ocloud-cert.pem')
+          }
+        }
   })
 }

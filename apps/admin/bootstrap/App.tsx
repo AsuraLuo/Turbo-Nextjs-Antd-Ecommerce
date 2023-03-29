@@ -1,20 +1,20 @@
-import { Provider as ReduxProvider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
-import { ThemeProvider } from '@emotion/react'
 import {
   StyleProvider,
   createCache,
   legacyLogicalPropertiesTransformer,
   px2remTransformer
 } from '@ant-design/cssinjs'
-
-import { OConfigProvider, OCssBaseline } from '@ocloud/ui'
 import { ThemeConf } from '@config/theme'
+import { ThemeProvider } from '@emotion/react'
 import { store } from '@store/index'
+import { Provider as ReduxProvider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 
-import AppShell from '@components/AppShell'
-import LocaleProvider from '@components/LocaleProvider'
+import { OConfigProvider, OCssBaseline, IButton } from '@ocloud/ui'
+
+// import AppShell from '@components/AppShell'
 import HttpProvider from '@components/HttpProvider'
+import LocaleProvider from '@components/LocaleProvider'
 
 const App = () => {
   const cache = createCache()
@@ -31,7 +31,10 @@ const App = () => {
               <ThemeProvider theme={ThemeConf}>
                 <OConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
                   <OCssBaseline />
-                  <AppShell />
+                  {/* <AppShell /> */}
+                  <div style={{ width: '500px', margin: '10rem auto' }}>
+                    <IButton />
+                  </div>
                 </OConfigProvider>
               </ThemeProvider>
             </StyleProvider>
