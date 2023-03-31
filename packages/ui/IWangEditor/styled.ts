@@ -539,15 +539,6 @@ export const StyledWangEditor = styled.div`
     border: 0;
   }
 
-  /* .w-e-text-container [data-slate-editor] pre > code {
-    background-color: var(--w-e-textarea-slight-bg-color);
-    border: 1px solid var(--w-e-textarea-slight-border-color);
-    border-radius: 4px 4px;
-    display: block;
-    font-size: 14px;
-    padding: 10px;
-    text-indent: 0;
-  } */
   .w-e-text-container [data-slate-editor] .w-e-image-container {
     display: inline-block;
     margin: 0 3px;
@@ -662,19 +653,26 @@ export const StyledWangEditor = styled.div`
   }
 
   .w-e-text-container [data-slate-editor] pre > code {
+    display: block;
+    padding: 10px;
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
     font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+    font-size: 14px;
     -webkit-hyphens: none;
     hyphens: none;
     line-height: 1.5;
     word-spacing: normal;
     text-align: left;
+    text-indent: 0;
     text-shadow: 0 1px #fff;
     word-break: normal;
     word-wrap: normal;
     white-space: pre;
+    background-color: var(--w-e-textarea-slight-bg-color);
+    border: 1px solid var(--w-e-textarea-slight-border-color);
+    border-radius: 4px 4px;
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
