@@ -2,12 +2,11 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { useCookie } from '@ocloud/hooks'
-import { OLocale } from '@ocloud/ui'
+import { OLocale, IGlobalStyled } from '@ocloud/ui'
 import { actions as userActions } from '@store/user'
 
-import AccountShell from '@components/AccountShell'
-import AppRoutes from '@components/AppRoutes'
-import GlobalStyled from '@components/GlobalStyled'
+// import AccountShell from '@components/AccountShell'
+// import AppRoutes from '@components/AppRoutes'
 
 const AppShell = () => {
   const dispatch = useDispatch()
@@ -21,10 +20,10 @@ const AppShell = () => {
   return (
     <>
       <OLocale />
-      <GlobalStyled />
-      <AccountShell>
+      <IGlobalStyled />
+      {/* <AccountShell>
         <AppRoutes />
-      </AccountShell>
+      </AccountShell> */}
     </>
   )
 }

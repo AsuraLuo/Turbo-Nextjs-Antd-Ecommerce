@@ -9,9 +9,9 @@ import { store } from '@store/index'
 import { Provider as ReduxProvider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
-import { OConfigProvider, OCssBaseline, IPassWordInput } from '@ocloud/ui'
+import { OConfigProvider, OCssBaseline, IWangEditor } from '@ocloud/ui'
 
-// import AppShell from '@components/AppShell'
+import AppShell from '@components/AppShell'
 import HttpProvider from '@components/HttpProvider'
 import LocaleProvider from '@components/LocaleProvider'
 
@@ -25,9 +25,9 @@ const App = () => {
               <ThemeProvider theme={ThemeConf}>
                 <OConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
                   <OCssBaseline />
-                  {/* <AppShell /> */}
+                  <AppShell />
                   <div style={{ width: '500px', margin: '10rem auto' }}>
-                    <IPassWordInput />
+                    <IWangEditor />
                   </div>
                 </OConfigProvider>
               </ThemeProvider>
