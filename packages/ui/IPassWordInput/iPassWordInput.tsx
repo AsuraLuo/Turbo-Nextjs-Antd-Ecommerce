@@ -3,11 +3,22 @@ import type { InputProps } from 'antd/es/input'
 
 import OInput from '../OInput'
 
-interface IPassWordInputProps
-  extends Omit<InputProps, 'type' | 'bordered' | 'size' | 'prefix' | 'suffix'> {}
+type ExcludeType =
+  | 'className'
+  | 'style'
+  | 'type'
+  | 'bordered'
+  | 'size'
+  | 'prefix'
+  | 'suffix'
+  | 'visibilityToggle'
 
-const IPassWordInput: FC<IPassWordInputProps> = ({ ...props }) => {
-  return <OInput.Password {...props} />
+interface IPassWordInputProps extends Omit<InputProps, ExcludeType> {
+  showEye?: boolean
+}
+
+const IPassWordInput: FC<IPassWordInputProps> = ({ showEye = true, ...props }) => {
+  return <OInput.Password visibilityToggle={showEye} {...props} />
 }
 
 export default IPassWordInput

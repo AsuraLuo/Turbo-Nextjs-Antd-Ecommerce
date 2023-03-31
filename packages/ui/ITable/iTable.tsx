@@ -3,15 +3,20 @@ import type { TableProps } from 'antd/es/table'
 
 import OTable from '../OTable'
 
+type ExcludeType =
+  | 'className'
+  | 'style'
+  | 'bordered'
+  | 'getPopupContainer'
+  | 'pagination'
+  | 'size'
+  | 'tableLayout'
+
 export interface RecordType extends Record<string, any> {
   [k: string]: any
 }
 
-export interface ITableProps<T = RecordType>
-  extends Omit<
-    TableProps<T>,
-    'bordered' | 'getPopupContainer' | 'pagination' | 'size' | 'tableLayout'
-  > {
+export interface ITableProps<T = RecordType> extends Omit<TableProps<T>, ExcludeType> {
   showPagination?: boolean
   paginationProps?: TableProps<RecordType>['pagination']
 }

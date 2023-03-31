@@ -5,13 +5,21 @@ import type { ModalProps } from 'antd/es/modal'
 
 import { StyledButtons, StyledConfirmModal } from './styled'
 
-export interface IButtonProps extends Omit<ButtonProps, 'onClick'> {}
+type ExcludeType = 'className' | 'style'
 
-export interface IModalProps
-  extends Omit<
-    ModalProps,
-    'footer' | 'open' | 'cancelButtonProps' | 'cancelText' | 'okButtonProps' | 'okText' | 'onCancel'
-  > {
+type MOdalExcludeType =
+  | ExcludeType
+  | 'footer'
+  | 'open'
+  | 'cancelButtonProps'
+  | 'cancelText'
+  | 'okButtonProps'
+  | 'okText'
+  | 'onCancel'
+
+export interface IButtonProps extends Omit<ButtonProps, ExcludeType | 'onClick'> {}
+
+export interface IModalProps extends Omit<ModalProps, MOdalExcludeType> {
   getContainer?: HTMLElement | false
 }
 
@@ -40,7 +48,7 @@ export interface IConfirmModalProps {
   handleCancel?: () => void
 }
 
-const IConfirmModal: FC<React.PropsWithChildren<IConfirmModalProps>> = ({
+const IConfirmModal: FC<React.PropsWithChildren<Omit<IConfirmModalProps, ExcludeType>>> = ({
   children,
   reverse = false,
   confirmText = '确认',

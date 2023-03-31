@@ -3,7 +3,9 @@ import { SearchProps } from 'antd/es/input'
 
 import Input from '../OInput'
 
-export interface IQuerySearchProps extends Omit<SearchProps, 'enterButton'> {
+type ExcludeType = 'className' | 'style' | 'enterButton'
+
+export interface IQuerySearchProps extends Omit<SearchProps, ExcludeType> {
   buttonText?: React.ReactNode
   handleSearch?: (
     value: string,

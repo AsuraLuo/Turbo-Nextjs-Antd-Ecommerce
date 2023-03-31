@@ -6,7 +6,9 @@ import { IButtonType, IButtonValueType } from './type'
 
 import { StyledIButton } from './styled'
 
-interface IButtonProps extends Omit<ButtonProps, 'type'> {
+type ExcludeType = 'className' | 'style' | 'block' | 'danger' | 'ghost' | 'href' | 'type'
+
+export interface IButtonProps extends Omit<ButtonProps, ExcludeType> {
   type?: IButtonType
 }
 

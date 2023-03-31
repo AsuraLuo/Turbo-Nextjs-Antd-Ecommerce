@@ -3,8 +3,9 @@ import type { InputProps } from 'antd/es/input'
 
 import OInput from '../OInput'
 
-interface ITextInputProps
-  extends Omit<InputProps, 'type' | 'bordered' | 'size' | 'prefix' | 'suffix'> {
+type ExcludeType = 'className' | 'style' | 'type' | 'bordered' | 'size' | 'prefix' | 'suffix'
+
+interface ITextInputProps extends Omit<InputProps, ExcludeType> {
   type?: 'text' | 'url' | 'email' | 'hidden'
 }
 

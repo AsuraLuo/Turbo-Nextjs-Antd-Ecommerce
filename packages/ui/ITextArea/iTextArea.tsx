@@ -3,8 +3,9 @@ import type { TextAreaProps } from 'antd/es/input'
 
 import OInput from '../OInput'
 
-interface ITextAreaProps
-  extends Omit<TextAreaProps, 'autoSize' | 'size' | 'bordered' | 'prefix' | 'suffix'> {
+type ExcludeType = 'className' | 'style' | 'autoSize' | 'size' | 'bordered' | 'prefix' | 'suffix'
+
+export interface ITextAreaProps extends Omit<TextAreaProps, ExcludeType> {
   maxRows?: number
 }
 

@@ -5,13 +5,13 @@ import type { TreeSelectProps } from 'antd/es/tree-select'
 
 import { StyledISelect } from './styled'
 
-export interface ISelectPropsType
-  extends Omit<SelectProps, 'mode' | 'options' | 'placeholder' | 'getPopupContainer'> {
+type ExcludeType = 'className' | 'style' | 'placeholder' | 'getPopupContainer'
+
+export interface ISelectPropsType extends Omit<SelectProps, ExcludeType | 'mode' | 'options'> {
   showSearch?: boolean
 }
 
-export interface ITreePropsType
-  extends Omit<TreeSelectProps, 'treeData' | 'placeholder' | 'getPopupContainer'> {}
+export interface ITreePropsType extends Omit<TreeSelectProps, ExcludeType | 'treeData'> {}
 
 export interface ISelectProps {
   /** 选择器类型 */
