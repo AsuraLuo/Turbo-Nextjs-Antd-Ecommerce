@@ -3,7 +3,7 @@ import { SearchProps } from 'antd/es/input'
 
 import Input from '../OInput'
 
-export interface IQueryInputProps extends Omit<SearchProps, 'enterButton'> {
+export interface IQuerySearchProps extends Omit<SearchProps, 'enterButton'> {
   buttonText?: React.ReactNode
   handleSearch?: (
     value: string,
@@ -14,7 +14,7 @@ export interface IQueryInputProps extends Omit<SearchProps, 'enterButton'> {
   ) => void
 }
 
-const IQueryInput: FC<IQueryInputProps> = ({
+const IQuerySearch: FC<IQuerySearchProps> = ({
   allowClear = true,
   buttonText = '查询',
   placeholder = '请输入查询内容',
@@ -30,4 +30,4 @@ const IQueryInput: FC<IQueryInputProps> = ({
   )
 }
 
-export default IQueryInput
+export default IQuerySearch

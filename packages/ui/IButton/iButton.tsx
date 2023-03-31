@@ -1,7 +1,8 @@
 import { Button, ButtonProps } from 'antd'
 import { FC } from 'react'
 
-import { IButtonConfig, IButtonType, IButtonValueType } from './declare'
+import { IButtonConfig, IButtonBreakConfig } from './config'
+import { IButtonType, IButtonValueType } from './type'
 
 import { StyledIButton } from './styled'
 
@@ -10,7 +11,7 @@ interface IButtonProps extends Omit<ButtonProps, 'type'> {
 }
 
 const IButton: FC<IButtonProps> = ({ type = 'query', ...props }) => {
-  const buttonValue: IButtonValueType = IButtonConfig[type]
+  const buttonValue: IButtonValueType = IButtonConfig?.[type] || IButtonBreakConfig.badcode
 
   return (
     <StyledIButton

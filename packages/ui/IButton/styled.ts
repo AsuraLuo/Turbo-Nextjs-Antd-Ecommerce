@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import { IButtonValueType } from './declare'
+import { IButtonValueType } from './type'
 
 interface StyledIButtonProps extends Omit<IButtonValueType, 'buttonText'> {}
 
@@ -9,5 +9,9 @@ export const StyledIButton = styled.span<StyledIButtonProps>`
     font-size: ${({ buttonFontSize }) => `${buttonFontSize}px`};
     color: ${({ buttonColor }) => buttonColor};
     background-color: ${({ buttonBackground }) => buttonBackground};
+
+    &:not(:disabled):hover {
+      color: ${({ buttonColor }) => buttonColor};
+    }
   }
 `
