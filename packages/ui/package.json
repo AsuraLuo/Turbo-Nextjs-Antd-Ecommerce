@@ -15,7 +15,8 @@
     "@wangeditor/editor": "^5.1.23",
     "@wangeditor/editor-for-react": "^1.0.6",
     "antd": "^5.3.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "recharts": "^2.5.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.0.1",
