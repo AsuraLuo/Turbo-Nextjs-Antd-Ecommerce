@@ -9,7 +9,7 @@ import { store } from '@store/index'
 import { Provider as ReduxProvider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
-import { OConfigProvider, OCssBaseline } from '@ocloud/ui'
+import { OConfigProvider, OCssBaseline, IUploadModal } from '@ocloud/ui'
 
 import AppShell from '@components/AppShell'
 import HttpProvider from '@components/HttpProvider'
@@ -26,7 +26,9 @@ const App = () => {
                 <OConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
                   <OCssBaseline />
                   <AppShell />
-                  <div style={{ width: '500px', margin: '10rem auto' }} />
+                  <div style={{ width: '500px', margin: '10rem auto' }}>
+                    <IUploadModal accept={['image/png', 'image/jpeg']} />
+                  </div>
                 </OConfigProvider>
               </ThemeProvider>
             </StyleProvider>

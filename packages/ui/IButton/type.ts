@@ -1,8 +1,11 @@
 export type IButtonCollection =
   | 'badcode'
   | 'add'
+  | 'confirm'
+  | 'cancel'
   | 'delete'
   | 'update'
+  | 'upload'
   | 'query'
   | 'import'
   | 'export'
@@ -25,6 +28,7 @@ export type IButtonValueType = {
   buttonColor: string
   buttonFontSize: number
   buttonBackground: string
+  buttonBorderColor: string
   buttonText: string
 }
 

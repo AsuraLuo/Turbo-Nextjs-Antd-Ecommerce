@@ -19,6 +19,7 @@ const IButton: FC<IButtonProps> = ({ type = 'query', ...props }) => {
     <StyledIButton
       buttonColor={buttonValue.buttonColor}
       buttonFontSize={buttonValue.buttonFontSize}
+      buttonBorderColor={buttonValue.buttonBorderColor}
       buttonBackground={buttonValue.buttonBackground}
     >
       <Button type="default" {...props}>
