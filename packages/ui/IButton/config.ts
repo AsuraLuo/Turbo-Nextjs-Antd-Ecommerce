@@ -110,45 +110,52 @@ export const IButtonConfig: IButtonConfigType = {
     buttonText: '解锁'
   },
   filter: {
-    buttonColor: '#fff',
+    buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
-    buttonBorderColor: '#ff9c99',
+    buttonBorderColor: '#d9d9d9',
     buttonText: '筛选'
   },
   next: {
-    buttonColor: '#fff',
+    buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
-    buttonBorderColor: '#ff9c99',
+    buttonBorderColor: '#d9d9d9',
     buttonText: '下一步'
   },
   configuration: {
-    buttonColor: '#fff',
+    buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
-    buttonBorderColor: '#ff9c99',
+    buttonBorderColor: '#d9d9d9',
     buttonText: '配置'
   },
   return: {
     buttonColor: '#fff',
     buttonFontSize: 14,
     buttonBackground: '#fff',
-    buttonBorderColor: '#ff9c99',
+    buttonBorderColor: '#d9d9d9',
     buttonText: '返回'
   },
   moveup: {
-    buttonColor: '#fff',
+    buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
-    buttonBorderColor: '#ff9c99',
+    buttonBorderColor: '#d9d9d9',
     buttonText: '上移'
   },
   movedown: {
-    buttonColor: '#fff',
+    buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
-    buttonBorderColor: '#ff9c99',
+    buttonBorderColor: '#d9d9d9',
     buttonText: '下移'
+  },
+  submit: {
+    buttonColor: '#000',
+    buttonFontSize: 14,
+    buttonBackground: '#fff',
+    buttonBorderColor: '#d9d9d9',
+    buttonText: '提交'
   }
 }

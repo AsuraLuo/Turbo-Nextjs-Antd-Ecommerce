@@ -1,9 +1,11 @@
 import { FC } from 'react'
 import { Form, FormProps } from 'antd'
 
-const InternalForm: FC<FormProps> = ({ children, ...props }) => {
+interface InternalFormProps extends Omit<FormProps, 'autoComplete'> {}
+
+const InternalForm: FC<InternalFormProps> = ({ children, ...props }) => {
   return (
-    <Form {...props}>
+    <Form autoComplete="off" {...props}>
       <>{children}</>
     </Form>
   )

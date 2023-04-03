@@ -20,6 +20,7 @@ export type IButtonCollection =
   | 'return'
   | 'moveup'
   | 'movedown'
+  | 'submit'
 
 export type IButtonType = Exclude<IButtonCollection, 'badcode'>
 export type IButtonBreakType = Extract<IButtonCollection, 'badcode'>
