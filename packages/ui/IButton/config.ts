@@ -5,6 +5,7 @@ export const IButtonBreakConfig: IButtonBreakConfigType = {
     buttonColor: '#fff',
     buttonFontSize: 14,
     buttonBackground: '#ff4d4f',
+    buttonHoverColor: '#ff4d4f',
     buttonBorderColor: '#ff4d4f',
     buttonText: '不良代码'
   }
@@ -15,6 +16,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '新增'
   },
@@ -22,27 +24,31 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#fff',
     buttonFontSize: 14,
     buttonBackground: '#30b8bd',
+    buttonHoverColor: '#30b8bd',
     buttonBorderColor: '#30b8bd',
     buttonText: '确认'
   },
   cancel: {
-    buttonColor: '#fff',
+    buttonColor: '#221F1F',
     buttonFontSize: 14,
-    buttonBackground: '#f95f61',
-    buttonBorderColor: '#f95f61',
+    buttonBackground: '#F3F3F3',
+    buttonHoverColor: '#F3F3F3',
+    buttonBorderColor: '#E7E7E7',
     buttonText: '取消'
   },
   delete: {
-    buttonColor: '#000',
+    buttonColor: '#221F1F',
     buttonFontSize: 14,
     buttonBackground: '#fff',
-    buttonBorderColor: '#d9d9d9',
+    buttonHoverColor: '#fff',
+    buttonBorderColor: '#D1D1D1',
     buttonText: '删除'
   },
   update: {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '更新'
   },
@@ -50,6 +56,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '上传文件'
   },
@@ -57,6 +64,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '查询'
   },
@@ -64,6 +72,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '导入'
   },
@@ -71,27 +80,31 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '导出'
   },
   refresh: {
-    buttonColor: '#000',
+    buttonColor: '#fff',
     buttonFontSize: 14,
-    buttonBackground: '#fff',
-    buttonBorderColor: '#d9d9d9',
+    buttonBackground: '#F9865B',
+    buttonHoverColor: '#FF7643',
+    buttonBorderColor: '#F9865B',
     buttonText: '刷新'
   },
   save: {
-    buttonColor: '#000',
+    buttonColor: '#fff',
     buttonFontSize: 14,
-    buttonBackground: '#fff',
-    buttonBorderColor: '#d9d9d9',
+    buttonBackground: '#659EF3',
+    buttonHoverColor: '#458CF7',
+    buttonBorderColor: '#659EF3',
     buttonText: '保存'
   },
   reset: {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '重置'
   },
@@ -99,6 +112,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '锁定'
   },
@@ -106,6 +120,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#ff9c99',
     buttonText: '解锁'
   },
@@ -113,6 +128,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '筛选'
   },
@@ -120,6 +136,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '下一步'
   },
@@ -127,6 +144,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#30b8bd',
     buttonBorderColor: '#d9d9d9',
     buttonText: '配置'
   },
@@ -134,6 +152,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#fff',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '返回'
   },
@@ -141,6 +160,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '上移'
   },
@@ -148,6 +168,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '下移'
   },
@@ -155,6 +176,7 @@ export const IButtonConfig: IButtonConfigType = {
     buttonColor: '#000',
     buttonFontSize: 14,
     buttonBackground: '#fff',
+    buttonHoverColor: '#fff',
     buttonBorderColor: '#d9d9d9',
     buttonText: '提交'
   }

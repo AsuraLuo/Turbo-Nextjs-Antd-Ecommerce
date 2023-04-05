@@ -9,7 +9,16 @@ import { store } from '@store/index'
 import { Provider as ReduxProvider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
-import { OConfigProvider, OCssBaseline, OForm, IButton, IDynamicInput } from '@ocloud/ui'
+import {
+  OConfigProvider,
+  OCssBaseline,
+  OForm,
+  OButton,
+  OInput,
+  IButton,
+  IDynamicInput,
+  IOperateButton
+} from '@ocloud/ui'
 
 import AppShell from '@components/AppShell'
 import HttpProvider from '@components/HttpProvider'
@@ -27,7 +36,7 @@ const App = () => {
           <LocaleProvider>
             <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
               <ThemeProvider theme={ThemeConf}>
-                <OConfigProvider theme={{}} prefixCls={ThemeConf.namespace}>
+                <OConfigProvider prefixCls={ThemeConf.namespace}>
                   <OCssBaseline />
                   <AppShell />
                   <div style={{ width: '500px', margin: '10rem auto' }}>
@@ -41,7 +50,21 @@ const App = () => {
                         ]}
                       />
                       <OForm.Item>
-                        <IButton type="submit" htmlType="submit" />
+                        <IOperateButton type="cancel" />
+                      </OForm.Item>
+                      <OForm.Item>
+                        <IButton type="refresh" />
+                      </OForm.Item>
+                      <OForm.Item>
+                        <IButton type="delete" />
+                      </OForm.Item>
+                      <OForm.Item name="input">
+                        <OInput placeholder="请输入内容" disabled />
+                      </OForm.Item>
+                      <OForm.Item>
+                        <OButton type="primary" htmlType="submit">
+                          OButton
+                        </OButton>
                       </OForm.Item>
                     </OForm>
                   </div>

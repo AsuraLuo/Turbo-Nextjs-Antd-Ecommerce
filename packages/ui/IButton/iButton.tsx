@@ -16,12 +16,7 @@ const IButton: FC<IButtonProps> = ({ type = 'query', ...props }) => {
   const buttonValue: IButtonValueType = IButtonConfig?.[type] || IButtonBreakConfig.badcode
 
   return (
-    <StyledIButton
-      buttonColor={buttonValue.buttonColor}
-      buttonFontSize={buttonValue.buttonFontSize}
-      buttonBorderColor={buttonValue.buttonBorderColor}
-      buttonBackground={buttonValue.buttonBackground}
-    >
+    <StyledIButton {...buttonValue}>
       <Button type="default" {...props}>
         {buttonValue.buttonText}
       </Button>

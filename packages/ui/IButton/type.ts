@@ -29,6 +29,7 @@ export type IButtonValueType = {
   buttonColor: string
   buttonFontSize: number
   buttonBackground: string
+  buttonHoverColor: string
   buttonBorderColor: string
   buttonText: string
 }
