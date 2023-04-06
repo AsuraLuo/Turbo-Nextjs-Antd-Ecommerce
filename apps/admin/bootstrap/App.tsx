@@ -15,7 +15,9 @@ import {
   OForm,
   OButton,
   OInput,
+  OSelect,
   IButton,
+  OPagination,
   IDynamicInput,
   IOperateButton
 } from '@ocloud/ui'
@@ -60,6 +62,24 @@ const App = () => {
                       </OForm.Item>
                       <OForm.Item name="input">
                         <OInput placeholder="请输入内容" disabled />
+                      </OForm.Item>
+                      <OForm.Item name="name" rules={[{ required: true }]}>
+                        <OSelect
+                          options={[
+                            { value: 'jack', label: 'Jack' },
+                            { value: 'lucy', label: 'Lucy' },
+                            { value: 'Yiminghe', label: 'yiminghe' },
+                            { value: 'disabled', label: 'Disabled', disabled: true }
+                          ]}
+                        />
+                      </OForm.Item>
+                      <OForm.Item>
+                        <OPagination
+                          total={85}
+                          showTotal={(total) => `共${total}条`}
+                          defaultPageSize={20}
+                          defaultCurrent={1}
+                        />
                       </OForm.Item>
                       <OForm.Item>
                         <OButton type="primary" htmlType="submit">
