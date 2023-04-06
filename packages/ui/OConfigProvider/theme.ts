@@ -36,6 +36,12 @@ export const theme: ThemeConfig = {
       controlItemBgHover: '#F6F8FC',
       controlItemBgActive: '#F6F8FC'
     },
+    Checkbox: {
+      borderRadiusSM: 4
+    },
+    Radio: {
+      colorBorder: '#E7E7E7'
+    },
     Dropdown: {
       colorText: '#333333',
       borderRadius: 4
@@ -45,11 +51,18 @@ export const theme: ThemeConfig = {
     },
     Pagination: {
       size: 28,
-      borderRadius: 4
+      borderRadius: 4,
+      controlHeight: 26,
+      controlHeightSM: 26
     },
     DatePicker: {
       borderRadius: 4
     },
-    Table: {}
+    Table: {
+      colorBgContainer: '#F8FCFC',
+      borderRadiusLG: 0,
+      paddingContentVerticalLG: 12,
+      padding: 12
+    }
   }
 }

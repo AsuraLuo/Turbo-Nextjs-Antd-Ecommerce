@@ -1,11 +1,16 @@
 import { FC } from 'react'
 import { ConfigProvider } from 'antd'
 import { ConfigProviderProps } from 'antd/es/config-provider'
+import zhCN from 'antd/locale/zh_CN'
+import dayjs from 'dayjs'
+import 'dayjs/locale/zh-cn'
 
 import { theme } from './theme'
 import { StyledConfigProvider } from './styled'
 
-type ExcludeType = 'iconPrefixCls' | 'prefixCls' | 'form' | 'theme'
+dayjs.locale('zh-cn')
+
+type ExcludeType = 'iconPrefixCls' | 'prefixCls' | 'form' | 'theme' | 'locale'
 
 export interface OConfigProviderProps extends Omit<ConfigProviderProps, ExcludeType> {
   prefixCls?: string
@@ -29,6 +34,7 @@ const OConfigProvider: FC<OConfigProviderProps> = ({
           }
         }}
         theme={theme}
+        locale={zhCN}
         {...props}
       >
         {children}

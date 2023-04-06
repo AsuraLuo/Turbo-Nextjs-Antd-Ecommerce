@@ -16,8 +16,11 @@ import {
   OButton,
   OInput,
   OSelect,
-  IButton,
+  OTable,
   OPagination,
+  OCheckbox,
+  ORadio,
+  IButton,
   IDynamicInput,
   IOperateButton
 } from '@ocloud/ui'
@@ -27,6 +30,45 @@ import HttpProvider from '@components/HttpProvider'
 import LocaleProvider from '@components/LocaleProvider'
 
 const App = () => {
+  const dataSource = [
+    {
+      key: '1',
+      name: '胡彦斌',
+      age: 32,
+      address: '西湖区湖底公园1号'
+    },
+    {
+      key: '2',
+      name: '胡彦祖',
+      age: 42,
+      address: '西湖区湖底公园1号'
+    }
+  ]
+
+  const columns = [
+    {
+      title: '姓名',
+      dataIndex: 'name',
+      key: 'name'
+    },
+    {
+      title: '年龄',
+      dataIndex: 'age',
+      key: 'age'
+    },
+    {
+      title: '住址',
+      dataIndex: 'address',
+      key: 'address'
+    }
+  ]
+
+  const options = [
+    { label: 'Apple', value: 'Apple' },
+    { label: 'Pear', value: 'Pear' },
+    { label: 'Orange', value: 'Orange', disabled: true }
+  ]
+
   const onFinish = (values: any) => {
     console.info('Received values of form:', values)
   }
@@ -74,13 +116,18 @@ const App = () => {
                         />
                       </OForm.Item>
                       <OForm.Item>
-                        <OPagination
-                          total={85}
-                          showTotal={(total) => `共${total}条`}
-                          defaultPageSize={20}
-                          defaultCurrent={1}
-                        />
+                        <OCheckbox.Group options={options} />
                       </OForm.Item>
+                      <OForm.Item>
+                        <ORadio defaultChecked={false}>Disabled</ORadio>
+                        <ORadio defaultChecked disabled>
+                          Disabled
+                        </ORadio>
+                      </OForm.Item>
+                      <OForm.Item>
+                        <OPagination total={85} defaultPageSize={20} defaultCurrent={1} />
+                      </OForm.Item>
+                      <OTable dataSource={dataSource} columns={columns} />
                       <OForm.Item>
                         <OButton type="primary" htmlType="submit">
                           OButton
