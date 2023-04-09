@@ -9,6 +9,7 @@ module.exports = () => {
     basePath: '',
     compress: false,
     distDir: '.next',
+    output: 'standalone',
     generateEtags: false,
     pageExtensions: ['tsx', 'ts'],
     poweredByHeader: false,
@@ -21,6 +22,7 @@ module.exports = () => {
       reactRemoveProperties: isProd,
       removeConsole: isProd
     },
+
     eslint: {
       ignoreDuringBuilds: isProd
     },
@@ -31,6 +33,14 @@ module.exports = () => {
     },
     typescript: {
       ignoreBuildErrors: isProd
+    },
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '**'
+        }
+      ]
     },
     webpack: (config) => {
       // Important: svg resource as component

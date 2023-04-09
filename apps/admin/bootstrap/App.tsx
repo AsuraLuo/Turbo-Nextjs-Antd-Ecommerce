@@ -22,7 +22,8 @@ import {
   ORadio,
   IButton,
   IDynamicInput,
-  IOperateButton
+  IOperateButton,
+  IWangEditor
 } from '@ocloud/ui'
 
 import AppShell from '@components/AppShell'
@@ -128,6 +129,7 @@ const App = () => {
                         <OPagination total={85} defaultPageSize={20} defaultCurrent={1} />
                       </OForm.Item>
                       <OTable dataSource={dataSource} columns={columns} />
+                      <IWangEditor />
                       <OForm.Item>
                         <OButton type="primary" htmlType="submit">
                           OButton
