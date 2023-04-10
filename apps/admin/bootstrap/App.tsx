@@ -80,7 +80,7 @@ const App = () => {
   }
 
   const handleApprovel = () => {
-    modelRef.current?.showModal()
+    modelRef.current?.openModal()
   }
 
   return (

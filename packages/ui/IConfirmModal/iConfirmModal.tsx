@@ -24,8 +24,8 @@ export interface IModalProps extends Omit<ModalProps, MOdalExcludeType> {
 }
 
 export type IConfirmModalRef = React.Ref<{
-  showModal: () => void
-  hideModal: () => void
+  openModal: () => void
+  closeModal: () => void
 }>
 
 export interface IConfirmModalProps {
@@ -87,8 +87,8 @@ const IConfirmModal = forwardRef((props: Omit<IConfirmModalProps, ExcludeType>, 
   }
 
   useImperativeHandle(ref, () => ({
-    showModal: handleOpenModal,
-    hideModal: handleCloseModal
+    openModal: handleOpenModal,
+    closeModal: handleCloseModal
   }))
 
   return (
