@@ -272,8 +272,10 @@ importers:
 
   packages/ui:
     specifiers:
+      '@loadable/component': ^5.15.3
       '@ocloud/tsconfig': workspace:*
       '@tinymce/tinymce-react': ^4.3.0
+      '@types/loadable__component': ^5.13.4
       '@types/react': ^18.0.22
       '@wangeditor/editor': ^5.1.23
       '@wangeditor/editor-for-react': ^1.0.6
@@ -284,6 +286,7 @@ importers:
       recharts: ^2.5.0
       typescript: ^4.5.2
     dependencies:
+      '@loadable/component': 5.15.3_react@18.2.0
       '@ocloud/tsconfig': link:../tsconfig
       '@tinymce/tinymce-react': 4.3.0_biqbaboplfbrettd7655fr4n2y
       '@wangeditor/editor': 5.1.23
@@ -292,6 +295,7 @@ importers:
       react: 18.2.0
       recharts: 2.5.0_v2m5e27vhdewzwhryxwfaorcca
     devDependencies:
+      '@types/loadable__component': 5.13.4
       '@types/react': 18.0.28
       eslint: 7.32.0
       eslint-config-ocloud: link:../eslint-config-ocloud
@@ -2917,6 +2921,18 @@ packages:
 
   /@juggle/resize-observer/3.4.0:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
+    dev: false
+
+  /@loadable/component/5.15.3_react@18.2.0:
+    resolution: {integrity: sha512-VOgYgCABn6+/7aGIpg7m0Ruj34tGetaJzt4bQ345FwEovDQZ+dua+NWLmuJKv8rWZyxOUSfoJkmGnzyDXH2BAQ==}
+    engines: {node: '>=8'}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 7.21.0
+      hoist-non-react-statics: 3.3.2
+      react: 18.2.0
+      react-is: 16.13.1
     dev: false
 
   /@mdx-js/mdx/1.6.22:
@@ -5806,6 +5822,12 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/loadable__component/5.13.4:
+    resolution: {integrity: sha512-YhoCCxyuvP2XeZNbHbi8Wb9EMaUJuA2VGHxJffcQYrJKIKSkymJrhbzsf9y4zpTmr5pExAAEh5hbF628PAZ8Dg==}
+    dependencies:
+      '@types/react': 18.0.28
     dev: true
 
   /@types/lodash/4.14.191:

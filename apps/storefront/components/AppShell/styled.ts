@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 export const StyledMain = styled.main`
   position: relative;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.white};
 
   .${({ theme }) => theme.namespace} {
     &-btn {

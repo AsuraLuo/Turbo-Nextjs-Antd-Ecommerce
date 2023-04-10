@@ -1,4 +1,5 @@
-import { FC, lazy } from 'react'
+import { FC } from 'react'
+import loadable from '@loadable/component'
 import { IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
 
 interface HackEditorProps {
@@ -8,7 +9,7 @@ interface HackEditorProps {
   handleChange?: (value: string) => void
 }
 
-const HackEditor = lazy(() => import('./hackEditor'))
+const HackEditor = loadable(() => import('./hackEditor'))
 
 const IWangEditor: FC<HackEditorProps> = ({ ...props }) => {
   return <HackEditor {...props} />

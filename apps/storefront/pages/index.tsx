@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 
 import { OButton, OForm, OI18n, OInput, IUploadFile } from '@ocloud/ui'
 
-const IWangEditor = dynamic(() => import('@ocloud/ui/IWangEditor/hackEditor'), {
+const IWangEditor = dynamic(() => import('@ocloud/ui/IWangEditor'), {
   ssr: false
 })
 

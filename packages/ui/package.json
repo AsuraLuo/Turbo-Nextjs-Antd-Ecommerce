@@ -10,6 +10,7 @@
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "dependencies": {
+    "@loadable/component": "^5.15.3",
     "@ocloud/tsconfig": "workspace:*",
     "@tinymce/tinymce-react": "^4.3.0",
     "@wangeditor/editor": "^5.1.23",
@@ -19,6 +20,7 @@
     "recharts": "^2.5.0"
   },
   "devDependencies": {
+    "@types/loadable__component": "^5.13.4",
     "@types/react": "^18.0.22",
     "eslint": "^7.32.0",
     "eslint-config-ocloud": "workspace:*",
