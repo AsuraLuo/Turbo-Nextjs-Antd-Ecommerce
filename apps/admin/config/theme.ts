@@ -16,7 +16,7 @@ export const ThemeConf: Theme = {
   colors: {
     white: '#ffffff',
     black: '#000000',
-    primary: '#556cd6'
+    primary: '#00A9AF'
   },
   namespace: 'ocloud'
 }

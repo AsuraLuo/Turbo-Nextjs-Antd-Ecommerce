@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { forwardRef, useImperativeHandle, useState } from 'react'
 import { Button, Modal } from 'antd'
 import type { ButtonProps } from 'antd/es/button'
 import type { ModalProps } from 'antd/es/modal'
@@ -17,17 +17,24 @@ type MOdalExcludeType =
   | 'okText'
   | 'onCancel'
 
-export interface IButtonProps extends Omit<ButtonProps, ExcludeType | 'onClick'> {}
+export interface IButtonProps extends Omit<ButtonProps, ExcludeType | 'type' | 'onClick'> {}
 
 export interface IModalProps extends Omit<ModalProps, MOdalExcludeType> {
   getContainer?: HTMLElement | false
 }
 
+export type IConfirmModalRef = React.Ref<{
+  showModal: () => void
+  hideModal: () => void
+}>
+
 export interface IConfirmModalProps {
-  /** 按钮排列方向 */
-  reverse?: boolean
+  /** 子节点 */
+  children?: React.ReactNode
+  /** 弹窗标题 */
+  title?: string
   /** modal配置属性 */
-  modalProps?: IModalProps
+  modalProps?: Omit<IModalProps, 'title'>
   /** 取消按钮文本 */
   cancelText?: string | React.ReactNode
   /** 取消按钮配置属性 */
@@ -38,33 +45,28 @@ export interface IConfirmModalProps {
   confirmProps?: IButtonProps
   /** 取消按钮显示隐藏 */
   showCancel?: boolean
-  /** 触发按钮文本 */
-  triggerText?: string | React.ReactNode
-  /** 触发按钮配置属性 */
-  triggerProps?: IButtonProps
   /** 确认事件回调函数 */
   handleConfirm?: () => void
   /** 取消事件回调函数 */
   handleCancel?: () => void
 }
 
-const IConfirmModal: FC<React.PropsWithChildren<Omit<IConfirmModalProps, ExcludeType>>> = ({
-  children,
-  reverse = false,
-  confirmText = '确认',
-  confirmProps = {},
-  cancelText = '取消',
-  cancelProps = {},
-  showCancel = true,
-  triggerText = '触发',
-  triggerProps = {},
-  modalProps = {
-    centered: true,
-    getContainer: false
-  },
-  handleConfirm = () => {},
-  handleCancel = () => {}
-}) => {
+const IConfirmModal = forwardRef((props: Omit<IConfirmModalProps, ExcludeType>, ref) => {
+  const {
+    children,
+    title = '',
+    confirmText = '确认',
+    confirmProps = {},
+    cancelText = '取消',
+    cancelProps = {},
+    showCancel = true,
+    modalProps = {
+      centered: true,
+      getContainer: false
+    },
+    handleConfirm = () => {},
+    handleCancel = () => {}
+  } = props
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const handleOpenModal = () => {
@@ -77,7 +79,6 @@ const IConfirmModal: FC<React.PropsWithChildren<Omit<IConfirmModalProps, Exclude
 
   const handleModalConfirm = () => {
     handleConfirm()
-    if (!showCancel) handleCloseModal()
   }
 
   const handleModalCanel = () => {
@@ -85,16 +86,20 @@ const IConfirmModal: FC<React.PropsWithChildren<Omit<IConfirmModalProps, Exclude
     handleCloseModal()
   }
 
+  useImperativeHandle(ref, () => ({
+    showModal: handleOpenModal,
+    hideModal: handleCloseModal
+  }))
+
   return (
     <StyledConfirmModal>
-      <Button {...triggerProps} onClick={handleOpenModal}>
-        <span>{triggerText}</span>
-      </Button>
       <Modal
+        width={276}
         open={isOpen}
+        title={title}
         footer={
-          <StyledButtons reverse={reverse}>
-            <Button {...confirmProps} onClick={handleModalConfirm}>
+          <StyledButtons>
+            <Button type="primary" {...confirmProps} onClick={handleModalConfirm}>
               <span>{confirmText}</span>
             </Button>
             {showCancel && (
@@ -111,6 +116,6 @@ const IConfirmModal: FC<React.PropsWithChildren<Omit<IConfirmModalProps, Exclude
       </Modal>
     </StyledConfirmModal>
   )
-}
+})
 
 export default IConfirmModal

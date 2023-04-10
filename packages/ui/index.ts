@@ -82,3 +82,5 @@ export { default as ITextInput } from './ITextInput'
 export { default as IUploadFile } from './IUploadFile'
 export { default as IUploadModal } from './IUploadModal'
 export { default as IWangEditor } from './IWangEditor'
+
+export type { IConfirmModalRef } from './IConfirmModal'

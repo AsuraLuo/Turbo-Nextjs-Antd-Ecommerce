@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import {
   StyleProvider,
   legacyLogicalPropertiesTransformer
@@ -21,16 +22,20 @@ import {
   OCheckbox,
   ORadio,
   IButton,
+  IConfirmModal,
   IDynamicInput,
   IOperateButton,
   IWangEditor
 } from '@ocloud/ui'
+import type { IConfirmModalRef } from '@ocloud/ui'
 
 import AppShell from '@components/AppShell'
 import HttpProvider from '@components/HttpProvider'
 import LocaleProvider from '@components/LocaleProvider'
 
 const App = () => {
+  const modelRef: IConfirmModalRef = useRef(null)
+
   const dataSource = [
     {
       key: '1',
@@ -74,6 +79,10 @@ const App = () => {
     console.info('Received values of form:', values)
   }
 
+  const handleApprovel = () => {
+    modelRef.current?.showModal()
+  }
+
   return (
     <ReduxProvider store={store}>
       <HttpProvider>
@@ -94,6 +103,17 @@ const App = () => {
                           { key: 'last', value: undefined }
                         ]}
                       />
+                      <OForm.Item>
+                        <OButton onClick={handleApprovel}>审核</OButton>
+                        <IConfirmModal
+                          ref={modelRef}
+                          title="审核"
+                          confirmText="审核通过"
+                          showCancel={false}
+                        >
+                          <p>是否审核选中订单？</p>
+                        </IConfirmModal>
+                      </OForm.Item>
                       <OForm.Item>
                         <IOperateButton type="cancel" />
                       </OForm.Item>
