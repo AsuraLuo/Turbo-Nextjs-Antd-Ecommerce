@@ -90,7 +90,7 @@ const App = () => {
           <LocaleProvider>
             <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
               <ThemeProvider theme={ThemeConf}>
-                <OConfigProvider prefixCls={ThemeConf.namespace}>
+                <OConfigProvider prefixCls={ThemeConf.namespace} theme={ThemeConf.antdTheme}>
                   <OCssBaseline />
                   <AppShell />
                   <div style={{ width: '500px', margin: '10rem auto' }}>

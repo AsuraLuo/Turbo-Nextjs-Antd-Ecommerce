@@ -1,28 +1,30 @@
 import { FC } from 'react'
 import { ConfigProvider } from 'antd'
-import { ConfigProviderProps } from 'antd/es/config-provider'
-import zhCN from 'antd/locale/zh_CN'
+import type { ConfigProviderProps, ThemeConfig } from 'antd/es/config-provider'
+import { merge } from 'lodash'
 import dayjs from 'dayjs'
+import zhCN from 'antd/locale/zh_CN'
 import 'dayjs/locale/zh-cn'
 
-import { theme } from './theme'
+import { themeConfig } from './themeConfig'
 import { StyledConfigProvider } from './styled'
 
 dayjs.locale('zh-cn')
 
-type ExcludeType = 'iconPrefixCls' | 'prefixCls' | 'form' | 'theme' | 'locale'
+type ExcludeType = 'iconPrefixCls' | 'form' | 'locale'
 
 export interface OConfigProviderProps extends Omit<ConfigProviderProps, ExcludeType> {
-  prefixCls?: string
   requiredMessage?: string
 }
 
 const OConfigProvider: FC<OConfigProviderProps> = ({
   children,
   prefixCls = 'ocloud',
+  theme = {},
   requiredMessage = '内容输入错误，请重新输入',
   ...props
 }) => {
+  const globalTheme: ThemeConfig = merge(themeConfig, theme)
   return (
     <StyledConfigProvider>
       <ConfigProvider
@@ -33,7 +35,7 @@ const OConfigProvider: FC<OConfigProviderProps> = ({
             required: requiredMessage
           }
         }}
-        theme={theme}
+        theme={globalTheme}
         locale={zhCN}
         {...props}
       >

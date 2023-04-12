@@ -1,6 +1,6 @@
 import type { ThemeConfig } from 'antd/es/config-provider'
 
-export const theme: ThemeConfig = {
+export const themeConfig: ThemeConfig = {
   token: {
     colorPrimary: '#30B8BD',
     colorError: '#D11515',

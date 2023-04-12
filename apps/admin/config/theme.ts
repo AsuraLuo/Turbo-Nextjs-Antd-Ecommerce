@@ -1,6 +1,9 @@
-import { Theme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+
+import { antdTheme } from './antdTheme'
 
 export const ThemeConf: Theme = {
+  antdTheme,
   breakPoint: {
     xxs: 320,
     xs: 480,

@@ -1,7 +1,9 @@
-import { Theme as EmotionTheme } from '@emotion/react'
+import type { Theme as EmotionTheme } from '@emotion/react'
+import type { ThemeConfig } from 'antd'
 
 declare module '@emotion/react' {
   export interface Theme extends EmotionTheme {
+    antdTheme: ThemeConfig
     breakPoint: {
       xxs: number // 320
       xs: number // 480
