@@ -33,8 +33,8 @@ export const themeConfig: ThemeConfig = {
       controlHeight: 34,
       borderRadius: 4,
       paddingSM: 13,
-      controlItemBgHover: '#F6F8FC',
-      controlItemBgActive: '#F6F8FC'
+      controlItemBgHover: '#f6f8fc',
+      controlItemBgActive: '#f6f8fc'
     },
     Checkbox: {
       borderRadiusSM: 4
@@ -70,6 +70,10 @@ export const themeConfig: ThemeConfig = {
       borderRadiusLG: 0,
       paddingContentVerticalLG: 12,
       padding: 12
+    },
+    TreeSelect: {
+      borderRadius: 0,
+      paddingXS: 0
     }
   }
 }

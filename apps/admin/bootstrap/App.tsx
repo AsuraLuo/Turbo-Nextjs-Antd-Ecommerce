@@ -25,6 +25,7 @@ import {
   IConfirmModal,
   IDynamicInput,
   IOperateButton,
+  ITreeSelect,
   IWangEditor
 } from '@ocloud/ui'
 import type { IConfirmModalRef } from '@ocloud/ui'
@@ -73,6 +74,45 @@ const App = () => {
     { label: 'Apple', value: 'Apple' },
     { label: 'Pear', value: 'Pear' },
     { label: 'Orange', value: 'Orange', disabled: true }
+  ]
+
+  const treeData = [
+    {
+      title: 'Node1',
+      value: '0-0',
+      key: '0-0',
+      children: []
+      // children: [
+      //   {
+      //     title: 'Child Node1',
+      //     value: '0-0-0',
+      //     key: '0-0-0'
+      //   }
+      // ]
+    },
+    {
+      title: 'Node2',
+      value: '0-1',
+      key: '0-1',
+      children: []
+      // children: [
+      //   {
+      //     title: 'Child Node3',
+      //     value: '0-1-0',
+      //     key: '0-1-0'
+      //   },
+      //   {
+      //     title: 'Child Node4',
+      //     value: '0-1-1',
+      //     key: '0-1-1'
+      //   },
+      //   {
+      //     title: 'Child Node5',
+      //     value: '0-1-2',
+      //     key: '0-1-2'
+      //   }
+      // ]
+    }
   ]
 
   const onFinish = (values: any) => {
@@ -135,6 +175,9 @@ const App = () => {
                             { value: 'disabled', label: 'Disabled', disabled: true }
                           ]}
                         />
+                      </OForm.Item>
+                      <OForm.Item name="tree" rules={[{ required: true }]}>
+                        <ITreeSelect treeData={treeData} />
                       </OForm.Item>
                       <OForm.Item>
                         <OCheckbox.Group options={options} />
