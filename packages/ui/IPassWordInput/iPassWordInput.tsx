@@ -18,7 +18,7 @@ interface IPassWordInputProps extends Omit<InputProps, ExcludeType> {
 }
 
 const IPassWordInput: FC<IPassWordInputProps> = ({ showEye = true, ...props }) => {
-  return <OInput.Password visibilityToggle={showEye} {...props} />
+  return <OInput.Password {...props} visibilityToggle={showEye} />
 }
 
 export default IPassWordInput

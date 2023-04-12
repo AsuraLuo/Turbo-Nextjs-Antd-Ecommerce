@@ -30,7 +30,7 @@ const IModal = (props: IModalProps, ref: IModalRef) => {
 
   return (
     <StyledIModal>
-      <OModal open={isOpen} title={title} onCancel={handleCloseModal} {...modalProps}>
+      <OModal {...modalProps} open={isOpen} title={title} onCancel={handleCloseModal}>
         {children}
       </OModal>
     </StyledIModal>

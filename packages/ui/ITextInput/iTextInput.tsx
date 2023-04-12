@@ -10,7 +10,7 @@ interface ITextInputProps extends Omit<InputProps, ExcludeType> {
 }
 
 const ITextInput: FC<ITextInputProps> = ({ type, ...props }) => {
-  return <OInput type={type} {...props} />
+  return <OInput {...props} type={type} />
 }
 
 export default ITextInput

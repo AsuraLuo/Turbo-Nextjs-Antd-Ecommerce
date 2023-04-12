@@ -64,6 +64,7 @@ const IUploadModal: FC<IUploadModalProps> = ({
     <StyledUploadModal>
       <IButton type="upload" onClick={handleModalOpen} />
       <OModal
+        {...modalProps}
         title={title}
         open={visible}
         destroyOnClose={destroyOnClose}
@@ -74,9 +75,8 @@ const IUploadModal: FC<IUploadModalProps> = ({
           </StyledButtons>
         }
         onCancel={handleModalClose}
-        {...modalProps}
       >
-        <OUpload.Dragger accept={accept.join(',')} multiple={multiple} {...uploadProps}>
+        <OUpload.Dragger {...uploadProps} accept={accept.join(',')} multiple={multiple}>
           <p className="upload__drag-icon">
             <InboxOutlined style={{ fontSize: 40 }} />
           </p>

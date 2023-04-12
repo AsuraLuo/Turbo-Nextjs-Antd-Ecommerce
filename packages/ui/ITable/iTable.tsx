@@ -29,11 +29,10 @@ const ITable: FC<ITableProps> = ({ showPagination = false, paginationProps = {},
 
   return (
     <OTable
+      {...props}
       tableLayout="fixed"
-      bordered
       getPopupContainer={getPopupContainer}
       pagination={pagination}
-      {...props}
     />
   )
 }

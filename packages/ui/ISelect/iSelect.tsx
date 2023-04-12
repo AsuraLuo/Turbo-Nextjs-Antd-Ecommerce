@@ -55,19 +55,19 @@ const ISelect: FC<ISelectProps> = ({
     <StyledISelect>
       {showSelect ? (
         <Select
+          {...selectProps}
+          {...multipleProps}
           getPopupContainer={getPopupContainer}
           placeholder={placeholder}
           options={values}
-          {...selectProps}
-          {...multipleProps}
         />
       ) : (
         <TreeSelect
+          {...treeProps}
           getPopupContainer={getPopupContainer}
           multiple={multiple}
           placeholder={placeholder}
           treeData={values}
-          {...treeProps}
         />
       )}
     </StyledISelect>

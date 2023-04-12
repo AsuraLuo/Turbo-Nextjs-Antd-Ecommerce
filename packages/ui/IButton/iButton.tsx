@@ -17,7 +17,7 @@ const IButton: FC<IButtonProps> = ({ type = 'query', ...props }) => {
 
   return (
     <StyledIButton {...buttonValue}>
-      <Button type="default" {...props}>
+      <Button {...props} type="default">
         {buttonValue.buttonText}
       </Button>
     </StyledIButton>

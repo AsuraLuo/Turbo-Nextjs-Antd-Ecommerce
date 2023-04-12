@@ -32,7 +32,7 @@ const IDatePicker: FC<IDatePickerProps> = ({
   rangeProps = {},
   timeProps = {}
 }) => {
-  const defaultProps: DatePickerProps = {
+  const defaultProps: any = {
     getPopupContainer: (node: HTMLElement) => node
   }
 

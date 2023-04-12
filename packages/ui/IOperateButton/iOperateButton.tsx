@@ -12,7 +12,7 @@ export interface IOperateButtonProps extends Omit<ButtonProps, ExcludeType> {
   type?: IOperateButtonType
 }
 
-const IOperateButton: FC<IOperateButtonProps> = ({ type = 'query', ...props }) => {
+const IOperateButton: FC<IOperateButtonProps> = ({ type = 'add', ...props }) => {
   const buttonValue: IOperateButtonValueType =
     IOperateButtonConfig?.[type] || IOperateButtonBreakConfig.badcode
 
@@ -23,7 +23,7 @@ const IOperateButton: FC<IOperateButtonProps> = ({ type = 'query', ...props }) =
       buttonBorderColor={buttonValue.buttonBorderColor}
       buttonBackground={buttonValue.buttonBackground}
     >
-      <Button type="default" {...props}>
+      <Button {...props} type="default">
         {buttonValue.buttonText}
       </Button>
     </StyledIOperateButton>

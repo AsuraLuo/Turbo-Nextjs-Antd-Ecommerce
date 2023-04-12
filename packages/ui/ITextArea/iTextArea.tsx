@@ -10,7 +10,7 @@ export interface ITextAreaProps extends Omit<TextAreaProps, ExcludeType> {
 }
 
 const ITextArea: FC<ITextAreaProps> = ({ maxRows = 10, ...props }) => {
-  return <OInput.TextArea autoSize={{ minRows: 6, maxRows }} {...props} />
+  return <OInput.TextArea {...props} autoSize={{ minRows: 6, maxRows }} />
 }
 
 export default ITextArea

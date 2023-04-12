@@ -95,6 +95,7 @@ const IConfirmModal = forwardRef((props: Omit<IConfirmModalProps, ExcludeType>, 
     <StyledConfirmModal>
       <Modal
         width={276}
+        {...modalProps}
         open={isOpen}
         title={title}
         footer={
@@ -110,7 +111,6 @@ const IConfirmModal = forwardRef((props: Omit<IConfirmModalProps, ExcludeType>, 
           </StyledButtons>
         }
         onCancel={handleCloseModal}
-        {...modalProps}
       >
         {children}
       </Modal>

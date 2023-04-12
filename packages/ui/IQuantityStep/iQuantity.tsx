@@ -56,7 +56,7 @@ const IQuantity: FC<IQuantityProps> = ({
       <OButton {...buttonProps} onClick={handleIncrease}>
         -
       </OButton>
-      <OInput type="number" {...inputProps} {...props} />
+      <OInput {...inputProps} {...props} type="number" />
       <OButton {...buttonProps} onClick={handleIecrease}>
         +
       </OButton>
