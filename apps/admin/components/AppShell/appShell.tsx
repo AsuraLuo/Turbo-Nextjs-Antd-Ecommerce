@@ -5,8 +5,8 @@ import { useCookie } from '@ocloud/hooks'
 import { OLocale, IGlobalStyled } from '@ocloud/ui'
 import { actions as userActions } from '@store/user'
 
-// import AccountShell from '@components/AccountShell'
-// import AppRoutes from '@components/AppRoutes'
+import AccountShell from '@components/AccountShell'
+import AppRoutes from '@components/AppRoutes'
 
 const AppShell = () => {
   const dispatch = useDispatch()
@@ -21,9 +21,9 @@ const AppShell = () => {
     <>
       <OLocale />
       <IGlobalStyled />
-      {/* <AccountShell>
+      <AccountShell>
         <AppRoutes />
-      </AccountShell> */}
+      </AccountShell>
     </>
   )
 }

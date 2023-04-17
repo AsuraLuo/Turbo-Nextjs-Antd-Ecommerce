@@ -13,6 +13,7 @@ import { BrowserRouter } from 'react-router-dom'
 import {
   OConfigProvider,
   OCssBaseline,
+  OLocale,
   OForm,
   OButton,
   OInput,
@@ -21,6 +22,7 @@ import {
   OPagination,
   OCheckbox,
   ORadio,
+  IGlobalStyled,
   IButton,
   IConfirmModal,
   IDynamicInput,
@@ -30,7 +32,7 @@ import {
 } from '@ocloud/ui'
 import type { IConfirmModalRef } from '@ocloud/ui'
 
-import AppShell from '@components/AppShell'
+// import AppShell from '@components/AppShell'
 import HttpProvider from '@components/HttpProvider'
 import LocaleProvider from '@components/LocaleProvider'
 
@@ -132,7 +134,9 @@ const App = () => {
               <ThemeProvider theme={ThemeConf}>
                 <OConfigProvider prefixCls={ThemeConf.namespace} theme={ThemeConf.antdTheme}>
                   <OCssBaseline />
-                  <AppShell />
+                  <IGlobalStyled />
+                  <OLocale />
+                  {/* <AppShell /> */}
                   <div style={{ width: '500px', margin: '10rem auto' }}>
                     <OForm onFinish={onFinish}>
                       <IDynamicInput

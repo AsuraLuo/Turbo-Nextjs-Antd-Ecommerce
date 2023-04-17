@@ -1,5 +1,5 @@
 import { Connect, Plugin } from 'vite'
-import proxy from 'http2-proxy'
+import * as proxy from 'http2-proxy'
 
 const error = (message: string): never => {
   throw new Error(message)

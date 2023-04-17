@@ -24,10 +24,10 @@ const findSvgFile: Function = (dir: string) => {
       const svg: any = readFileSync(path)
         .toString()
         .replace(clearReturn, '')
-        .replace(svgTitle, ($1: any, $2: any) => {
+        .replace(svgTitle, (_$1: any, $2: any) => {
           let width: number = 0
           let height: number = 0
-          let content: string = $2.replace(clearHeightWidth, (s1: any, s2: any, s3: any) => {
+          let content: string = $2.replace(clearHeightWidth, (_s1: any, s2: any, s3: any) => {
             s3 = s3.replace('px', '')
 
             if (s2 === 'width') {
