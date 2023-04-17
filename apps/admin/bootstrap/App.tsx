@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import {
   StyleProvider,
   legacyLogicalPropertiesTransformer
@@ -19,6 +19,7 @@ import {
   OInput,
   OSelect,
   OTable,
+  OTree,
   OPagination,
   OCheckbox,
   ORadio,
@@ -27,7 +28,6 @@ import {
   IConfirmModal,
   IDynamicInput,
   IOperateButton,
-  ITreeSelect,
   IWangEditor
 } from '@ocloud/ui'
 import type { IConfirmModalRef } from '@ocloud/ui'
@@ -38,6 +38,28 @@ import LocaleProvider from '@components/LocaleProvider'
 
 const App = () => {
   const modelRef: IConfirmModalRef = useRef(null)
+  const [expandedKeys, setExpandedKeys] = useState<React.Key[]>(['0-0-0', '0-0-1'])
+  const [checkedKeys, setCheckedKeys] = useState<React.Key[]>(['0-0-0', '0-0-0-1'])
+  const [selectedKeys, setSelectedKeys] = useState<React.Key[]>([])
+  const [autoExpandParent, setAutoExpandParent] = useState<boolean>(true)
+
+  const onExpand = (expandedKeysValue: React.Key[]) => {
+    console.info('onExpand', expandedKeysValue)
+    // if not set autoExpandParent to false, if children expanded, parent can not collapse.
+    // or, you can remove all expanded children keys.
+    setExpandedKeys(expandedKeysValue)
+    setAutoExpandParent(false)
+  }
+
+  const onCheck = (checkedKeysValue: React.Key[]) => {
+    console.info('onCheck', checkedKeysValue)
+    setCheckedKeys(checkedKeysValue)
+  }
+
+  const onSelect = (selectedKeysValue: React.Key[], info: any) => {
+    console.info('onSelect', info)
+    setSelectedKeys(selectedKeysValue)
+  }
 
   const dataSource = [
     {
@@ -80,40 +102,45 @@ const App = () => {
 
   const treeData = [
     {
-      title: 'Node1',
-      value: '0-0',
+      title: '0-0',
       key: '0-0',
-      children: []
-      // children: [
-      //   {
-      //     title: 'Child Node1',
-      //     value: '0-0-0',
-      //     key: '0-0-0'
-      //   }
-      // ]
+      children: [
+        {
+          title: '0-0-0',
+          key: '0-0-0',
+          children: [
+            { title: '0-0-0-0', key: '0-0-0-0' },
+            { title: '0-0-0-1', key: '0-0-0-1' },
+            { title: '0-0-0-2', key: '0-0-0-2' }
+          ]
+        },
+        {
+          title: '0-0-1',
+          key: '0-0-1',
+          children: [
+            { title: '0-0-1-0', key: '0-0-1-0' },
+            { title: '0-0-1-1', key: '0-0-1-1' },
+            { title: '0-0-1-2', key: '0-0-1-2' }
+          ]
+        },
+        {
+          title: '0-0-2',
+          key: '0-0-2'
+        }
+      ]
     },
     {
-      title: 'Node2',
-      value: '0-1',
+      title: '0-1',
       key: '0-1',
-      children: []
-      // children: [
-      //   {
-      //     title: 'Child Node3',
-      //     value: '0-1-0',
-      //     key: '0-1-0'
-      //   },
-      //   {
-      //     title: 'Child Node4',
-      //     value: '0-1-1',
-      //     key: '0-1-1'
-      //   },
-      //   {
-      //     title: 'Child Node5',
-      //     value: '0-1-2',
-      //     key: '0-1-2'
-      //   }
-      // ]
+      children: [
+        { title: '0-1-0-0', key: '0-1-0-0' },
+        { title: '0-1-0-1', key: '0-1-0-1' },
+        { title: '0-1-0-2', key: '0-1-0-2' }
+      ]
+    },
+    {
+      title: '0-2',
+      key: '0-2'
     }
   ]
 
@@ -180,8 +207,19 @@ const App = () => {
                           ]}
                         />
                       </OForm.Item>
-                      <OForm.Item name="tree" rules={[{ required: true }]}>
-                        <ITreeSelect treeData={treeData} />
+                      <OForm.Item>
+                        <OTree
+                          checkable
+                          checkStrictly
+                          onExpand={onExpand}
+                          expandedKeys={expandedKeys}
+                          autoExpandParent={autoExpandParent}
+                          onCheck={onCheck}
+                          checkedKeys={checkedKeys}
+                          onSelect={onSelect}
+                          selectedKeys={selectedKeys}
+                          treeData={treeData}
+                        />
                       </OForm.Item>
                       <OForm.Item>
                         <OCheckbox.Group options={options} />

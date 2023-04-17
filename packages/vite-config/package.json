@@ -1,14 +1,15 @@
 {
   "name": "@ocloud/vite-config",
   "version": "0.0.1",
-  "main": "dist/index.js",
-  "source": "index.ts",
-  "types": "index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "tsc --build",
-    "watch": "tsc --build --watch"
+    "build": "pnpm build:esm && pnpm build:cjs",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs"
   },
   "dependencies": {
     "@ocloud/tsconfig": "workspace:*",

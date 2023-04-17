@@ -14,6 +14,7 @@ dist/
 out/
 build/
 storybook-static/
+!packages/vite-config/dist
 
 # ssl
 keys/
