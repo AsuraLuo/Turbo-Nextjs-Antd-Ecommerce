@@ -25,6 +25,7 @@
     "clean:turbo-cache": "rm -rf ./node_modules/.cache"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.0.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@reduxjs/toolkit": "^1.9.1",

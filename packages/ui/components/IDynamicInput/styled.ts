@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import OSpace from '../OSpace'
+import OSpace from '../../OSpace'
 
 export const StyledDynamicInput = styled.div`
   .${({ theme }: any) => theme.namespace} {
