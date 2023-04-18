@@ -221,6 +221,7 @@ importers:
       '@wangeditor/editor': ^5.1.23
       '@wangeditor/editor-for-react': ^1.0.6
       antd: ^5.4.0
+      dayjs: ^1.11.7
       eslint: ^7.32.0
       eslint-config-ocloud: workspace:*
       father: ^4.1.7
@@ -234,6 +235,7 @@ importers:
       '@wangeditor/editor': 5.1.23
       '@wangeditor/editor-for-react': 1.0.6_omoyz7df4qskprnmrkig6mddwm
       antd: 5.4.2_biqbaboplfbrettd7655fr4n2y
+      dayjs: 1.11.7
       react: 18.2.0
       recharts: 2.5.0_v2m5e27vhdewzwhryxwfaorcca
     devDependencies:

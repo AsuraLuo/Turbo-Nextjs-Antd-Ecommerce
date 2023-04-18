@@ -1,15 +1,15 @@
 import { FC } from 'react'
 import { ConfigProvider } from 'antd'
 import type { ConfigProviderProps, ThemeConfig } from 'antd/es/config-provider'
-import { merge } from 'lodash'
-import dayjs from 'dayjs'
+import { locale } from 'dayjs'
+import merge from 'lodash/merge'
 import zhCN from 'antd/locale/zh_CN'
 import 'dayjs/locale/zh-cn'
 
 import { themeConfig } from './themeConfig'
 import { StyledConfigProvider } from './styled'
 
-dayjs.locale('zh-cn')
+locale('zh-cn')
 
 type ExcludeType = 'iconPrefixCls' | 'form' | 'locale'
 
