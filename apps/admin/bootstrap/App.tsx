@@ -10,25 +10,26 @@ import { store } from '@store/index'
 import { Provider as ReduxProvider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
-// import // OConfigProvider,
-// OCssBaseline,
-// OLocale,
-// OForm,
-// OButton
-// OInput,
-// OSelect,
-// OTable,
-// OTree,
-// OPagination,
-// OCheckbox,
-// ORadio,
-// IGlobalStyled,
-// IButton,
-// IConfirmModal,
-// IDynamicInput,
-// IOperateButton,
-// IWangEditor
-// '@ocloud/ui'
+import {
+  // OConfigProvider,
+  // OCssBaseline,
+  // OLocale,
+  // OForm,
+  OButton
+  // OInput,
+  // OSelect,
+  // OTable,
+  // OTree,
+  // OPagination,
+  // OCheckbox,
+  // ORadio,
+  // IGlobalStyled,
+  // IButton,
+  // IConfirmModal,
+  // IDynamicInput,
+  // IOperateButton,
+  // IWangEditor
+} from '@ocloud/ui'
 // import type { IConfirmModalRef } from '@ocloud/ui'
 
 // import AppShell from '@components/AppShell'
@@ -158,6 +159,7 @@ const App = () => {
           <LocaleProvider>
             <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
               <ThemeProvider theme={ThemeConf}>
+                <OButton type="primary">Antd Button</OButton>
                 {/* <OConfigProvider prefixCls={ThemeConf.namespace} theme={ThemeConf.antdTheme}> */}
                 {/* <OCssBaseline />
                   <IGlobalStyled />
