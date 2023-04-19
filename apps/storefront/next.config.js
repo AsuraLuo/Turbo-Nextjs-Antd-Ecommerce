@@ -26,11 +26,6 @@ module.exports = () => {
     eslint: {
       ignoreDuringBuilds: isProd
     },
-    modularizeImports: {
-      lodash: {
-        transform: 'lodash/{{member}}'
-      }
-    },
     typescript: {
       ignoreBuildErrors: isProd
     },

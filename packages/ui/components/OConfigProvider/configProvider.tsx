@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { ConfigProvider } from 'antd'
 import type { ConfigProviderProps, ThemeConfig } from 'antd/es/config-provider'
 import { locale } from 'dayjs'
-import merge from 'lodash/merge'
+import { merge } from 'lodash-es'
 import zhCN from 'antd/locale/zh_CN'
 import 'dayjs/locale/zh-cn'
 

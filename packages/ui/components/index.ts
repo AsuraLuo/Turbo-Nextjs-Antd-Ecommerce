@@ -1,5 +1,6 @@
 // Antd Type Declaration
 import type { ColumnsType } from 'antd/es/table'
+import type { ThemeConfig } from 'antd/es/config-provider'
 
 // Antd Atomic Components
 export { default as OAffix } from './OAffix'
@@ -62,7 +63,7 @@ export { default as OI18n } from './OI18n'
 export { default as OLocale } from './OLocale'
 
 // Antd Custom Export
-export { ColumnsType }
+export { ColumnsType, ThemeConfig }
 export { useBreakpoint } from './OGrid'
 export { formatMessage } from './OLocale'
 

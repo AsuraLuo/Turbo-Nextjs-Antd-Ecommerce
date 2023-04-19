@@ -1,6 +1,6 @@
-import { ThemeConfig } from 'antd'
+// import { ThemeConfig } from 'antd'
 
-export const antdTheme: ThemeConfig = {
+export const antdTheme: any = {
   token: {
     colorLink: '#30b8bd',
     colorLinkActive: '#1e8e96',

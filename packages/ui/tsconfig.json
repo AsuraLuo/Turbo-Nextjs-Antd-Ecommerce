@@ -3,7 +3,9 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsxImportSource": "@emotion/react",
-    "outDir": "dist"
+    "outDir": "dist",
+    "declarationMap": false,
+    "sourceMap": false
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["dist", "build", "node_modules"]

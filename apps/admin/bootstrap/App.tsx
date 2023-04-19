@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+// import { useRef, useState } from 'react'
 import {
   StyleProvider,
   legacyLogicalPropertiesTransformer
@@ -10,147 +10,146 @@ import { store } from '@store/index'
 import { Provider as ReduxProvider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 
-import {
-  OConfigProvider,
-  OCssBaseline,
-  OLocale,
-  OForm,
-  OButton,
-  OInput,
-  OSelect,
-  OTable,
-  OTree,
-  OPagination,
-  OCheckbox,
-  ORadio,
-  IGlobalStyled,
-  IButton,
-  IConfirmModal,
-  IDynamicInput,
-  IOperateButton,
-  IWangEditor
-} from '@ocloud/ui'
-import type { IConfirmModalRef } from '@ocloud/ui'
+// import // OConfigProvider,
+// OCssBaseline,
+// OLocale,
+// OForm,
+// OButton
+// OInput,
+// OSelect,
+// OTable,
+// OTree,
+// OPagination,
+// OCheckbox,
+// ORadio,
+// IGlobalStyled,
+// IButton,
+// IConfirmModal,
+// IDynamicInput,
+// IOperateButton,
+// IWangEditor
+// '@ocloud/ui'
+// import type { IConfirmModalRef } from '@ocloud/ui'
 
 // import AppShell from '@components/AppShell'
 import HttpProvider from '@components/HttpProvider'
 import LocaleProvider from '@components/LocaleProvider'
 
 const App = () => {
-  const modelRef: IConfirmModalRef = useRef(null)
-  const [expandedKeys, setExpandedKeys] = useState<React.Key[]>(['0-0-0', '0-0-1'])
-  const [checkedKeys, setCheckedKeys] = useState<React.Key[]>(['0-0-0', '0-0-0-1'])
-  const [selectedKeys, setSelectedKeys] = useState<React.Key[]>([])
-  const [autoExpandParent, setAutoExpandParent] = useState<boolean>(true)
+  // const modelRef: any = useRef(null)
+  // const [expandedKeys, setExpandedKeys] = useState<React.Key[]>(['0-0-0', '0-0-1'])
+  // const [checkedKeys, setCheckedKeys] = useState<React.Key[]>(['0-0-0', '0-0-0-1'])
+  // const [selectedKeys, setSelectedKeys] = useState<React.Key[]>([])
+  // const [autoExpandParent, setAutoExpandParent] = useState<boolean>(true)
 
-  const onExpand = (expandedKeysValue: React.Key[]) => {
-    console.info('onExpand', expandedKeysValue)
-    // if not set autoExpandParent to false, if children expanded, parent can not collapse.
-    // or, you can remove all expanded children keys.
-    setExpandedKeys(expandedKeysValue)
-    setAutoExpandParent(false)
-  }
+  // const onExpand = (expandedKeysValue: React.Key[]) => {
+  //   console.info('onExpand', expandedKeysValue)
+  //   // if not set autoExpandParent to false, if children expanded, parent can not collapse.
+  //   // or, you can remove all expanded children keys.
+  //   setExpandedKeys(expandedKeysValue)
+  //   setAutoExpandParent(false)
+  // }
 
-  const onCheck = (checkedKeysValue: React.Key[]) => {
-    console.info('onCheck', checkedKeysValue)
-    setCheckedKeys(checkedKeysValue)
-  }
+  // const onCheck = (checkedKeysValue: React.Key[]) => {
+  //   console.info('onCheck', checkedKeysValue)
+  //   setCheckedKeys(checkedKeysValue)
+  // }
 
-  const onSelect = (selectedKeysValue: React.Key[], info: any) => {
-    console.info('onSelect', info)
-    setSelectedKeys(selectedKeysValue)
-  }
+  // const onSelect = (selectedKeysValue: React.Key[], info: any) => {
+  //   console.info('onSelect', info)
+  //   setSelectedKeys(selectedKeysValue)
+  // }
 
-  const dataSource = [
-    {
-      key: '1',
-      name: '胡彦斌',
-      age: 32,
-      address: '西湖区湖底公园1号'
-    },
-    {
-      key: '2',
-      name: '胡彦祖',
-      age: 42,
-      address: '西湖区湖底公园1号'
-    }
-  ]
+  // const dataSource = [
+  //   {
+  //     key: '1',
+  //     name: '胡彦斌',
+  //     age: 32,
+  //     address: '西湖区湖底公园1号'
+  //   },
+  //   {
+  //     key: '2',
+  //     name: '胡彦祖',
+  //     age: 42,
+  //     address: '西湖区湖底公园1号'
+  //   }
+  // ]
 
-  const columns = [
-    {
-      title: '姓名',
-      dataIndex: 'name',
-      key: 'name'
-    },
-    {
-      title: '年龄',
-      dataIndex: 'age',
-      key: 'age'
-    },
-    {
-      title: '住址',
-      dataIndex: 'address',
-      key: 'address'
-    }
-  ]
+  // const columns = [
+  //   {
+  //     title: '姓名',
+  //     dataIndex: 'name',
+  //     key: 'name'
+  //   },
+  //   {
+  //     title: '年龄',
+  //     dataIndex: 'age',
+  //     key: 'age'
+  //   },
+  //   {
+  //     title: '住址',
+  //     dataIndex: 'address',
+  //     key: 'address'
+  //   }
+  // ]
 
-  const options = [
-    { label: 'Apple', value: 'Apple' },
-    { label: 'Pear', value: 'Pear' },
-    { label: 'Orange', value: 'Orange', disabled: true }
-  ]
+  // const options = [
+  //   { label: 'Apple', value: 'Apple' },
+  //   { label: 'Pear', value: 'Pear' },
+  //   { label: 'Orange', value: 'Orange', disabled: true }
+  // ]
 
-  const treeData = [
-    {
-      title: '0-0',
-      key: '0-0',
-      children: [
-        {
-          title: '0-0-0',
-          key: '0-0-0',
-          children: [
-            { title: '0-0-0-0', key: '0-0-0-0' },
-            { title: '0-0-0-1', key: '0-0-0-1' },
-            { title: '0-0-0-2', key: '0-0-0-2' }
-          ]
-        },
-        {
-          title: '0-0-1',
-          key: '0-0-1',
-          children: [
-            { title: '0-0-1-0', key: '0-0-1-0' },
-            { title: '0-0-1-1', key: '0-0-1-1' },
-            { title: '0-0-1-2', key: '0-0-1-2' }
-          ]
-        },
-        {
-          title: '0-0-2',
-          key: '0-0-2'
-        }
-      ]
-    },
-    {
-      title: '0-1',
-      key: '0-1',
-      children: [
-        { title: '0-1-0-0', key: '0-1-0-0' },
-        { title: '0-1-0-1', key: '0-1-0-1' },
-        { title: '0-1-0-2', key: '0-1-0-2' }
-      ]
-    },
-    {
-      title: '0-2',
-      key: '0-2'
-    }
-  ]
+  // const treeData = [
+  //   {
+  //     title: '0-0',
+  //     key: '0-0',
+  //     children: [
+  //       {
+  //         title: '0-0-0',
+  //         key: '0-0-0',
+  //         children: [
+  //           { title: '0-0-0-0', key: '0-0-0-0' },
+  //           { title: '0-0-0-1', key: '0-0-0-1' },
+  //           { title: '0-0-0-2', key: '0-0-0-2' }
+  //         ]
+  //       },
+  //       {
+  //         title: '0-0-1',
+  //         key: '0-0-1',
+  //         children: [
+  //           { title: '0-0-1-0', key: '0-0-1-0' },
+  //           { title: '0-0-1-1', key: '0-0-1-1' },
+  //           { title: '0-0-1-2', key: '0-0-1-2' }
+  //         ]
+  //       },
+  //       {
+  //         title: '0-0-2',
+  //         key: '0-0-2'
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     title: '0-1',
+  //     key: '0-1',
+  //     children: [
+  //       { title: '0-1-0-0', key: '0-1-0-0' },
+  //       { title: '0-1-0-1', key: '0-1-0-1' },
+  //       { title: '0-1-0-2', key: '0-1-0-2' }
+  //     ]
+  //   },
+  //   {
+  //     title: '0-2',
+  //     key: '0-2'
+  //   }
+  // ]
 
-  const onFinish = (values: any) => {
-    console.info('Received values of form:', values)
-  }
+  // const onFinish = (values: any) => {
+  //   console.info('Received values of form:', values)
+  // }
 
-  const handleApprovel = () => {
-    modelRef.current?.openModal()
-  }
+  // const handleApprovel = () => {
+  //   modelRef.current?.openModal()
+  // }
 
   return (
     <ReduxProvider store={store}>
@@ -159,12 +158,12 @@ const App = () => {
           <LocaleProvider>
             <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
               <ThemeProvider theme={ThemeConf}>
-                <OConfigProvider prefixCls={ThemeConf.namespace} theme={ThemeConf.antdTheme}>
-                  <OCssBaseline />
+                {/* <OConfigProvider prefixCls={ThemeConf.namespace} theme={ThemeConf.antdTheme}> */}
+                {/* <OCssBaseline />
                   <IGlobalStyled />
-                  <OLocale />
-                  {/* <AppShell /> */}
-                  <div style={{ width: '500px', margin: '10rem auto' }}>
+                  <OLocale /> */}
+                {/* <AppShell /> */}
+                {/* <div style={{ width: '500px', margin: '10rem auto' }}>
                     <OForm onFinish={onFinish}>
                       <IDynamicInput
                         name="users"
@@ -180,8 +179,7 @@ const App = () => {
                           ref={modelRef}
                           title="审核"
                           confirmText="审核通过"
-                          showCancel={false}
-                        >
+                          showCancel={false}>
                           <p>是否审核选中订单？</p>
                         </IConfirmModal>
                       </OForm.Item>
@@ -241,8 +239,11 @@ const App = () => {
                         </OButton>
                       </OForm.Item>
                     </OForm>
-                  </div>
-                </OConfigProvider>
+                  </div> */}
+                {/* <OButton type="primary" htmlType="submit">
+                    OButton
+                  </OButton>
+                </OConfigProvider> */}
               </ThemeProvider>
             </StyleProvider>
           </LocaleProvider>

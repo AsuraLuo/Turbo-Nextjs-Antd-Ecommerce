@@ -1,17 +1,23 @@
 {
-  "name": "@ocloud/ui",
-  "version": "0.1.0",
+  "name": "@ecloud/ui",
+  "version": "0.1.2",
   "main": "dist/es/index.js",
   "module": "dist/es/index.js",
   "types": "dist/es/index.d.ts",
   "license": "MIT",
+  "description": "Ocloud Ui Base On Antd v5",
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "father dev",
     "build": "father build",
     "build:deps": "father prebundle",
-    "prepublishOnly": "father doctor && npm run build",
     "lint": "TIMING=1 eslint \"**/*.ts*\""
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@loadable/component": "^5.15.3",

@@ -6,11 +6,11 @@ import {
   legacyLogicalPropertiesTransformer,
   px2remTransformer
 } from '@ant-design/cssinjs'
-import { isEmpty } from 'lodash'
+import { isEmpty } from 'lodash-es'
 import 'antd/dist/reset.css'
 
 import { ThemeConf } from '@config/theme'
-import { OConfigProvider } from '@ocloud/ui'
+import { OConfigProvider } from '@ecloud/ui'
 import { withRedux, LocaleContextProvider } from '@provider/index'
 import { fetchApp } from '@hooks/App'
 

@@ -13,7 +13,7 @@ coverage
 dist/
 out/
 build/
-storybook-static/
+stats.html
 !packages/vite-config/dist
 
 # ssl

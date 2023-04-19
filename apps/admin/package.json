@@ -8,8 +8,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:prod": "tsc && vite build",
+    "build": "tsc && vite build",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "preview": "vite preview",
     "mkcert:prepare": "mkcert -install",
@@ -19,15 +18,16 @@
     "@ant-design/cssinjs": "^1.6.0",
     "@ocloud/hooks": "workspace:*",
     "@ocloud/tsconfig": "workspace:*",
+    "@ocloud/ui": "^0.1.1",
     "@ocloud/vite-config": "workspace:*",
-    "@ocloud/ui": "workspace:*",
     "crypto-js": "^4.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
     "terser": "^5.16.4",
     "use-http": "^1.0.27",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "vite": "^4.1.2"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",

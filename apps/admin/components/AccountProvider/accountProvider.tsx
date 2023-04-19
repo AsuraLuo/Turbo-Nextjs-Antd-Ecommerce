@@ -2,7 +2,7 @@ import { FC, createContext, useCallback, useContext, useEffect, useMemo } from '
 import { useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { useFetch } from 'use-http'
-import { isEmpty } from 'lodash'
+import { isEmpty } from 'lodash-es'
 import { actions as appActions } from '@store/app'
 
 const AccountContext = createContext({})

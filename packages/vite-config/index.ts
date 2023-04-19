@@ -10,13 +10,6 @@ export const baseConfig = (mode: string, pkg: any = {}) => {
 
   const config: UserConfigExport = {
     envPrefix: 'REACT_',
-    optimizeDeps: {
-      include: isProd ? ['@ocloud/ui'] : []
-    },
-    build: {
-      reportCompressedSize: !isProd,
-      sourcemap: !isProd
-    },
     plugins: [
       banner(
         `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * author: ${pkg.author}\n * version: ${pkg.version}\n * copyright: ${pkg.copyright}\n */`
@@ -40,7 +33,19 @@ export const baseConfig = (mode: string, pkg: any = {}) => {
           gzipSize: true,
           brotliSize: true
         })
-    ]
+    ],
+    build: {
+      cssMinify: isProd,
+      reportCompressedSize: !isProd,
+      sourcemap: !isProd,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // lodash: ['lodash']
+          }
+        }
+      }
+    }
   }
 
   return config

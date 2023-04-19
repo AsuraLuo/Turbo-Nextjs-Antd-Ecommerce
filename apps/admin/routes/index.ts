@@ -1,6 +1,6 @@
 import { lazy, LazyExoticComponent, useCallback, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { isEmpty } from 'lodash'
+import { isEmpty } from 'lodash-es'
 
 import { useCookie } from '@ocloud/hooks'
 

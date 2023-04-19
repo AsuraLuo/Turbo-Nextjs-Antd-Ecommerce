@@ -1,4 +1,8 @@
-import axios from 'axios'
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
+
+export interface RequestOptions extends AxiosRequestConfig {
+  cancel?: any
+}
 
 const { CancelToken } = axios
 
@@ -16,12 +20,12 @@ const baseConfig: any = {
   withCredentials: true,
   responseType: 'json',
   maxContentLength: 2000,
-  validateStatus(status) {
+  validateStatus(status: number) {
     return status >= 200 && status < 300
   }
 }
 
-const instance: any = axios.create({
+const instance: AxiosInstance = axios.create({
   ...baseConfig
 })
 
@@ -58,7 +62,7 @@ instance.interceptors.response.use(
   }
 )
 
-export const useAxios = (endpoint, options) => {
+export const useAxios = (endpoint: string, options: RequestOptions) => {
   const cancel = options?.cancel ?? {}
   return instance.request({
     url: endpoint,

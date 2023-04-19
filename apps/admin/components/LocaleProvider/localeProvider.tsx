@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react'
 import { IntlProvider, ReactIntlError } from 'react-intl'
 import { useDispatch } from 'react-redux'
-import { isEmpty } from 'lodash'
+import { isEmpty } from 'lodash-es'
 
 import { useCookie } from '@ocloud/hooks'
 import { actions as i18nActions } from '@store/i18n'
