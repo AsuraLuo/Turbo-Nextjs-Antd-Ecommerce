@@ -14,13 +14,13 @@
    - Bug/hotfix: 只允许从 master 或者 dev 分⽀进⾏ checkout
    - Release: 只允许从 master 分⽀进⾏ checkout
 
-## 常规规范
+### 常规规范
 
 1. Feature 分⽀以名字/feature/事务进⾏命名，⽐如: apax/feature/user-management
 2. bug 和 hotfix 分⽀以名字/类型-ticket 号进⾏命名，⽐如: apax/bug-cart-button
 3. git 的全局⽤户名和邮箱需要使⽤公司的名字和邮箱
 
-## 提交管理
+### 提交管理
 
 1. commit 代码需将代码粒度区分⾄模块，接⼝，⽂档，注释等。粒度区分完毕再以做的事情来作为命名此次
    commit 提交，尽量最⼩化的提交 PR, ⽅便同事做 Code Review
@@ -47,6 +47,32 @@
    1
    2
 
+### 本地分支提交步骤
+
+- 本地添加此次任务修改变动文件，此处默认提交全部（参考）
+
+```bash
+git add -A
+```
+
+- 填写本次任务事务名以及具体内容
+
+```bash
+git commit -m "feat: user management"
+```
+
+- 执行 git push 命令，会有本地临时分支推送远程提示
+
+```bash
+git push
+```
+
+- 根据上一步提示，执行推送远程仓库临时分支
+
+```bash
+git push --set-upstream origin apax-feat-user-management
+```
+
 ## 代码合并流程和规范
 
 ### Pull Request
@@ -64,4 +90,12 @@
 
 # Aliyun Codeup
 
-- 本地临时分支开发完成，推送远程临时分支 git push
+- 本地临时分支开发完成，推送远程临时分支 git push 推送远程临时分支
+- 云效仓库 web 端可视化界面，点击左侧合并请求，此处可以全局看到默认所有 Merge Request 的状态
+- 点击右侧新建合并请求按钮
+- 选择此外任务推送的临时分支作为来源，选择目前分支，确认此外提交代码
+- 此次 Merge Request 默认有 3 个描述模版 （缺陷修复，功能开发，优化改进）酌情选择模版进行填写
+- 选择此次代码提交需要的审核人员
+- 最近点击确定，完成本次代码提交
+- 审核人员进行 Code Review 流程，如果失败打回，成功 Approval
+- 开发人员代码被合并，需要自己删除临时分支

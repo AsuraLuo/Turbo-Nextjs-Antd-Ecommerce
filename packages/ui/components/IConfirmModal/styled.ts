@@ -9,7 +9,6 @@ export const StyledConfirmModal = styled.div`
 
     &-modal-body {
       padding: 20px 30px 10px 30px;
-      text-align: center;
     }
 
     &-modal-footer {
