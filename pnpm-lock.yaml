@@ -68,7 +68,7 @@ importers:
       '@ant-design/cssinjs': ^1.6.0
       '@ocloud/hooks': workspace:*
       '@ocloud/tsconfig': workspace:*
-      '@ocloud/ui': ^0.1.1
+      '@ocloud/ui': ^0.1.3
       '@ocloud/vite-config': workspace:*
       '@types/crypto-js': ^4.1.1
       '@types/react': ^18.0.22
@@ -90,7 +90,7 @@ importers:
       '@ant-design/cssinjs': 1.8.1_biqbaboplfbrettd7655fr4n2y
       '@ocloud/hooks': link:../../packages/hooks
       '@ocloud/tsconfig': link:../../packages/tsconfig
-      '@ocloud/ui': 0.1.1_vrwljcczstdz3tspqhd5bpmssq
+      '@ocloud/ui': 0.1.3_vrwljcczstdz3tspqhd5bpmssq
       '@ocloud/vite-config': link:../../packages/vite-config
       crypto-js: 4.1.1
       react: 18.2.0
@@ -2818,8 +2818,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@ocloud/ui/0.1.1_vrwljcczstdz3tspqhd5bpmssq:
-    resolution: {integrity: sha512-LJMfXmFy/CY9/HX+ft86ePNQMGOv746yQN51qgSyWl8X1OFJeucDaAPp4i9s/Rg+LdTOh48Cj/kv24BMemzlkg==}
+  /@ocloud/ui/0.1.3_vrwljcczstdz3tspqhd5bpmssq:
+    resolution: {integrity: sha512-+Uu4bvP0mTF3wqdd5UEktTDpbZ7ZROmsMFAjBm+hYXl9brRIxrXb66vDAjSgpCSqqJrw7vo0vbnLEKlDfHgDyA==}
     dependencies:
       '@loadable/component': 5.15.3_react@18.2.0
       '@ocloud/tsconfig': link:packages/tsconfig
