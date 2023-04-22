@@ -180,8 +180,7 @@ const App = () => {
                           ref={modelRef}
                           title="审核"
                           confirmText="审核通过"
-                          showCancel={false}
-                        >
+                          showCancel={false}>
                           <div>
                             <p>是否审核选中订单？</p>
                             <OForm.Item name="name" rules={[{ required: true }]}>
@@ -197,9 +196,9 @@ const App = () => {
                           </div>
                         </IConfirmModal>
                       </OForm.Item>
-                      <OForm.Item>
+                      {/* <OForm.Item>
                         <IOperateButton type="cancel" />
-                      </OForm.Item>
+                      </OForm.Item> */}
                       <OForm.Item>
                         <IButton type="refresh" />
                       </OForm.Item>
