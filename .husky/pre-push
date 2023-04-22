@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-cd ../ &&  pnpm lint:branch-name
+pnpm lint:branch-name
