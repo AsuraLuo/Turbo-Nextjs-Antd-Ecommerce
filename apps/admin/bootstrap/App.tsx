@@ -198,7 +198,7 @@ const App = () => {
                         </IConfirmModal>
                       </OForm.Item>
                       <OForm.Item>
-                        <IOperateButton type="cancel" />
+                        <IOperateButton type="add" />
                       </OForm.Item>
                       <OForm.Item>
                         <IButton type="refresh" />
