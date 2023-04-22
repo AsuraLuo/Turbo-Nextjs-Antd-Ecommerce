@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@ant-design/icons': ^5.0.1
+      '@b12k/branch-name-lint': ^1.0.3
       '@commitlint/cli': ^17.3.0
       '@commitlint/config-conventional': ^17.3.0
       '@emotion/react': ^11.10.5
@@ -46,6 +47,7 @@ importers:
       redux-logger: 3.0.6
       turbo: 1.9.1
     devDependencies:
+      '@b12k/branch-name-lint': 1.0.3
       '@commitlint/cli': 17.6.1
       '@commitlint/config-conventional': 17.6.1
       '@types/lodash': 4.14.194
@@ -343,6 +345,11 @@ packages:
       resize-observer-polyfill: 1.5.1
       throttle-debounce: 5.0.0
     dev: false
+
+  /@b12k/branch-name-lint/1.0.3:
+    resolution: {integrity: sha512-LuzMQpylusHhL/9TcyhTpqrtrmVCvC5NSEpNCWRIh71AuN01+tC0KDQkqzXOkab7eMwk4s5CEUmhe1jX4+CwdA==}
+    hasBin: true
+    dev: true
 
   /@babel/code-frame/7.12.11:
     resolution: {integrity: sha512-Zt1yodBx1UcyiePMSkWnU4hPqhwq7hGi2nFL1LeA3EUl+q2LQx16MISgJ0+z7dnmgvP9QtIleuETGOiOH1RcIw==}

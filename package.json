@@ -18,6 +18,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "husky:prepare": "husky install",
+    "lint:branch-name": "branch-name-lint",
     "commit": "./node_modules/cz-customizable/standalone.js",
     "clean": "pnpm clean:node-modules & pnpm clean:next-cache & pnpm clean:turbo-cache",
     "clean:node-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
@@ -39,6 +40,7 @@
     "turbo": "^1.8.3"
   },
   "devDependencies": {
+    "@b12k/branch-name-lint": "^1.0.3",
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@types/lodash": "^4.14.191",
