@@ -1,3 +1,15 @@
+import { useRef, useState } from 'react'
+import {
+  StyleProvider,
+  legacyLogicalPropertiesTransformer
+  // px2remTransformer
+} from '@ant-design/cssinjs'
+import { ThemeConf } from '@config/theme'
+import { ThemeProvider } from '@emotion/react'
+import { store } from '@store/index'
+import { Provider as ReduxProvider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+
 import {
   OConfigProvider,
   OCssBaseline,
@@ -168,7 +180,8 @@ const App = () => {
                           ref={modelRef}
                           title="审核"
                           confirmText="审核通过"
-                          showCancel={false}>
+                          showCancel={false}
+                        >
                           <div>
                             <p>是否审核选中订单？</p>
                             <OForm.Item name="name" rules={[{ required: true }]}>
@@ -184,9 +197,9 @@ const App = () => {
                           </div>
                         </IConfirmModal>
                       </OForm.Item>
-                      {/* <OForm.Item>
-                        <IOperateButton type="cancel" />
-                      </OForm.Item> */}
+                      <OForm.Item>
+                        <IOperateButton type="add" />
+                      </OForm.Item>
                       <OForm.Item>
                         <IButton type="refresh" />
                       </OForm.Item>
