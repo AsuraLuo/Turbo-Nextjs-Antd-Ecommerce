@@ -1,15 +1,3 @@
-import { useRef, useState } from 'react'
-import {
-  StyleProvider,
-  legacyLogicalPropertiesTransformer
-  // px2remTransformer
-} from '@ant-design/cssinjs'
-import { ThemeConf } from '@config/theme'
-import { ThemeProvider } from '@emotion/react'
-import { store } from '@store/index'
-import { Provider as ReduxProvider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
-
 import {
   OConfigProvider,
   OCssBaseline,
