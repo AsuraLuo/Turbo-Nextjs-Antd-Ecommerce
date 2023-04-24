@@ -1,3 +1,11 @@
+const fs = require('fs')
+
+const readDirectories = (path) =>
+  fs
+    .readdirSync(path, { withFileTypes: true })
+    .filter((file) => file.isDirectory())
+    .map(({ name }) => name)
+
 module.exports = {
   pattern: ':username-:type-:desc',
   params: {
@@ -15,7 +23,8 @@ module.exports = {
       'build',
       'hotfix'
     ],
-    desc: ['[a-z0-9-]+']
+    desc: ['[a-z0-9-]+'],
+    scope: readDirectories('./apps')
   },
   prohibited: ['main', 'development', 'test', 'build', 'master', 'release']
 }
