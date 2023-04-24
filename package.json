@@ -46,7 +46,7 @@
     "@types/lodash-es": "^4.17.7",
     "@types/react-helmet": "^6.1.6",
     "@types/redux-logger": "^3.0.9",
-    "branch-rule-lint": "^0.3.0",
+    "branch-rule-lint": "^0.4.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.31.0",
     "eslint-config-ocloud": "workspace:*",
