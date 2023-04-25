@@ -14,7 +14,7 @@ importers:
       '@types/lodash-es': ^4.17.7
       '@types/react-helmet': ^6.1.6
       '@types/redux-logger': ^3.0.9
-      branch-rule-lint: ^0.4.0
+      branch-rule-lint: ^0.5.0
       clsx: ^1.2.1
       cz-customizable: ^7.0.0
       eslint: ^8.31.0
@@ -53,7 +53,7 @@ importers:
       '@types/lodash-es': 4.17.7
       '@types/react-helmet': 6.1.6
       '@types/redux-logger': 3.0.9
-      branch-rule-lint: 0.4.0_typescript@5.0.4
+      branch-rule-lint: 0.5.0_typescript@5.0.4
       cz-customizable: 7.0.0
       eslint: 8.38.0
       eslint-config-ocloud: link:packages/eslint-config-ocloud
@@ -5104,8 +5104,8 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
-  /branch-rule-lint/0.4.0_typescript@5.0.4:
-    resolution: {integrity: sha512-g03hjTX7Ny8ntI6DfsT+GTzTRsK/6N7WoPDd5Jy7GdJXA2KszA5PyTOeE6F7oDUv+LnULPjqlElSv26b/AKzGA==}
+  /branch-rule-lint/0.5.0_typescript@5.0.4:
+    resolution: {integrity: sha512-CoxWSjS36vXAndSWUUqQh6msyBizJmKEyFf7Waf8m0EdLYC5BsQfZYJ+GpseMhNOTKEHvWQO6WKan4TFsDCbyQ==}
     hasBin: true
     dependencies:
       '@rollup/plugin-commonjs': 24.1.0_rollup@3.21.0
