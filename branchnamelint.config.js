@@ -26,5 +26,5 @@ module.exports = {
     desc: ['[a-z0-9-]+'],
     scope: readDirectories('./apps')
   },
-  prohibited: ['development', 'test', 'build', 'master', 'release']
+  prohibited: ['development', 'main', 'test', 'build', 'master', 'release']
 }
