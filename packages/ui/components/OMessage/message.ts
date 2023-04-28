@@ -1,15 +1,10 @@
-import { message } from 'antd'
-import { ArgsProps } from 'antd/es/message'
+import { message as OMessage } from 'antd'
 
-const OMessage = (options: ArgsProps) => {
-  return message.config({
-    top: 100,
-    duration: 2,
-    maxCount: 3,
-    rtl: true,
-    prefixCls: 'ocloud',
-    ...options
-  })
-}
+OMessage.config({
+  top: 100,
+  duration: 2,
+  maxCount: 3,
+  rtl: true
+})
 
 export default OMessage

@@ -1,6 +1,6 @@
 import { TreeSelect } from 'antd'
 
-import InternalTreeSelect from './oTreeSelect'
+import InternalTreeSelect from './treeSelect'
 
 const { SHOW_ALL, SHOW_PARENT, SHOW_CHILD } = TreeSelect
 

@@ -1,16 +1,19 @@
-import { Input } from 'antd'
+import { Input, InputProps, InputRef } from 'antd'
 
 import InternalInput from './input'
 
 const { Group, Search, TextArea, Password } = Input
 
 type InternalInputType = typeof InternalInput
-type CompoundedComponent = InternalInputType & {
-  Group: typeof Group
-  Search: typeof Search
-  TextArea: typeof TextArea
-  Password: typeof Password
-}
+type CompoundedComponent = React.ForwardRefExoticComponent<
+  InputProps & React.RefAttributes<InputRef>
+> &
+  InternalInputType & {
+    Group: typeof Group
+    Search: typeof Search
+    TextArea: typeof TextArea
+    Password: typeof Password
+  }
 
 const OInput = InternalInput as CompoundedComponent
 OInput.Group = Input.Group

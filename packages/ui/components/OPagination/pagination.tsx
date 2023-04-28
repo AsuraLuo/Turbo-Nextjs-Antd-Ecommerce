@@ -3,11 +3,9 @@ import { Pagination, PaginationProps } from 'antd'
 
 import { StyledPagination } from './styled'
 
-interface OPaginationProps extends Omit<PaginationProps, 'showTotal'> {}
-
-const OPagination: FC<OPaginationProps> = ({ ...props }) => {
+const OPagination: FC<PaginationProps> = ({ ...props }) => {
   const showTotal = (total: number) => {
-    return `共${total}条`
+    return `共 ${total} 条`
   }
 
   return (

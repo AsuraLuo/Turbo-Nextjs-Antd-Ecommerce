@@ -1,6 +1,7 @@
 // Antd Type Declaration
 import type { ColumnsType } from 'antd/es/table'
 import type { ThemeConfig } from 'antd/es/config-provider'
+import type { ResultProps } from 'antd/es/result'
 
 // Antd Atomic Components
 export { default as OAffix } from './OAffix'
@@ -29,6 +30,7 @@ export { default as OLayout } from './OLayout'
 export { default as OMenu } from './OMenu'
 export { default as OModal } from './OModal'
 export { default as OPagination } from './OPagination'
+export { default as OPopconfirm } from './OPopconfirm'
 export { default as OPopover } from './OPopover'
 export { default as OQRCode } from './OQRCode'
 export { default as ORadio } from './ORadio'
@@ -51,6 +53,7 @@ export { default as OTour } from './OTour'
 export { default as OTransfer } from './OTransfer'
 export { default as OTree } from './OTree'
 export { default as OTreeSelect } from './OTreeSelect'
+export { default as OTypography } from './OTypography'
 export { default as OUpload } from './OUpload'
 export { default as OWatermark } from './OWatermark'
 export { default as OMessage } from './OMessage'
@@ -63,7 +66,7 @@ export { default as OI18n } from './OI18n'
 export { default as OLocale } from './OLocale'
 
 // Antd Custom Export
-export { ColumnsType, ThemeConfig }
+export { ColumnsType, ThemeConfig, ResultProps }
 export { useBreakpoint } from './OGrid'
 export { formatMessage } from './OLocale'
 
