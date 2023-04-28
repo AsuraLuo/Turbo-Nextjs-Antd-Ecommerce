@@ -6,7 +6,13 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "config": {
+    "commitizen": {
+      "path": "./../../node_modules/cz-customizable"
+    }
+  },
   "scripts": {
+    "commit": "git cz",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint \"**/*.{ts,tsx}\"",

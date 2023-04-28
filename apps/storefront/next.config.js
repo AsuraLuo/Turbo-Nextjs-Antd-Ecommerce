@@ -7,7 +7,7 @@ module.exports = () => {
    */
   const nextConfig = {
     basePath: '',
-    compress: false,
+    compress: true,
     distDir: '.next',
     output: 'standalone',
     generateEtags: false,

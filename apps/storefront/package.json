@@ -5,7 +5,13 @@
   "copyright": "Copyright © 2023 all right reserved.",
   "private": true,
   "version": "0.0.1",
+  "config": {
+    "commitizen": {
+      "path": "./../../node_modules/cz-customizable"
+    }
+  },
   "scripts": {
+    "commit": "git cz",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
