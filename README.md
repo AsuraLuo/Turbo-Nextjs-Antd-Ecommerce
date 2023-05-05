@@ -80,3 +80,14 @@ This was happening to me after I updated VS code. The easiest fix is to add this
 ```json
 "typescript.tsdk": "node_modules/typescript/lib"
 ```
+
+## Vscode Support
+
+### widnows terminal
+1. win+s 在系统中搜索框 输入“Windos PowerShell”右击“管理员身份运行”
+
+2. 输入“set-ExecutionPolicy RemoteSigned”回车,根据提示输入A，回车
+
+3. 再次回到pnpm -v执行成功
+
+不只是pnpm命令，包括cnpm、yarn等这些命令，如果执行时，报这样的错误，都可以通过此方法解决。前提是，如果是用npm命令来安装这些CLI命令工具，必须安装到全局环境中，才能生效
