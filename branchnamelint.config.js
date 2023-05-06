@@ -7,7 +7,7 @@ const readDirectories = (path) =>
     .map(({ name }) => name)
 
 module.exports = {
-  pattern: ':username-:type-:desc',
+  pattern: ':username/:type/:desc',
   params: {
     username: ['caesar'],
     type: [
