@@ -73,6 +73,12 @@ git push
 git push --set-upstream origin apax-feat-user-management
 ```
 
+自动推送临时分支全局设置
+
+```bash
+git config --global push.autoSetupRemote true
+```
+
 ## 代码合并流程和规范
 
 ### Pull Request

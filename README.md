@@ -83,11 +83,17 @@ This was happening to me after I updated VS code. The easiest fix is to add this
 
 ## Vscode Support
 
-### widnows terminal
+### widnows terminal command
+
 1. win+s 在系统中搜索框 输入“Windos PowerShell”右击“管理员身份运行”
 
-2. 输入“set-ExecutionPolicy RemoteSigned”回车,根据提示输入A，回车
+2. 输入“set-ExecutionPolicy RemoteSigned”回车,根据提示输入 A，回车
 
-3. 再次回到pnpm -v执行成功
+3. 再次回到 pnpm -v 执行成功
 
-不只是pnpm命令，包括cnpm、yarn等这些命令，如果执行时，报这样的错误，都可以通过此方法解决。前提是，如果是用npm命令来安装这些CLI命令工具，必须安装到全局环境中，才能生效
+不只是 pnpm 命令，包括 cnpm、yarn 等这些命令，如果执行时，报这样的错误，都可以通过此方法解决。前提是，如果是用 npm 命令来安装这些 CLI 命令工具，必须安装到全局环境中，才能生效
+
+### window vscode LF format
+
+1. vscode File --》Preferences --》 Setting --》 搜索 eol，改变 eol 为\n(lf)
+2. git config --global core.autocrlf false
