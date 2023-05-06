@@ -7,7 +7,7 @@
   "version": "0.0.1",
   "config": {
     "commitizen": {
-      "path": "./../../node_modules/cz-customizable"
+      "path": "./node_modules/cz-customizable"
     }
   },
   "scripts": {
