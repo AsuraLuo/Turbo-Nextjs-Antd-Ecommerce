@@ -36,11 +36,32 @@ const plugin_1 = require("./plugin");
 const baseConfig = (mode, pkg = {}) => {
     const isProd = mode === 'production';
     const config = {
+        base: './',
         envPrefix: 'REACT_',
         plugins: [
             (0, vite_plugin_banner_1.default)(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * author: ${pkg.author}\n * version: ${pkg.version}\n * copyright: ${pkg.copyright}\n */`),
             (0, plugin_legacy_1.default)({
-                targets: ['defaults', 'not IE 11']
+                targets: ['defaults', 'ie >= 9', 'chrome 52'],
+                additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
+                renderLegacyChunks: true,
+                polyfills: [
+                    'es.symbol',
+                    'es.promise',
+                    'es.promise.finally',
+                    'es/map',
+                    'es/set',
+                    'es.array.filter',
+                    'es.array.for-each',
+                    'es.object.define-properties',
+                    'es.object.define-property',
+                    'es.object.get-own-property-descriptors',
+                    'es.object.get-own-property-descriptor',
+                    'es.object.keys',
+                    'es.object.to-string',
+                    'web.dom-collections.for-each',
+                    'esnext.global-this',
+                    'esnext.string.match-all'
+                ]
             }),
             (0, plugin_react_swc_1.default)(),
             (0, plugin_1.httpProxy)({
@@ -62,7 +83,7 @@ const baseConfig = (mode, pkg = {}) => {
             }),
             (0, vite_plugin_cdn_import_1.default)({
                 modules: [(0, vite_plugin_cdn_import_1.autoComplete)('react'), (0, vite_plugin_cdn_import_1.autoComplete)('react-dom')],
-                prodUrl: `https://cdn.bootcdn.net/ajax/libs/{name}/{version}/{path}`
+                prodUrl: 'https://cdn.bootcdn.net/ajax/libs/{name}/{version}/{path}'
             }),
             process.env.REACT_APP_BUNDLE_VISUALIZE === '1' &&
                 require('rollup-plugin-visualizer').visualizer({
@@ -87,7 +108,7 @@ const baseConfig = (mode, pkg = {}) => {
                             'redux-logger',
                             'use-http'
                         ],
-                        i18n: ['react-intl']
+                        intl: ['react-intl']
                     }
                 }
             }

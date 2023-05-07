@@ -7,11 +7,32 @@ import { httpProxy, svgBuilder } from './plugin';
 export const baseConfig = (mode, pkg = {}) => {
     const isProd = mode === 'production';
     const config = {
+        base: './',
         envPrefix: 'REACT_',
         plugins: [
             banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * author: ${pkg.author}\n * version: ${pkg.version}\n * copyright: ${pkg.copyright}\n */`),
             legacy({
-                targets: ['defaults', 'not IE 11']
+                targets: ['defaults', 'ie >= 9', 'chrome 52'],
+                additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
+                renderLegacyChunks: true,
+                polyfills: [
+                    'es.symbol',
+                    'es.promise',
+                    'es.promise.finally',
+                    'es/map',
+                    'es/set',
+                    'es.array.filter',
+                    'es.array.for-each',
+                    'es.object.define-properties',
+                    'es.object.define-property',
+                    'es.object.get-own-property-descriptors',
+                    'es.object.get-own-property-descriptor',
+                    'es.object.keys',
+                    'es.object.to-string',
+                    'web.dom-collections.for-each',
+                    'esnext.global-this',
+                    'esnext.string.match-all'
+                ]
             }),
             react(),
             httpProxy({
@@ -33,7 +54,7 @@ export const baseConfig = (mode, pkg = {}) => {
             }),
             importCDN({
                 modules: [autoComplete('react'), autoComplete('react-dom')],
-                prodUrl: `https://cdn.bootcdn.net/ajax/libs/{name}/{version}/{path}`
+                prodUrl: 'https://cdn.bootcdn.net/ajax/libs/{name}/{version}/{path}'
             }),
             process.env.REACT_APP_BUNDLE_VISUALIZE === '1' &&
                 require('rollup-plugin-visualizer').visualizer({
@@ -58,7 +79,7 @@ export const baseConfig = (mode, pkg = {}) => {
                             'redux-logger',
                             'use-http'
                         ],
-                        i18n: ['react-intl']
+                        intl: ['react-intl']
                     }
                 }
             }

@@ -11,13 +11,34 @@ export const baseConfig = (mode: string, pkg: any = {}) => {
   const isProd: boolean = mode === 'production'
 
   const config: UserConfigExport = {
+    base: './',
     envPrefix: 'REACT_',
     plugins: [
       banner(
         `/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * author: ${pkg.author}\n * version: ${pkg.version}\n * copyright: ${pkg.copyright}\n */`
       ),
       legacy({
-        targets: ['defaults', 'not IE 11']
+        targets: ['defaults', 'ie >= 9', 'chrome 52'],
+        additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
+        renderLegacyChunks: true,
+        polyfills: [
+          'es.symbol',
+          'es.promise',
+          'es.promise.finally',
+          'es/map',
+          'es/set',
+          'es.array.filter',
+          'es.array.for-each',
+          'es.object.define-properties',
+          'es.object.define-property',
+          'es.object.get-own-property-descriptors',
+          'es.object.get-own-property-descriptor',
+          'es.object.keys',
+          'es.object.to-string',
+          'web.dom-collections.for-each',
+          'esnext.global-this',
+          'esnext.string.match-all'
+        ]
       }),
       react(),
       httpProxy({

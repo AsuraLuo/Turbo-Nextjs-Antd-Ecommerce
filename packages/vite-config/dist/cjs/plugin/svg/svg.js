@@ -60,6 +60,22 @@ const svgBuilder = (path) => {
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0">
               ${result.join('')}
             </svg>
+            <script>
+              !(function(t) {
+                function e() {
+                  var e = this || self;
+                  (e.globalThis = e), delete t.prototype._T_;
+                }
+                "object" !== typeof globalThis &&
+                (this
+                    ? e()
+                    : (t.defineProperty(t.prototype, '_T_', {
+                      configurable: !0,
+                      get: e,
+                    }),
+                    _T_));
+              })(Object);
+            </script>
         `);
         }
     };

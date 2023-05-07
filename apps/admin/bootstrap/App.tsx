@@ -51,7 +51,7 @@ const App = () => {
     setAutoExpandParent(false)
   }
 
-  const onCheck = (checkedKeysValue: React.Key[]) => {
+  const onCheck: any = (checkedKeysValue: React.Key[]) => {
     console.info('onCheck', checkedKeysValue)
     setCheckedKeys(checkedKeysValue)
   }
