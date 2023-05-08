@@ -1,8 +1,9 @@
 const fs = require('fs')
+const path = require('path')
 
-const readDirectories = (path) =>
+const readDirectories = (url) =>
   fs
-    .readdirSync(path, { withFileTypes: true })
+    .readdirSync(url, { withFileTypes: true })
     .filter((file) => file.isDirectory())
     .map(({ name }) => name)
 
@@ -24,7 +25,7 @@ module.exports = {
       'hotfix'
     ],
     desc: ['[a-z0-9-]+'],
-    scope: readDirectories('./apps')
+    scope: readDirectories(path.resolve(__dirname, './apps'))
   },
   prohibited: ['dev', 'test', 'build', 'master', 'release'],
   whiteList: ['main']
