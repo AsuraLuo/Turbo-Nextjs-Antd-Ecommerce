@@ -3,7 +3,6 @@ import { ConfigProvider } from 'antd'
 import type { ConfigProviderProps, ThemeConfig } from 'antd/es/config-provider'
 import { locale } from 'dayjs'
 import { merge } from 'lodash-es'
-import zhCN from 'antd/locale/zh_CN'
 import 'dayjs/locale/zh-cn'
 
 import { themeConfig } from './themeConfig'
@@ -11,7 +10,7 @@ import { StyledConfigProvider } from './styled'
 
 locale('zh-cn')
 
-type ExcludeType = 'iconPrefixCls' | 'form' | 'locale'
+type ExcludeType = 'iconPrefixCls' | 'form'
 
 export interface OConfigProviderProps extends Omit<ConfigProviderProps, ExcludeType> {
   requiredMessage?: string
@@ -36,7 +35,6 @@ const OConfigProvider: FC<OConfigProviderProps> = ({
           }
         }}
         theme={globalTheme}
-        locale={zhCN}
         {...props}
       >
         {children}
