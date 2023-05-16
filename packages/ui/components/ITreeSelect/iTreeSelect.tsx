@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { TreeSelectProps } from 'antd/es/tree-select'
+import type { TreeSelectProps } from 'antd/es/tree-select'
 
 import OTreeSelect from '../OTreeSelect'
 import { StyledITreeSelect } from './styled'

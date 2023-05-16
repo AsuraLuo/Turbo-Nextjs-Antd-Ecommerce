@@ -331,9 +331,6 @@ importers:
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
     devDependencies:
       '@ant-design/icons':
         specifier: ^5.0.1
@@ -359,6 +356,9 @@ importers:
       father:
         specifier: ^4.1.7
         version: 4.1.7(@types/node@18.11.18)(styled-components@5.3.10)(webpack@5.82.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       react-intl:
         specifier: ^6.2.5
         version: 6.2.5(react@18.2.0)(typescript@4.7.4)

@@ -1,5 +1,5 @@
 import { useImperativeHandle, useState } from 'react'
-import { ModalProps } from 'antd/es/modal'
+import type { ModalProps } from 'antd/es/modal'
 
 import OModal from '../OModal'
 import { StyledIModal } from './styled'

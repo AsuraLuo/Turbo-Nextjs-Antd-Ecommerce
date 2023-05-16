@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { SearchProps } from 'antd/es/input'
+import type { SearchProps } from 'antd/es/input'
 
 import Input from '../OInput'
 
