@@ -9,8 +9,9 @@
   "scripts": {
     "clean": "rm -rf dist",
     "dev": "father dev",
-    "build": "father doctor && father build",
+    "build": "father build",
     "build:deps": "father prebundle",
+    "prepublishOnly": "father doctor && pnpm run build",
     "lint": "TIMING=1 eslint \"**/*.ts*\""
   },
   "files": [
