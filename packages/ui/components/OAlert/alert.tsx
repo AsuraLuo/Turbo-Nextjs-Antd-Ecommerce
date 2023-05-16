@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Alert, AlertProps } from 'antd'
+import { Alert } from 'antd'
+import type { AlertProps } from 'antd/es/alert'
 
 const OAlert: FC<AlertProps> = ({ ...props }) => {
   return <Alert {...props} />

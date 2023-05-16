@@ -1,6 +1,7 @@
 import { FC, Fragment, useState } from 'react'
-import { Upload, FormItemProps, UploadProps, UploadFile } from 'antd'
-import { RcFile } from 'antd/es/upload'
+import { Upload } from 'antd'
+import type { FormItemProps } from 'antd/es/form'
+import type { RcFile, UploadProps, UploadFile } from 'antd/es/upload'
 
 import Form from '../OForm'
 import Modal from '../OModal'

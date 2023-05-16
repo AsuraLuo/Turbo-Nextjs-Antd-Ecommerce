@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Select, SelectProps } from 'antd'
+import { Select } from 'antd'
+import type { SelectProps } from 'antd/es/select'
 
 interface OSelectProps extends Omit<SelectProps, 'allowClear' | 'getPopupContainer'> {
   clear?: boolean

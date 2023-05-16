@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Affix, AffixProps } from 'antd'
+import { Affix } from 'antd'
+import type { AffixProps } from 'antd/es/affix'
 
 const OAffix: FC<AffixProps> = ({ children, ...props }) => {
   return <Affix {...props}>{children}</Affix>

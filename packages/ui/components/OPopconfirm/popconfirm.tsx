@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Popconfirm, PopconfirmProps } from 'antd'
+import { Popconfirm } from 'antd'
+import type { PopconfirmProps } from 'antd/es/popconfirm'
 
 const OPopconfirm: FC<PopconfirmProps> = ({ children, ...props }) => {
   return <Popconfirm {...props}>{children}</Popconfirm>

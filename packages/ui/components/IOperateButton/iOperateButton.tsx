@@ -1,5 +1,6 @@
-import { Button, ButtonProps } from 'antd'
 import { FC } from 'react'
+import { Button } from 'antd'
+import type { ButtonProps } from 'antd/es/button'
 
 import { IOperateButtonConfig, IOperateButtonBreakConfig } from './config'
 import { IOperateButtonType, IOperateButtonValueType } from './type'

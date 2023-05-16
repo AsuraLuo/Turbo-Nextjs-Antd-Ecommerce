@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react'
-import { Typography, TypographyProps } from 'antd'
+import { Typography } from 'antd'
+import type { TypographyProps } from 'antd/es/typography'
 
 interface OTypographyProps extends TypographyProps {
   children?: ReactNode

@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { App, AppProps } from 'antd'
+import { App } from 'antd'
+import type { AppProps } from 'antd/es/app'
 
 const OApp: FC<AppProps> = ({ children, ...props }) => {
   return <App {...props}>{children}</App>

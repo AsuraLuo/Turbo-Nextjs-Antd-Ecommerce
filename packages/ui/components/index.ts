@@ -2,6 +2,7 @@
 import type { ColumnsType } from 'antd/es/table'
 import type { ThemeConfig } from 'antd/es/config-provider'
 import type { ResultProps } from 'antd/es/result'
+import type { FormInstance } from 'antd/es/form'
 
 // Antd Atomic Components
 export { default as OAffix } from './OAffix'
@@ -65,12 +66,11 @@ export { default as ONotification } from './ONotification'
 export { OCol, ORow } from './OGrid'
 
 // Ocloud Custom Components
-export { default as OCssBaseline } from './OCssBaseline'
 export { default as OI18n } from './OI18n'
 export { default as OLocale } from './OLocale'
 
 // Antd Custom Export
-export { ColumnsType, ThemeConfig, ResultProps }
+export { ColumnsType, ThemeConfig, ResultProps, FormInstance }
 export { useBreakpoint } from './OGrid'
 export { formatMessage } from './OLocale'
 

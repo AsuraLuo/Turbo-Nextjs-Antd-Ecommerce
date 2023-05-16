@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Avatar, AvatarProps } from 'antd'
+import { Avatar } from 'antd'
+import type { AvatarProps } from 'antd/es/avatar'
 
 const OAvatar: FC<AvatarProps> = ({ children, ...props }) => {
   return <Avatar {...props}>{children}</Avatar>

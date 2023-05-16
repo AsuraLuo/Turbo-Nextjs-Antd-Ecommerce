@@ -1,5 +1,5 @@
 import { notification } from 'antd'
-import { ArgsProps } from 'antd/es/notification/interface'
+import type { ArgsProps } from 'antd/es/notification/interface'
 
 const ONotification = (options: ArgsProps) => {
   return notification.config({

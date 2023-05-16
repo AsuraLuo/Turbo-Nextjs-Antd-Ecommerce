@@ -12,7 +12,6 @@ import { BrowserRouter } from 'react-router-dom'
 
 import {
   OConfigProvider,
-  OCssBaseline,
   OLocale,
   OForm,
   OButton,
@@ -160,7 +159,6 @@ const App = () => {
             <StyleProvider transformers={[legacyLogicalPropertiesTransformer]}>
               <ThemeProvider theme={ThemeConf}>
                 <OConfigProvider prefixCls={ThemeConf.namespace} theme={ThemeConf.antdTheme}>
-                  <OCssBaseline />
                   <IGlobalStyled />
                   <OLocale />
                   {/* <AppShell /> */}

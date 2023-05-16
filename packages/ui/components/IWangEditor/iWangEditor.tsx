@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import loadable from '@loadable/component'
-import { IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
+import type { IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
 
 interface HackEditorProps {
   value?: string

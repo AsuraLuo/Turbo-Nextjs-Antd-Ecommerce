@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Pagination, PaginationProps } from 'antd'
+import { Pagination } from 'antd'
+import type { PaginationProps } from 'antd/es/pagination'
 
 import { StyledPagination } from './styled'
 

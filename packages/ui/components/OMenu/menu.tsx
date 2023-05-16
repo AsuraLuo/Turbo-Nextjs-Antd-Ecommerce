@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Menu, MenuProps } from 'antd'
+import { Menu } from 'antd'
+import type { MenuProps } from 'antd/es/menu'
 
 const OMenu: FC<MenuProps> = ({ children, ...props }) => {
   return <Menu {...props}>{children}</Menu>

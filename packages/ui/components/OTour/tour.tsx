@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Tour, TourProps } from 'antd'
+import { Tour } from 'antd'
+import type { TourProps } from 'antd/es/tour/interface'
 
 const OTour: FC<TourProps> = ({ ...props }) => {
   return <Tour {...props} />

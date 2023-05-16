@@ -1,11 +1,12 @@
 import { FC } from 'react'
-import { Modal as AntdModal, ModalProps } from 'antd'
+import { Modal } from 'antd'
+import type { ModalProps } from 'antd/es/modal'
 
 const OModal: FC<ModalProps> = ({ children, getContainer = false, ...props }) => {
   return (
-    <AntdModal getContainer={getContainer} {...props}>
+    <Modal getContainer={getContainer} {...props}>
       {children}
-    </AntdModal>
+    </Modal>
   )
 }
 

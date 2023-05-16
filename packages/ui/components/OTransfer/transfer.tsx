@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Transfer, TransferProps } from 'antd'
+import { Transfer } from 'antd'
+import type { TransferProps } from 'antd/es/transfer'
 
 const OTransfer: FC<TransferProps<any>> = ({ children, ...props }) => {
   return <Transfer {...props}>{children}</Transfer>

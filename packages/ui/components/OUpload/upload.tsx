@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Upload, UploadProps } from 'antd'
+import { Upload } from 'antd'
+import type { UploadProps } from 'antd/es/upload'
 
 const OUpload: FC<UploadProps<any>> = ({ children, ...props }) => {
   return <Upload {...props}>{children}</Upload>

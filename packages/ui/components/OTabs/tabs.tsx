@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Tabs, TabsProps } from 'antd'
+import { Tabs } from 'antd'
+import type { TabsProps } from 'antd/es/tabs'
 
 const OTabs: FC<TabsProps> = ({ children, ...props }) => {
   return <Tabs {...props}>{children}</Tabs>

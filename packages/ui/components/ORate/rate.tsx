@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Rate, RateProps } from 'antd'
+import { Rate } from 'antd'
+import type { RateProps } from 'antd/es/rate'
 
 const ORate: FC<RateProps> = ({ ...props }) => {
   return <Rate {...props} />
