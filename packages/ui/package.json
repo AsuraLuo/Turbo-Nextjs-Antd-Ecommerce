@@ -1,6 +1,6 @@
 {
   "name": "@ecloud/ui",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "main": "dist/es/index.js",
   "module": "dist/es/index.js",
   "types": "dist/es/index.d.ts",
@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@loadable/component": "^5.15.3",
-    "@ocloud/tsconfig": "workspace:*",
     "@wangeditor/editor": "^5.1.23",
     "@wangeditor/editor-for-react": "^1.0.6",
     "antd": "^5.4.0",
@@ -33,6 +32,7 @@
     "@ant-design/icons": "^5.0.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@ocloud/tsconfig": "workspace:*",
     "@types/loadable__component": "^5.13.4",
     "@types/react": "^18.0.22",
     "eslint": "^7.32.0",
@@ -47,6 +47,7 @@
     "@ant-design/icons": "^5.0.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@ocloud/tsconfig": "workspace:*",
     "react": "^18.2.0",
     "react-intl": "^6.2.5",
     "react-redux": "^8.0.5"

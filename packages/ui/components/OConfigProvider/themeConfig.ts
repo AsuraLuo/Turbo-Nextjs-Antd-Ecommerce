@@ -47,12 +47,6 @@ export const themeConfig: ThemeConfig = {
       borderRadius: 4
     },
     Modal: {
-      marginXS: 0,
-      marginSM: 0,
-      paddingLG: 0,
-      paddingMD: 0,
-      paddingContentHorizontalLG: 0,
-      fontSizeLG: 13,
       borderRadius: 4,
       boxShadow: '0 0 7px 0 rgba(126,136,155,0.2)'
     },
