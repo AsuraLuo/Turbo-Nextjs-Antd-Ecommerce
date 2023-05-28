@@ -1,19 +1,41 @@
-import { createSlice, Slice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction, Slice } from '@reduxjs/toolkit'
 
 import { fetchStoreConfig } from './actions'
 
+interface Menu {
+  id: string
+  name: string
+  url: string
+  children: Array<Menu>
+}
+
+export interface AppState {
+  activeMenus: Array<Menu>
+  menus: Array<Menu>
+  navMenus: Array<Menu>
+  sideMenus: Array<Menu>
+}
+
+const initialState: AppState = {
+  activeMenus: [],
+  menus: [],
+  navMenus: [],
+  sideMenus: []
+}
+
 export const slice: Slice = createSlice({
   name: 'app',
-  initialState: {
-    activeMenus: [],
-    menus: [],
-    navMenus: [],
-    sideMenus: []
-  },
+  initialState,
   reducers: {
-    setMenus: (state: any, { payload }) => {
-      const { activeMenus, menus } = payload
-      const result = menus.find((nav: any) => nav.name === 'IT云')
+    setMenus: (
+      state: AppState,
+      action: PayloadAction<{
+        activeMenus: Array<Menu>
+        menus: Array<Menu>
+      }>
+    ) => {
+      const { activeMenus, menus } = action.payload
+      const result: any = menus.find((nav: any) => nav.name === 'IT云')
       const navMenus = result?.children ?? []
       const sideMenus = navMenus?.[0] ?? {}
       state.menus = menus
@@ -21,22 +43,28 @@ export const slice: Slice = createSlice({
       state.sideMenus = [activeMenus?.[1] ?? sideMenus]
       state.activeMenus = activeMenus
     },
-    setNavMenus: (state: any, { payload }) => {
-      const sideMenus = [payload?.[0] ?? {}]
-      state.navMenus = payload
+    setNavMenus: (state: AppState, action: PayloadAction<Menu[]>) => {
+      const sideMenus = [action.payload?.[0] ?? {}]
+      state.navMenus = action.payload
       state.sideMenus = sideMenus
     },
-    setSideMenus: (state: any, { payload }) => {
-      state.sideMenus = payload
-    }
+    setSideMenus: (
+      state: any,
+      action: PayloadAction<{
+        sideMenus: Menu[]
+      }>
+    ) => {
+      state.sideMenus = action.payload
+    },
+    setInitialState: () => initialState
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchStoreConfig.fulfilled, (state: any, { payload }) => {
-        state.setAppConfig = payload
+      .addCase(fetchStoreConfig.fulfilled, (state: AppState, action: any) => {
+        state.menus = action.payload
       })
-      .addCase(fetchStoreConfig.rejected, (state: any) => {
-        state.setAppConfig = null
+      .addCase(fetchStoreConfig.rejected, (state: AppState) => {
+        state.menus = []
       })
   }
 })
