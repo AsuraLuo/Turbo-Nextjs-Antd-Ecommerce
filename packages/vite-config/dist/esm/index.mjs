@@ -1,41 +1,10 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var react = require('@vitejs/plugin-react-swc');
-var legacy = require('@vitejs/plugin-legacy');
-var banner = require('vite-plugin-banner');
-var compression = require('vite-plugin-compression');
-var importCDN = require('vite-plugin-cdn-import');
-var proxy = require('http2-proxy');
-var fs = require('fs');
-
-function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-function _interopNamespace(e) {
-    if (e && e.__esModule) return e;
-    var n = Object.create(null);
-    if (e) {
-        Object.keys(e).forEach(function (k) {
-            if (k !== 'default') {
-                var d = Object.getOwnPropertyDescriptor(e, k);
-                Object.defineProperty(n, k, d.get ? d : {
-                    enumerable: true,
-                    get: function () { return e[k]; }
-                });
-            }
-        });
-    }
-    n["default"] = e;
-    return Object.freeze(n);
-}
-
-var react__default = /*#__PURE__*/_interopDefaultLegacy(react);
-var legacy__default = /*#__PURE__*/_interopDefaultLegacy(legacy);
-var banner__default = /*#__PURE__*/_interopDefaultLegacy(banner);
-var compression__default = /*#__PURE__*/_interopDefaultLegacy(compression);
-var importCDN__default = /*#__PURE__*/_interopDefaultLegacy(importCDN);
-var proxy__namespace = /*#__PURE__*/_interopNamespace(proxy);
+import react from '@vitejs/plugin-react-swc';
+import legacy from '@vitejs/plugin-legacy';
+import banner from 'vite-plugin-banner';
+import compression from 'vite-plugin-compression';
+import importCDN, { autoComplete } from 'vite-plugin-cdn-import';
+import * as proxy from 'http2-proxy';
+import { readdirSync, readFileSync } from 'fs';
 
 const error = (message) => {
     throw new Error(message);
@@ -63,7 +32,7 @@ const httpProxy = (configOptions) => {
                 if (req.url && re.test(req.url)) {
                     const url = (rewrite?.(req.url) ?? req.url).replace(/^\/+/, '');
                     const { pathname, search } = new URL(url, tu);
-                    proxy__namespace.web(req, res, {
+                    proxy.web(req, res, {
                         protocol,
                         port,
                         hostname: tu.hostname,
@@ -100,7 +69,7 @@ const findSvgFile = (dir) => {
     // 清除换行符
     const clearReturn = /(\r)|(\n)/g;
     const svgRes = [];
-    const dirents = fs.readdirSync(dir, {
+    const dirents = readdirSync(dir, {
         withFileTypes: true
     });
     for (const dirent of dirents) {
@@ -109,7 +78,7 @@ const findSvgFile = (dir) => {
             svgRes.push(...findSvgFile(`${path}/`));
         }
         else {
-            const svg = fs.readFileSync(path)
+            const svg = readFileSync(path)
                 .toString()
                 .replace(clearReturn, '')
                 .replace(svgTitle, (_$1, $2) => {
@@ -175,8 +144,8 @@ const baseConfig = (mode, pkg = {}) => {
         base: './',
         envPrefix: 'REACT_',
         plugins: [
-            banner__default["default"](`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * author: ${pkg.author}\n * version: ${pkg.version}\n * copyright: ${pkg.copyright}\n */`),
-            legacy__default["default"]({
+            banner(`/**\n * name: ${pkg.name}\n * version: v${pkg.version}\n * author: ${pkg.author}\n * version: ${pkg.version}\n * copyright: ${pkg.copyright}\n */`),
+            legacy({
                 targets: ['defaults', 'ie >= 9', 'chrome 52'],
                 additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
                 renderLegacyChunks: true,
@@ -199,7 +168,7 @@ const baseConfig = (mode, pkg = {}) => {
                     'esnext.string.match-all'
                 ]
             }),
-            react__default["default"](),
+            react(),
             httpProxy({
                 '/api': {
                     target: process.env.REACT_APP_API_URL,
@@ -209,7 +178,7 @@ const baseConfig = (mode, pkg = {}) => {
                 }
             }),
             svgBuilder('svgs/'),
-            compression__default["default"]({
+            compression({
                 verbose: true,
                 disable: false,
                 deleteOriginFile: false,
@@ -217,8 +186,8 @@ const baseConfig = (mode, pkg = {}) => {
                 algorithm: 'gzip',
                 ext: '.gz'
             }),
-            importCDN__default["default"]({
-                modules: [importCDN.autoComplete('react'), importCDN.autoComplete('react-dom')],
+            importCDN({
+                modules: [autoComplete('react'), autoComplete('react-dom')],
                 prodUrl: 'https://cdn.bootcdn.net/ajax/libs/{name}/{version}/{path}'
             }),
             process.env.REACT_APP_BUNDLE_VISUALIZE === '1' &&
@@ -253,4 +222,4 @@ const baseConfig = (mode, pkg = {}) => {
     return config;
 };
 
-exports.baseConfig = baseConfig;
+export { baseConfig };

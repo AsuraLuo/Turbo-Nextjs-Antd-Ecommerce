@@ -7,12 +7,12 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "pnpm build:esm && pnpm build:cjs",
-    "build:esm": "tsc --module esnext --outDir dist/esm",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs"
+    "build": "rollup --config"
   },
   "dependencies": {
     "@ocloud/tsconfig": "workspace:*",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-typescript": "^11.1.1",
     "@vitejs/plugin-legacy": "^4.0.1",
     "@vitejs/plugin-react-swc": "^3.2.0",
     "http2-proxy": "^5.0.53",
