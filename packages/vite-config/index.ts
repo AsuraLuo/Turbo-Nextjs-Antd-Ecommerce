@@ -1,5 +1,6 @@
 import { UserConfigExport } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+// import react from '@vitejs/plugin-react'
 import legacy from '@vitejs/plugin-legacy'
 import banner from 'vite-plugin-banner'
 import compression from 'vite-plugin-compression'
@@ -40,7 +41,19 @@ export const baseConfig = (mode: string, pkg: any = {}) => {
           'esnext.string.match-all'
         ]
       }),
-      react(),
+      react({
+        jsxImportSource: '@emotion/react',
+        plugins: [
+          [
+            '@swc/plugin-emotion',
+            {
+              sourceMap: true,
+              autoLabel: 'dev-only',
+              labelFormat: '[local]'
+            }
+          ]
+        ]
+      }),
       httpProxy({
         '/api': {
           target: process.env.REACT_APP_API_URL,
@@ -78,8 +91,8 @@ export const baseConfig = (mode: string, pkg: any = {}) => {
           manualChunks: {
             runtime: [
               'react-router-dom',
-              '@emotion/react',
-              '@emotion/styled',
+              // '@emotion/react',
+              // '@emotion/styled',
               '@reduxjs/toolkit',
               'react-redux',
               'redux-logger',

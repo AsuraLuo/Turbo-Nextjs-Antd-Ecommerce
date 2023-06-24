@@ -6,7 +6,8 @@
     "lib": ["ESNext", "DOM"],
     "outDir": "dist/esm",
     "declarationMap": false,
-    "sourceMap": false
+    "sourceMap": false,
+    "jsxImportSource": "@emotion/react"
   },
   "include": ["index.ts", "./plugin/**/*.ts"],
   "exclude": ["node_modules"]

@@ -199,7 +199,21 @@ const baseConfig = (mode, pkg = {}) => {
                     'esnext.string.match-all'
                 ]
             }),
-            react__default["default"](),
+            react__default["default"]({
+                jsxImportSource: '@emotion/react',
+                // babel: {
+                //   plugins: ['@emotion/babel-plugin']
+                // }
+                plugins: [
+                    [
+                        '@swc/plugin-emotion',
+                        {
+                            sourceMap: true,
+                            autoLabel: 'dev-only'
+                        }
+                    ]
+                ]
+            }),
             httpProxy({
                 '/api': {
                     target: process.env.REACT_APP_API_URL,
@@ -237,8 +251,8 @@ const baseConfig = (mode, pkg = {}) => {
                     manualChunks: {
                         runtime: [
                             'react-router-dom',
-                            '@emotion/react',
-                            '@emotion/styled',
+                            // '@emotion/react',
+                            // '@emotion/styled',
                             '@reduxjs/toolkit',
                             'react-redux',
                             'redux-logger',

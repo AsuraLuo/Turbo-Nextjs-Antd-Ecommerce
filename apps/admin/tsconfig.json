@@ -2,6 +2,7 @@
   "extends": "@ocloud/tsconfig/vite.json",
   "compilerOptions": {
     "baseUrl": "./",
+    "jsxImportSource": "@emotion/react",
     "paths": {
       "@components/*": ["components/*"],
       "@config/*": ["config/*"],
