@@ -1,6 +1,5 @@
 import { UserConfigExport } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-// import react from '@vitejs/plugin-react'
 import legacy from '@vitejs/plugin-legacy'
 import banner from 'vite-plugin-banner'
 import compression from 'vite-plugin-compression'
