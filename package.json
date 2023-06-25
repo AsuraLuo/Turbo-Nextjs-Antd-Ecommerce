@@ -12,6 +12,8 @@
     }
   },
   "scripts": {
+    "postinstall": "pnpm install --ignore-workspace",
+    "install:admin": "pnpm install --filter=@ocloud/admin",
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "build:ocloud": "turbo run build --filter=@ocloud/storefront",

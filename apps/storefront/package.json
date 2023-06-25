@@ -27,7 +27,7 @@
     "@ant-design/cssinjs": "^1.6.0",
     "@ocloud/hooks": "workspace:*",
     "@ocloud/tsconfig": "workspace:*",
-    "@ecloud/ui": "workspace:*",
+    "@ocloud/ui": "^0.1.3",
     "@svgr/webpack": "^6.5.1",
     "cross-env": "^7.0.3",
     "express": "^4.18.2",
