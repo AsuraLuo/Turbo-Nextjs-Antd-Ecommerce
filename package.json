@@ -2,17 +2,12 @@
   "name": "turbo-nextjs-antd-ocloud",
   "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-customizable"
     }
   },
   "scripts": {
-    "postinstall": "pnpm install --ignore-workspace",
     "install:admin": "pnpm install --filter=@ocloud/admin",
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
